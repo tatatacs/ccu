@@ -30,7 +30,11 @@ module.exports = function (grunt) {
         watch: {
             options: {
                 nospawn: true,
-                livereload: LIVERELOAD_PORT
+                livereload: true
+            },
+            compass: {
+                files: ['<%= yeoman.app %>/styles/{,*/}{,*/}*.{scss,sass}'],
+                tasks: ['compass']
             },
             livereload: {
                 options: {
@@ -38,23 +42,23 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '<%= yeoman.app %>/*.html',
-                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
-                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-                    '<%= yeoman.app %>/scripts/templates/*.{ejs,mustache,hbs}',
+                    '{.tmp,<%= yeoman.app %>}/styles/{,*/}{,*/}*.css',
+                    '{.tmp,<%= yeoman.app %>}/scripts/{,*/}{,*/}*.js',
+                    '<%= yeoman.app %>/images/{,*/}{,*/}*.{png,jpg,jpeg,gif,webp}',
+                    '<%= yeoman.app %>/scripts/templates/{,*/}{,*/}.{ejs,mustache,hbs}',
                     'test/spec/**/*.js'
                 ]
             },
             handlebars: {
                 files: [
-                    '<%= yeoman.app %>/scripts/templates/*.hbs'
+                    '<%= yeoman.app %>/scripts/templates/{,*/}.hbs'
                 ],
                 tasks: ['handlebars']
             },
-            test: {
-                files: ['<%= yeoman.app %>/scripts/{,*/}*.js', 'test/spec/**/*.js'],
-                tasks: ['test:true']
-            }
+            //test: {
+            //    files: ['<%= yeoman.app %>/scripts/{,*/}*.js', 'test/spec/**/*.js'],
+            //    tasks: ['test:true']
+            //}
         },
         connect: {
             options: {
@@ -73,7 +77,7 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            test: {
+            /*test: {
                 options: {
                     port: 9001,
                     middleware: function (connect) {
@@ -85,7 +89,7 @@ module.exports = function (grunt) {
                         ];
                     }
                 }
-            },
+            },*/
             dist: {
                 options: {
                     middleware: function (connect) {
@@ -100,9 +104,9 @@ module.exports = function (grunt) {
             server: {
                 path: 'http://localhost:<%= connect.options.port %>'
             },
-            test: {
+            /*test: {
                 path: 'http://localhost:<%= connect.test.options.port %>'
-            }
+            }*/
         },
         clean: {
             dist: ['.tmp', '<%= yeoman.dist %>/*'],

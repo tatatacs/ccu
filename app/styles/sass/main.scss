@@ -5,6 +5,12 @@
 
 @import "compass/reset";
 
-.main {
-	color:red;
+#header {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    font-family: verdana;
 }
