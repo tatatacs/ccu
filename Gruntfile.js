@@ -250,8 +250,26 @@ module.exports = function (grunt) {
                     ]
                 }
             }
+        },
+        compass: {
+            options: {
+                sassDir: '<%= yeoman.app %>/styles/sass',
+                cssDir: '<%= yeoman.app %>/styles',
+                imagesDir: '<%= yeoman.app %>/images',
+                javascriptsDir: '<%= yeoman.app %>/scripts',
+                importPath: '<%= yeoman.app %>/bower_components',
+                relativeAssets: true
+            },
+            dist: {},
+            server: {
+                options: {
+                    debugInfo: true
+                }
+            }
         }
     });
+
+    grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('createDefaultTemplate', function () {
         grunt.file.write('.tmp/scripts/templates.js', 'this.JST = this.JST || {};');
@@ -267,7 +285,7 @@ module.exports = function (grunt) {
             return grunt.task.run(['build', 'open:server', 'connect:dist:keepalive']);
         }
 
-        if (target === 'test') {
+        /*if (target === 'test') {
             return grunt.task.run([
                 'clean:server',
                 'createDefaultTemplate',
@@ -276,12 +294,13 @@ module.exports = function (grunt) {
                 'open:test',
                 'watch'
             ]);
-        }
+        }*/
 
         grunt.task.run([
             'clean:server',
             'createDefaultTemplate',
             'handlebars',
+            'compass:server',
             'connect:livereload',
             'open:server',
             'watch'
@@ -294,6 +313,7 @@ module.exports = function (grunt) {
                 'clean:server',
                 'createDefaultTemplate',
                 'handlebars',
+                'compass',
                 'connect:test',
                 'mocha',
             ];
@@ -311,6 +331,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'createDefaultTemplate',
         'handlebars',
+        'compass:dist',
         'useminPrepare',
         'requirejs',
         'imagemin',
@@ -325,7 +346,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'jshint',
-        'test',
+        //'test',
         'build'
     ]);
 };

@@ -2,7 +2,7 @@
 'use strict';
 
 require.config({
-    shim: {,
+    shim: {
         handlebars: {
             exports: 'Handlebars'
         }
@@ -16,7 +16,18 @@ require.config({
 });
 
 require([
-    'backbone'
-], function (Backbone) {
+    'backbone',
+    'routes/router'
+], function (Backbone, Router) {
+
+    window.App = {
+        Models: {},
+        Collections: {},
+        Views: {},
+        Router: new Router(),
+        Helpers: {},
+        Vent: _.extend({}, Backbone.Events)
+    };
+
     Backbone.history.start();
 });
