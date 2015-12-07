@@ -2,8 +2,9 @@
 
 define([
     'jquery',
-    'backbone'
-], function ($, Backbone) {
+    'backbone',
+    'views/header'
+], function ($, Backbone, Header) {
     'use strict';
 
     var RouterRouter = Backbone.Router.extend({
@@ -13,7 +14,8 @@ define([
         },
 
         start: function() {
-        	console.log('cenas');
+        	App.Views.header = new Header();
+            $('#header').replaceWith(App.Views.header.render().el);
         }
 
     });
