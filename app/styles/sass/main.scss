@@ -4,13 +4,16 @@
  * <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "variables";
+@import "palettes";
+@import "header";
+@import "menu";
+@import "footer";
 
-#header {
-	position: absolute;
-    top: 0;
-    left: 0;
+html, body {
+    position: relative;
     width: 100%;
-    background-color: red;
-    color: #fff;
+    height: 100%;    
     font-family: verdana;
+    box-sizing: border-box;
 }

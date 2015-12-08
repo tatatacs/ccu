@@ -1,0 +1,18 @@
+/* line 3, sass/header.scss */
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+/* line 14, sass/header.scss */
+#header > button {
+  height: 100%;
+  border: none;
+  background-color: lightgray;
+  font-family: inherit;
+}

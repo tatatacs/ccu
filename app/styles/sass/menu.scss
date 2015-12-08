@@ -1,0 +1,8 @@
+@import "variables";
+
+
+#menu {
+	height: calc(100% - #{$header + $footer});
+    position: absolute;
+    top: 60px;
+}

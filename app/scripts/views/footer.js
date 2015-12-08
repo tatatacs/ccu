@@ -15,7 +15,7 @@ define([
 
         id: 'footer',
 
-        className: 'footer',
+        className: 'footer red dark',
 
         events: {},
 

@@ -1,0 +1,6 @@
+/* line 4, sass/menu.scss */
+#menu {
+  height: calc(100% - 120px);
+  position: absolute;
+  top: 60px;
+}

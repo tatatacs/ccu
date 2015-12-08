@@ -67,13 +67,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, sass/main.scss */
+/* line 9, sass/palettes.scss */
+.red {
+  color: #fff;
+  background-color: #f00;
+}
+/* line 13, sass/palettes.scss */
+.red.light {
+  background-color: #ff8080;
+}
+/* line 14, sass/palettes.scss */
+.red.dark {
+  background-color: maroon;
+}
+
+/* line 18, sass/palettes.scss */
+.blue {
+  color: #fff;
+  background-color: #00f;
+}
+/* line 22, sass/palettes.scss */
+.blue.light {
+  background-color: #8080ff;
+}
+/* line 23, sass/palettes.scss */
+.blue.dark {
+  background-color: navy;
+}
+
+/* line 3, sass/header.scss */
 #header {
   position: absolute;
   top: 0;
   left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
   width: 100%;
-  background-color: red;
-  color: #fff;
+  justify-content: space-between;
+}
+/* line 14, sass/header.scss */
+#header > button {
+  height: 100%;
+  border: none;
+  background-color: lightgray;
+  font-family: inherit;
+}
+
+/* line 4, sass/menu.scss */
+#menu {
+  height: calc(100% - 120px);
+  position: absolute;
+  top: 60px;
+}
+
+/* line 3, sass/footer.scss */
+#footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 60px;
+}
+
+/* line 13, sass/main.scss */
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
   font-family: verdana;
+  box-sizing: border-box;
 }

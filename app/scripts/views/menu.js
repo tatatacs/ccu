@@ -15,7 +15,7 @@ define([
 
         id: 'menu',
 
-        className: 'menu',
+        className: 'menu red light',
 
         events: {},
 

@@ -1,0 +1,25 @@
+@mixin light($color) {
+	background-color: scale-color($color, $lightness: 50%);
+}
+
+@mixin dark($color) {
+	background-color: scale-color($color, $lightness: -50%);
+}
+
+.red {
+	color: $white;
+	background-color: $red;
+
+	&.light { @include light($red); }
+	&.dark { @include dark($red); }
+
+}
+
+.blue {
+	color: $white;
+	background-color: $blue;
+
+	&.light { @include light($blue); }
+	&.dark { @include dark($blue); }
+
+}
