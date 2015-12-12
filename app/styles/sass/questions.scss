@@ -1,0 +1,70 @@
+.buttons {
+	button {
+		padding: 10px;
+		margin: 10px 0px 10px 5px;
+	}
+	flex-grow: 0.1;
+	display: flex;
+	justify-content: flex-end;
+}
+.questions,.responses {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	
+	>.questions, >.responses {
+		border: 1px solid;
+	}
+	.response,.question {
+	    padding: 10px;
+	    border-bottom: 1px solid;
+	    cursor:pointer;
+	}
+	
+	>.question,.response {
+		display:flex;
+		
+		.field {
+			&.check { flex: 0.2; }
+			&.name { flex: 2; } 
+			&.tit { flex: 3; }
+			&.date { flex: 1; }
+		}
+	}
+}
+
+#question, #response {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+    .field {
+	    flex-grow: 1;
+	    display: flex;
+	    flex-direction:column;
+
+	    >textarea {
+		    flex-grow: 1;
+		    padding: 10px;
+		}
+	    
+	    .label {
+	    	padding: 10px 0;
+	    }
+
+	    input {
+		    padding: 10px;
+		    flex-grow: 1;
+		}
+
+	    &.name, &.class, &.tit {
+	    	flex-grow: 0.1;
+	    } 
+
+	    &.buttons {
+	    	flex-grow: 0.1;
+		    display: flex;
+		    flex-direction: row;
+		}
+	}
+}

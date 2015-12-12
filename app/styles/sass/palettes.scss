@@ -1,25 +1,60 @@
 @mixin light($color) {
+	color: $black;
 	background-color: scale-color($color, $lightness: 50%);
 }
 
+@mixin lightest($color) {
+	color: $black;
+	background-color: scale-color($color, $lightness: 75%);
+}
+
+@mixin darkest($color) {
+	color: $white;
+	background-color: scale-color($color, $lightness: -75%);
+}
+
 @mixin dark($color) {
+	color: $white;
 	background-color: scale-color($color, $lightness: -50%);
 }
 
 .red {
-	color: $white;
 	background-color: $red;
 
 	&.light { @include light($red); }
+	&.lightest { @include lightest($red); }
 	&.dark { @include dark($red); }
+	&.darkest { @include darkest($red); }
+
 
 }
 
 .blue {
-	color: $white;
 	background-color: $blue;
 
 	&.light { @include light($blue); }
+	&.lightest { @include lightest($blue); }
 	&.dark { @include dark($blue); }
+	&.darkest { @include darkest($blue); }
+
+}
+
+.gray {
+	background-color: #777;
+
+	&.light { @include light(#777); }
+	&.lightest { @include lightest(#777); }
+	&.dark { @include dark(#777); }
+	&.darkest { @include darkest(#777); }
+
+}
+
+.orange {
+	background-color: orange;
+
+	&.light { @include light(orange); }
+	&.lightest { @include lightest(orange); }
+	&.dark { @include dark(orange); }
+	&.darkest { @include darkest(orange); }
 
 }

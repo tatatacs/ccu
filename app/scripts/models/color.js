@@ -6,16 +6,13 @@ define([
 ], function (_, Backbone) {
     'use strict';
 
-    var UserModel = Backbone.Model.extend({
-        
+    var ColorModel = Backbone.Model.extend({
         url: '',
 
         initialize: function() {
-            
         },
 
         defaults: {
-            visitor: true
         },
 
         validate: function(attrs, options) {
@@ -24,8 +21,7 @@ define([
         parse: function(response, options)  {
             return response;
         }
-
     });
 
-    return UserModel;
+    return ColorModel;
 });

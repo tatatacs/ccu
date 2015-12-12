@@ -1,0 +1,85 @@
+/* line 1, sass/questions.scss */
+.buttons {
+  flex-grow: 0.1;
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 2, sass/questions.scss */
+.buttons button {
+  padding: 10px;
+  margin: 10px 0px 10px 5px;
+}
+
+/* line 10, sass/questions.scss */
+.questions, .responses {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+/* line 15, sass/questions.scss */
+.questions > .questions, .questions > .responses, .responses > .questions, .responses > .responses {
+  border: 1px solid;
+}
+/* line 18, sass/questions.scss */
+.questions .response, .questions .question, .responses .response, .responses .question {
+  padding: 10px;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+/* line 24, sass/questions.scss */
+.questions > .question, .questions .response, .responses > .question, .responses .response {
+  display: flex;
+}
+/* line 28, sass/questions.scss */
+.questions > .question .field.check, .questions .response .field.check, .responses > .question .field.check, .responses .response .field.check {
+  flex: 0.2;
+}
+/* line 29, sass/questions.scss */
+.questions > .question .field.name, .questions .response .field.name, .responses > .question .field.name, .responses .response .field.name {
+  flex: 2;
+}
+/* line 30, sass/questions.scss */
+.questions > .question .field.tit, .questions .response .field.tit, .responses > .question .field.tit, .responses .response .field.tit {
+  flex: 3;
+}
+/* line 31, sass/questions.scss */
+.questions > .question .field.date, .questions .response .field.date, .responses > .question .field.date, .responses .response .field.date {
+  flex: 1;
+}
+
+/* line 36, sass/questions.scss */
+#question, #response {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+/* line 41, sass/questions.scss */
+#question .field, #response .field {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* line 46, sass/questions.scss */
+#question .field > textarea, #response .field > textarea {
+  flex-grow: 1;
+  padding: 10px;
+}
+/* line 51, sass/questions.scss */
+#question .field .label, #response .field .label {
+  padding: 10px 0;
+}
+/* line 55, sass/questions.scss */
+#question .field input, #response .field input {
+  padding: 10px;
+  flex-grow: 1;
+}
+/* line 60, sass/questions.scss */
+#question .field.name, #question .field.class, #question .field.tit, #response .field.name, #response .field.class, #response .field.tit {
+  flex-grow: 0.1;
+}
+/* line 64, sass/questions.scss */
+#question .field.buttons, #response .field.buttons {
+  flex-grow: 0.1;
+  display: flex;
+  flex-direction: row;
+}

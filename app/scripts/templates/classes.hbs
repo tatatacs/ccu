@@ -1,0 +1,28 @@
+{{#if display}}
+
+{{#each classes}}
+
+<div>
+	{{label}}
+	<div class="class" data-class='yes' data-label='{{label}}' data-index='{{@index}}'>
+		<div>
+			{{#if new}}nova aula
+			{{else}}rever aula{{/if}}
+		</div>
+	</div>
+</div>
+{{/each}}
+
+{{else}}
+
+{{#each classes}}
+
+<div class="class" data-label='{{label}}' data-index='{{@index}}'>
+	{{label}}
+
+	{{#if new}}<div> {{new}} novas aulas</div>{{/if}}
+</div>
+
+{{/each}}
+
+{{/if}}

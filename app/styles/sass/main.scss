@@ -8,12 +8,50 @@
 @import "palettes";
 @import "header";
 @import "menu";
+@import "body";
 @import "footer";
+@import "questions";
 
 html, body {
     position: relative;
-    width: 100%;
-    height: 100%;    
     font-family: verdana;
     box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+
+    height: 100%;
+    width: 100%;
+}
+
+body * {
+	font-family: verdana;
+	box-sizing: border-box;
+	background-color: transparent;
+	font-size: 14px;
+}
+
+body .title {
+	font-size: 20px;
+}
+
+button {
+	cursor: pointer;
+	border: 1px solid #000;
+}
+
+button:focus {
+	outline: none;
+}
+
+#header {
+	order: 1;
+}
+
+#body {
+	order: 2;
+}
+
+#content {
+	order: 3;
+	line-height: 120%;
 }

@@ -1,7 +1,13 @@
-<div>cenas</div>
+<div id="logo">
+	<img src="http://i1382.photobucket.com/albums/ah265/tatacostaesilva/icon_zpsrvs8in0j.png" alt="">
+	ul3i
+</div>
 
 {{#if user.name}}
-<button>Terminar sessão</button>
+<div>
+	<button class='profile {{color}} lightest'>{{user.name}}</button>
+	<button class='logout {{color}} light'>Terminar sessão</button>
+</div>
 {{else}}
-<button>Iniciar sessão</button>
+<button class='login {{color}} light'>Iniciar sessão</button>
 {{/if}}

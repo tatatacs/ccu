@@ -67,74 +67,591 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 9, sass/palettes.scss */
+/* line 21, sass/palettes.scss */
 .red {
-  color: #fff;
   background-color: #f00;
 }
-/* line 13, sass/palettes.scss */
+/* line 24, sass/palettes.scss */
 .red.light {
+  color: #000;
   background-color: #ff8080;
 }
-/* line 14, sass/palettes.scss */
+/* line 25, sass/palettes.scss */
+.red.lightest {
+  color: #000;
+  background-color: #ffbfbf;
+}
+/* line 26, sass/palettes.scss */
 .red.dark {
+  color: #fff;
   background-color: maroon;
 }
-
-/* line 18, sass/palettes.scss */
-.blue {
+/* line 27, sass/palettes.scss */
+.red.darkest {
   color: #fff;
+  background-color: #400000;
+}
+
+/* line 32, sass/palettes.scss */
+.blue {
   background-color: #00f;
 }
-/* line 22, sass/palettes.scss */
+/* line 35, sass/palettes.scss */
 .blue.light {
+  color: #000;
   background-color: #8080ff;
 }
-/* line 23, sass/palettes.scss */
+/* line 36, sass/palettes.scss */
+.blue.lightest {
+  color: #000;
+  background-color: #bfbfff;
+}
+/* line 37, sass/palettes.scss */
 .blue.dark {
+  color: #fff;
   background-color: navy;
+}
+/* line 38, sass/palettes.scss */
+.blue.darkest {
+  color: #fff;
+  background-color: #000040;
+}
+
+/* line 42, sass/palettes.scss */
+.gray {
+  background-color: #777;
+}
+/* line 45, sass/palettes.scss */
+.gray.light {
+  color: #000;
+  background-color: #bbbbbb;
+}
+/* line 46, sass/palettes.scss */
+.gray.lightest {
+  color: #000;
+  background-color: #dddddd;
+}
+/* line 47, sass/palettes.scss */
+.gray.dark {
+  color: #fff;
+  background-color: #3c3c3c;
+}
+/* line 48, sass/palettes.scss */
+.gray.darkest {
+  color: #fff;
+  background-color: #1e1e1e;
+}
+
+/* line 52, sass/palettes.scss */
+.orange {
+  background-color: orange;
+}
+/* line 55, sass/palettes.scss */
+.orange.light {
+  color: #000;
+  background-color: #ffd280;
+}
+/* line 56, sass/palettes.scss */
+.orange.lightest {
+  color: #000;
+  background-color: #ffe9bf;
+}
+/* line 57, sass/palettes.scss */
+.orange.dark {
+  color: #fff;
+  background-color: #805300;
+}
+/* line 58, sass/palettes.scss */
+.orange.darkest {
+  color: #fff;
+  background-color: #402900;
 }
 
 /* line 3, sass/header.scss */
 #header {
-  position: absolute;
-  top: 0;
-  left: 0;
+  align-self: flex-start;
   height: 60px;
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
-/* line 14, sass/header.scss */
-#header > button {
+/* line 13, sass/header.scss */
+#header > div {
+  height: 100%;
+  display: flex;
+}
+/* line 18, sass/header.scss */
+#header button {
   height: 100%;
   border: none;
-  background-color: lightgray;
   font-family: inherit;
+  min-width: 200px;
+}
+/* line 25, sass/header.scss */
+#header .profile {
+  width: 200px;
+}
+/* line 29, sass/header.scss */
+#header #logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+}
+/* line 37, sass/header.scss */
+#header #logo > img {
+  height: calc(100% - 10px);
+  margin-top: 5px;
+  margin-left: 20px;
 }
 
 /* line 4, sass/menu.scss */
 #menu {
-  height: calc(100% - 120px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  padding: 10px 10px;
+  min-width: 200px;
+  max-width: 300px;
+}
+/* line 17, sass/menu.scss */
+#menu > button {
+  flex: 1;
+  margin: 2px 0;
+  text-align: left;
+  padding-left: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+/* line 26, sass/menu.scss */
+#menu .fontsize, #menu .colorscheme {
+  flex: 0.5;
+  position: relative;
+}
+/* line 30, sass/menu.scss */
+#menu .fontsize > .pointer, #menu .colorscheme > .pointer {
+  height: 10px;
+  width: 10px;
+  border: 1px solid;
+  transform: rotate(45deg);
+  z-index: 0;
   position: absolute;
-  top: 60px;
+  right: -20px;
+  bottom: 12px;
+}
+/* line 40, sass/menu.scss */
+#menu .fontsize .color, #menu .fontsize .size, #menu .colorscheme .color, #menu .colorscheme .size {
+  position: absolute;
+  right: -215px;
+  width: 200px;
+  top: -7px;
+  height: 50px;
+  display: flex;
+  z-index: 1;
+  border: 1px solid;
+  border-radius: 5px;
+  align-items: center;
+  cursor: default;
+  background-color: #fff;
+  justify-content: space-around;
+}
+/* line 57, sass/menu.scss */
+#menu .fontsize .color svg, #menu .fontsize .size svg, #menu .colorscheme .color svg, #menu .colorscheme .size svg {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+/* line 65, sass/menu.scss */
+#menu .fontsize .size, #menu .colorscheme .size {
+  width: 150px;
+  right: -165px;
+}
+/* line 70, sass/menu.scss */
+#menu .fontsize .scheme, #menu .colorscheme .scheme {
+  flex: 1;
+  height: 100%;
+}
+/* line 74, sass/menu.scss */
+#menu .fontsize .scheme > .picker, #menu .colorscheme .scheme > .picker {
+  margin: 5px;
+  flex: 1;
+  height: calc(100% - 10px);
+  cursor: pointer;
+}
+/* line 82, sass/menu.scss */
+#menu .fontsize .hidden, #menu .colorscheme .hidden {
+  display: none;
+}
+
+/* line 3, sass/body.scss */
+#body {
+  height: calc(100% - 90px);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+}
+
+/* line 12, sass/body.scss */
+b {
+  font-weight: bold;
+}
+
+/* line 17, sass/body.scss */
+#profile {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+/* line 22, sass/body.scss */
+#profile .profileHeader {
+  display: flex;
+  padding: 20px;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+/* line 30, sass/body.scss */
+#profile .profileHeader img {
+  margin-right: 30px;
+  border-radius: 50%;
+  height: 150px;
+}
+/* line 35, sass/body.scss */
+#profile .profileHeader .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* line 41, sass/body.scss */
+#profile .profileContent {
+  display: flex;
+  padding: 0 20px;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+/* line 49, sass/body.scss */
+#profile .profileContent .info {
+  flex: 1;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 51, sass/body.scss */
+#profile .profileContent .info .title {
+  padding: 20px 0;
+}
+/* line 54, sass/body.scss */
+#profile .profileContent .info > div:not(.title) {
+  border: 1px solid;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* line 66, sass/body.scss */
+#content {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  flex: 7;
+  min-width: 400px;
+  padding: 10px;
+}
+/* line 74, sass/body.scss */
+#content .title {
+  padding: 20px;
+}
+/* line 77, sass/body.scss */
+#content .subtitle {
+  position: relative;
+  top: -10px;
+  margin-left: 20px;
+}
+/* line 82, sass/body.scss */
+#content .content-wrapper {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* line 89, sass/body.scss */
+#content .content-wrapper .content {
+  height: calc(100% - 20px);
+}
+/* line 93, sass/body.scss */
+#content .content-wrapper .content > img {
+  height: 100%;
+}
+
+/* line 101, sass/body.scss */
+#main-page, #courses {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* line 106, sass/body.scss */
+#main-page > .image, #courses > .image {
+  flex: 1;
+  background-color: orange;
+  margin: 0 20px 0 10px;
+  max-width: 400px;
+  min-width: 300px;
+}
+/* line 113, sass/body.scss */
+#main-page > .lorem, #courses > .lorem {
+  flex: 1;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 135%;
+}
+/* line 121, sass/body.scss */
+#main-page > .lorem button, #courses > .lorem button {
+  padding: 10px;
+}
+
+/* line 127, sass/body.scss */
+#courses, #classes {
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+/* line 132, sass/body.scss */
+#courses > button, #classes > button {
+  position: absolute;
+  bottom: 10px;
+  padding: 10px;
+  right: 10px;
+}
+/* line 138, sass/body.scss */
+#courses .course, #courses .class, #classes .course, #classes .class {
+  width: calc(33% - 20px);
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  min-width: 200px;
+  cursor: pointer;
+}
+/* line 153, sass/body.scss */
+#courses > div, #classes > div {
+  flex-flow: column;
+  display: flex;
+  flex-grow: 1;
+}
+/* line 158, sass/body.scss */
+#courses > div .course, #courses > div .class, #classes > div .course, #classes > div .class {
+  width: calc(100% - 60px);
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+/* line 176, sass/body.scss */
+#login {
+  display: flex;
+  flex: 1;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  border: 1px solid;
+}
+/* line 183, sass/body.scss */
+#login .title {
+  padding: 20px;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+}
+/* line 192, sass/body.scss */
+#login input, #login .label {
+  flex: 1;
+  margin: 0 20px;
+}
+/* line 197, sass/body.scss */
+#login button {
+  margin: 20px;
+  flex: 1.5;
+  font-size: 25px;
+  border-radius: 5px;
+}
+/* line 204, sass/body.scss */
+#login .label {
+  padding: 25px 0 0px 0;
+  font-size: 18px;
+}
+/* line 209, sass/body.scss */
+#login input {
+  padding: 0 10px;
+  border: 1px solid #777;
 }
 
 /* line 3, sass/footer.scss */
 #footer {
   width: 100%;
+  height: 30px;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  height: 60px;
 }
 
-/* line 13, sass/main.scss */
+/* line 1, sass/questions.scss */
+.buttons {
+  flex-grow: 0.1;
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 2, sass/questions.scss */
+.buttons button {
+  padding: 10px;
+  margin: 10px 0px 10px 5px;
+}
+
+/* line 10, sass/questions.scss */
+.questions, .responses {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+/* line 15, sass/questions.scss */
+.questions > .questions, .questions > .responses, .responses > .questions, .responses > .responses {
+  border: 1px solid;
+}
+/* line 18, sass/questions.scss */
+.questions .response, .questions .question, .responses .response, .responses .question {
+  padding: 10px;
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+/* line 24, sass/questions.scss */
+.questions > .question, .questions .response, .responses > .question, .responses .response {
+  display: flex;
+}
+/* line 28, sass/questions.scss */
+.questions > .question .field.check, .questions .response .field.check, .responses > .question .field.check, .responses .response .field.check {
+  flex: 0.2;
+}
+/* line 29, sass/questions.scss */
+.questions > .question .field.name, .questions .response .field.name, .responses > .question .field.name, .responses .response .field.name {
+  flex: 2;
+}
+/* line 30, sass/questions.scss */
+.questions > .question .field.tit, .questions .response .field.tit, .responses > .question .field.tit, .responses .response .field.tit {
+  flex: 3;
+}
+/* line 31, sass/questions.scss */
+.questions > .question .field.date, .questions .response .field.date, .responses > .question .field.date, .responses .response .field.date {
+  flex: 1;
+}
+
+/* line 36, sass/questions.scss */
+#question, #response {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+/* line 41, sass/questions.scss */
+#question .field, #response .field {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* line 46, sass/questions.scss */
+#question .field > textarea, #response .field > textarea {
+  flex-grow: 1;
+  padding: 10px;
+}
+/* line 51, sass/questions.scss */
+#question .field .label, #response .field .label {
+  padding: 10px 0;
+}
+/* line 55, sass/questions.scss */
+#question .field input, #response .field input {
+  padding: 10px;
+  flex-grow: 1;
+}
+/* line 60, sass/questions.scss */
+#question .field.name, #question .field.class, #question .field.tit, #response .field.name, #response .field.class, #response .field.tit {
+  flex-grow: 0.1;
+}
+/* line 64, sass/questions.scss */
+#question .field.buttons, #response .field.buttons {
+  flex-grow: 0.1;
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 15, sass/main.scss */
 html, body {
   position: relative;
-  width: 100%;
-  height: 100%;
   font-family: verdana;
   box-sizing: border-box;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 26, sass/main.scss */
+body * {
+  font-family: verdana;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+/* line 33, sass/main.scss */
+body .title {
+  font-size: 20px;
+}
+
+/* line 37, sass/main.scss */
+button {
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+/* line 42, sass/main.scss */
+button:focus {
+  outline: none;
+}
+
+/* line 46, sass/main.scss */
+#header {
+  order: 1;
+}
+
+/* line 50, sass/main.scss */
+#body {
+  order: 2;
+}
+
+/* line 54, sass/main.scss */
+#content {
+  order: 3;
+  line-height: 120%;
 }

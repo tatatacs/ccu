@@ -1,2 +1,72 @@
-<p>Your content here.</p>
+{{#if visitor}}
+<button data-route=''>Página da faculdade</button>
+<button data-route='courses'>Cursos</button>
+<button data-route=''>Notícias</button>
+<button data-route='informations'>Informações</button>
+<button data-route='contacts'>Contactos</button>
+<button class="fontsize">
+	Tamanho de letra
+	<div class="pointer hidden"></div>
+	<div class="size"></div>
+</button>
+<button class="colorscheme">
+	Esquema de cores
+	<div class="pointer hidden"></div>
+	<div class="color"></div>
+</button>
+<button data-route=''>Ajuda</button>
+{{/if}}
 
+{{#if student}}
+
+<button data-route='profile'>
+	Perfil do aluno
+</button>
+<button data-route='classes'>
+	Minhas Aulas
+	<div class="sub">{{classes}} novas aulas</div>
+</button>
+<button data-route='calendar'>Calendário</button>
+<button data-route='responses'>Dúvidas
+	<div class="sub">2 novas respostas</div>
+</button>
+<button data-route=''>Opções</button>
+<button class="fontsize">
+	Tamanho de letra
+	<div class="pointer hidden"></div>
+	<div class="size"></div>
+</button>
+<button class="colorscheme">
+	Esquema de cores
+	<div class="pointer hidden"></div>
+	<div class="color"></div>
+</button>
+<button data-route=''>Ajuda</button>
+{{/if}}
+
+
+{{#if teacher}}
+
+<button data-route='profile'>
+	Perfil do professor
+</button>
+<button data-route='classes'>
+	Minhas Aulas
+</button>
+<button data-route='calendar'>Calendário</button>
+<button data-route='questions'>Dúvidas
+	<div class="sub">2 novas dúvidas</div>
+</button>
+<button data-route=''>Opções</button>
+<button class="fontsize">
+	Tamanho de letra
+	<div class="pointer hidden"></div>
+	<div class="size"></div>
+</button>
+<button class="colorscheme">
+	Esquema de cores
+	<div class="pointer hidden"></div>
+	<div class="color"></div>
+</button>
+<button data-route=''>Ajuda</button>
+{{/if}}

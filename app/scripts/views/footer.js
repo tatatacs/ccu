@@ -15,17 +15,29 @@ define([
 
         id: 'footer',
 
-        className: 'footer red dark',
+        className: 'footer dark',
 
         events: {},
 
+        color: null,
+
         initialize: function () {
-            //this.listenTo(this.model, 'change', this.render);
+            this.listenTo(App.Models.Color, 'change', this.render);
         },
 
-        render: function () {
+        render: function (color) {
+            
             this.$el.html(this.template());
+            
+            this.$el.switchClass( this.color, App.Models.Color.get('color') );
+
+            this.color = App.Models.Color.get('color');
+            
             return this;
+        },
+
+        onClose: function() {
+            
         }
     });
 

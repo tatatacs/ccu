@@ -1,0 +1,60 @@
+[
+	{ 
+		"label": "Letras",
+		"router": "letras",
+		"classes": [
+			{ 
+				"label":"História da Ciência e de Cientistas",
+				"router": ""
+			},
+			{ 
+				"label":"A União Europeia",
+				"router": ""
+			},
+			{ 
+				"label":"Ciências Politicas",
+				"router": ""
+			},
+			{ 
+				"label":"Diálogos com a Arte",
+				"router": ""
+			},
+			{ 
+				"label":"Estudos Olisiponenses",
+				"router": ""
+			},
+			{ 
+				"label":"História da Arte",
+				"router": ""
+			},
+			{ 
+				"label":"História das Religiões",
+				"router": ""
+			},
+			{ 
+				"label":"História de Portugal e Cultura",
+				"router": ""
+			}
+		]
+	},
+	{ 
+		"label": "Ciências",
+		"router": "ciencias",
+		"classes": [] 
+	},
+	{ 
+		"label": "Tecnologia",
+		"router": "tecnologia",
+		"classes": []  
+	},
+	{ 
+		"label": "Artes",
+		"router": "artes",
+		"classes": []  
+	},
+	{ 
+		"label": "Línguas",
+		"router": "linguas",
+		"classes": []  
+	}
+]

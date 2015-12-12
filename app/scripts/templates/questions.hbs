@@ -1,0 +1,21 @@
+<div class='buttons'>
+	<button class="new {{color}} dark">Nova mensagem</button>
+	<button disabled>Apagar</button>
+</div>
+
+<div class='questions'>
+	<div class='header question {{color}} darkest'>
+		<div class='field check'></div>
+		<div class='field name'>Nome do professor / Curso</div>
+		<div class='field tit'>Título</div>
+		<div class='field date'>Data</div>
+	</div>
+	{{#each questions}}
+	<div class='question {{#unless read}}{{../../color}}{{/unless}} light' data-index="{{@index}}">
+		<div class='field check'><input type='checkbox'></div>
+		<div class='field name'>{{name}} / {{course}}</div>
+		<div class='field tit'>{{title}}</div>
+		<div class='field date'>{{date}}</div>
+	</div>
+	{{/each}}
+</div>

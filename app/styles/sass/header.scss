@@ -1,21 +1,43 @@
 @import "variables";
 
 #header {
-	position: absolute;
-    top: 0;
-    left: 0;
+	
+	align-self: flex-start;
+    
     height: $header;
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 
+	>div {
+		height: 100%;
+		display: flex;
+	}
 
-	>button {
+	button {
 	    height: 100%;
 	    border: none;
-	    background-color: lightgray;
 	    font-family: inherit;
+	    min-width: 200px;
+	}
+
+	.profile {
+		width: 200px;
+	}
+
+	#logo{
+	    height: 100%;
+	    display: flex;
+	    align-items: center;
+	    font-size: 35px;
+	}
+
+
+	#logo>img {
+	    height: calc(100% - 10px);
+	    margin-top: 5px;
+	    margin-left: 20px;
 	}
 
 }

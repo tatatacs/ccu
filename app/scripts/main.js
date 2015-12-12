@@ -25,26 +25,48 @@ require.config({
 require([
     'backbone',
     'routes/router',
-    'models/user'
-], function (Backbone, Router, User) {
+    'models/user',
+    'models/color',
+    'collections/classes',
+    'collections/questions',
+    'collections/responses'
+], function (Backbone, Router, User, Color, Classes, Questions, Responses) {
+
+    Backbone.View.prototype.close = function(){
+      this.remove();
+      this.unbind();
+      if (this.onClose){
+        this.onClose();
+      }
+    }
 
     window.App = {
     
-        Models: {
-            User: new User()
-        },
+        Models: {},
 
         Collections: {},
         
         Views: {},
         
-        Router: new Router(),
-        
         Helpers: {},
+
+        Router: null
         
-        Vent: _.extend({}, Backbone.Events)
-    
     };
 
+
+    App.Vent = _.extend({}, Backbone.Events);
+    
+    App.Models.User = new User();
+    App.Models.Color = new Color({color:'red'});
+
+    App.Collections.Classes = new Classes();
+
+    App.Collections.Questions = new Questions();
+    App.Collections.Responses = new Responses();
+
+    App.Router = new Router();
+
     Backbone.history.start();
+
 });

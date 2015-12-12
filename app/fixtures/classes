@@ -1,0 +1,186 @@
+{
+	"novas": 10,
+	"classes":[
+		{ 
+			"label": "História da Ciência e de Cientistas",
+			"new": 3,
+			"classes": [
+				{
+					"label": "Aula 1 - Introdução à História da Ciência",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 2 - Introdução à História da Ciência",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 3 - Introdução à História da Ciência",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 4 - Introdução à História da Ciência",
+					"new": true,
+					"completed": false
+				},
+				{
+					"label": "Aula 5 - Introdução à História da Ciência",
+					"new": true,
+					"completed": false
+				},
+				{
+					"label": "Aula 6 - Introdução à História da Ciência",
+					"new": true,
+					"completed": false
+				}
+			]
+		},
+		{ 
+			"label":"A União Europeia",
+			"new": 5,
+			"classes": [
+				{
+					"label": "Aula 1 - A União Europeia",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 2 - A União Europeia",
+					"new": true,
+					"completed": false
+				},
+				{
+					"label": "Aula 3 - A União Europeia",
+					"new": true,
+					"completed": false
+				},
+				{
+					"label": "Aula 4 - A União Europeia",
+					"new": true,
+					"completed": false
+				},
+				{
+					"label": "Aula 5 - A União Europeia",
+					"new": true,
+					"completed": false
+				},
+				{
+					"label": "Aula 6 - A União Europeia",
+					"new": true,
+					"completed": false
+				}
+			]
+		},
+		{ 
+			"label":"Ciências Politicas",
+			"new": 1,
+			"classes": [
+				{
+					"label": "Aula 1 - Ciências Politicas",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 2 - Ciências Politicas",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 3 - Ciências Politicas",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 4 - Ciências Politicas",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 5 - Ciências Politicas",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 6 - Ciências Politicas",
+					"new": true,
+					"completed": false
+				}
+			]
+		},
+		{ 
+			"label":"Diálogos com a Arte",
+			"new": 0,
+			"classes": [
+				{
+					"label": "Aula 1 - Diálogos com a Arte",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 2 - Diálogos com a Arte",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 3 - Diálogos com a Arte",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 4 - Diálogos com a Arte",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 5 - Diálogos com a Arte",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 6 - Diálogos com a Arte",
+					"new": false,
+					"completed": false
+				}
+			]
+		},
+		{ 
+			"label":"Estudos Olisiponenses",
+			"new": 1,
+			"classes": [
+				{
+					"label": "Aula 1 - Estudos Olisiponenses",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 2 - Estudos Olisiponenses",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 3 - Estudos Olisiponenses",
+					"new": false,
+					"completed": false
+				},
+				{
+					"label": "Aula 4 - Estudos Olisiponenses",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 5 - Estudos Olisiponenses",
+					"new": false,
+					"completed": true
+				},
+				{
+					"label": "Aula 6 - Estudos Olisiponenses",
+					"new": true,
+					"completed": false
+				}
+			]
+		}
+	]
+}
+	

@@ -1,0 +1,44 @@
+<div class='profileHeader {{color}} lightest'>
+	{{#if model.teacher}}
+	<img src='http://www.foundationhouse.org.au/wp-content/uploads/2014/05/Briele_YES_smallest.jpg'>
+	{{else}}
+	<img src='http://www.criticschoice.com/wp-content/uploads/avatars/544/79f7d649fcf36589a9698e09ec68ce97-bpfull.jpg'>
+	{{/if}}
+	<div class="info">
+		<div>Nome: {{model.name}}</div>
+		<div>Idade: {{model.age}}</div>
+		<div>Data de Nascimento: {{model.dob}}</div>
+		<div>Sexo: {{model.sex}}</div>
+		<div>Nacionalidade: {{model.nationality}}</div>
+		<div>Naturalidade: {{model.natural}}</div>
+		<div>Contacto: {{model.contact}}</div>
+	</div>
+</div>
+
+<div class='profileContent'>
+	
+	{{#if student}}
+	<div class="info">
+		<div class="title">Cursos Concluídos:</div>
+		<div>História da Arte do Antigo Egipto</div>
+		<div>Música Tradicional Castelhana</div>
+		<div>Introdução ao Estudo das Ciências Políticas</div>
+	</div>
+
+	<div class="info">
+		<div class="title">Inscrito em:</div>
+		<div>História da Ciência e de Cientistas</div>
+		<div>A União Europeia</div>
+		<div>Ciências Políticas</div>
+		<div>Diálogos com a Arte</div>
+		<div>Estudos Olisiponenses</div>
+	</div>
+	{{else}}
+	<div class="info">
+		<div class="title">Cursos leccionados:</div>
+		<div>História de Portugal e Cultura</div>
+		<div>A União Europeia</div>
+		<div>Estudos Olisiponenses</div>
+	</div>
+	{{/if}}
+</div>

@@ -1,6 +1,78 @@
 /* line 4, sass/menu.scss */
 #menu {
-  height: calc(100% - 120px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  padding: 10px 10px;
+  min-width: 200px;
+  max-width: 300px;
+}
+/* line 17, sass/menu.scss */
+#menu > button {
+  flex: 1;
+  margin: 2px 0;
+  text-align: left;
+  padding-left: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+/* line 26, sass/menu.scss */
+#menu .fontsize, #menu .colorscheme {
+  flex: 0.5;
+  position: relative;
+}
+/* line 30, sass/menu.scss */
+#menu .fontsize > .pointer, #menu .colorscheme > .pointer {
+  height: 10px;
+  width: 10px;
+  border: 1px solid;
+  transform: rotate(45deg);
+  z-index: 0;
   position: absolute;
-  top: 60px;
+  right: -20px;
+  bottom: 12px;
+}
+/* line 40, sass/menu.scss */
+#menu .fontsize .color, #menu .fontsize .size, #menu .colorscheme .color, #menu .colorscheme .size {
+  position: absolute;
+  right: -215px;
+  width: 200px;
+  top: -7px;
+  height: 50px;
+  display: flex;
+  z-index: 1;
+  border: 1px solid;
+  border-radius: 5px;
+  align-items: center;
+  cursor: default;
+  background-color: #fff;
+  justify-content: space-around;
+}
+/* line 57, sass/menu.scss */
+#menu .fontsize .color svg, #menu .fontsize .size svg, #menu .colorscheme .color svg, #menu .colorscheme .size svg {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+/* line 65, sass/menu.scss */
+#menu .fontsize .size, #menu .colorscheme .size {
+  width: 150px;
+  right: -165px;
+}
+/* line 70, sass/menu.scss */
+#menu .fontsize .scheme, #menu .colorscheme .scheme {
+  flex: 1;
+  height: 100%;
+}
+/* line 74, sass/menu.scss */
+#menu .fontsize .scheme > .picker, #menu .colorscheme .scheme > .picker {
+  margin: 5px;
+  flex: 1;
+  height: calc(100% - 10px);
+  cursor: pointer;
+}
+/* line 82, sass/menu.scss */
+#menu .fontsize .hidden, #menu .colorscheme .hidden {
+  display: none;
 }
