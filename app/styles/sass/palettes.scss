@@ -32,12 +32,16 @@ body.dark {
 		}
 	}
 
-	.image {
-	    background-color: #777;
-	}
+	
 
 	#content {
 	    color: #bbb;
+
+	    .content-wrapper {
+	    	.image {
+			    background-color: #777; 
+			}
+	    }
 	}
 
 	.course:not(.promo), .class {
@@ -62,6 +66,7 @@ body.dark {
 
 	.course.promo {
 		background-color: #A85A43;
+		border: 7px solid #A85A43;
 		color: #111;
 	}
 

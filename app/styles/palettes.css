@@ -34,40 +34,41 @@ body.dark #menu button:hover {
 body.dark #menu button:hover svg, body.dark #menu button:hover path {
   fill: #eee;
 }
-/* line 35, sass/palettes.scss */
-body.dark .image {
-  background-color: #777;
-}
-/* line 39, sass/palettes.scss */
+/* line 37, sass/palettes.scss */
 body.dark #content {
   color: #bbb;
 }
-/* line 43, sass/palettes.scss */
+/* line 41, sass/palettes.scss */
+body.dark #content .content-wrapper .image {
+  background-color: #777;
+}
+/* line 47, sass/palettes.scss */
 body.dark .course:not(.promo), body.dark .class {
   background-color: #bbb;
   color: #111;
   border: 7px solid #bbb;
 }
-/* line 48, sass/palettes.scss */
+/* line 52, sass/palettes.scss */
 body.dark .course:not(.promo) svg, body.dark .class svg {
   fill: #111;
 }
-/* line 53, sass/palettes.scss */
+/* line 57, sass/palettes.scss */
 body.dark .course:not(.promo):hover {
   background-color: transparent;
   border: 7px solid;
   color: #bbb;
 }
-/* line 58, sass/palettes.scss */
+/* line 62, sass/palettes.scss */
 body.dark .course:not(.promo):hover svg {
   fill: #bbb;
 }
-/* line 63, sass/palettes.scss */
+/* line 67, sass/palettes.scss */
 body.dark .course.promo {
   background-color: #A85A43;
+  border: 7px solid #A85A43;
   color: #111;
 }
-/* line 68, sass/palettes.scss */
+/* line 73, sass/palettes.scss */
 body.dark .course.promo:hover {
   background-color: transparent;
   border: 7px solid #A85A43;

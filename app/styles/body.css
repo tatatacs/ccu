@@ -135,7 +135,7 @@ b {
 #courses, #classes {
   flex-flow: row wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-grow: 1;
 }
 /* line 132, sass/body.scss */
@@ -152,27 +152,31 @@ b {
   display: flex;
   align-items: center;
   padding: 0 20px;
+  min-height: 137px;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
+  margin: 20px;
   min-width: 200px;
+  max-width: 400px;
   cursor: pointer;
   box-sizing: border-box;
 }
-/* line 153, sass/body.scss */
+/* line 157, sass/body.scss */
 #courses .course svg, #courses .class svg, #classes .course svg, #classes .class svg {
   max-height: 100px;
   max-width: 100px;
-  margin-bottom: 20px;
+  height: 40%;
+  width: 40%;
+  padding: 10px;
 }
-/* line 160, sass/body.scss */
+/* line 166, sass/body.scss */
 #courses > div, #classes > div {
   flex-flow: column;
   display: flex;
   flex-grow: 1;
 }
-/* line 165, sass/body.scss */
+/* line 171, sass/body.scss */
 #courses > div .course, #courses > div .class, #classes > div .course, #classes > div .class {
   width: calc(100% - 60px);
   border: 1px solid;
@@ -187,14 +191,14 @@ b {
   cursor: pointer;
   margin-bottom: 25px;
 }
-/* line 179, sass/body.scss */
+/* line 185, sass/body.scss */
 #courses > div .course svg, #courses > div .class svg, #classes > div .course svg, #classes > div .class svg {
   max-height: 100px;
   max-width: 100px;
   margin-bottom: 20px;
 }
 
-/* line 189, sass/body.scss */
+/* line 195, sass/body.scss */
 #login {
   display: flex;
   flex: 1;
@@ -202,7 +206,7 @@ b {
   justify-content: space-around;
   border: 1px solid;
 }
-/* line 196, sass/body.scss */
+/* line 202, sass/body.scss */
 #login .title {
   padding: 20px;
   flex: 2;
@@ -211,24 +215,24 @@ b {
   justify-content: center;
   border-bottom: 1px solid #000;
 }
-/* line 205, sass/body.scss */
+/* line 211, sass/body.scss */
 #login input, #login .label {
   flex: 1;
   margin: 0 20px;
 }
-/* line 210, sass/body.scss */
+/* line 216, sass/body.scss */
 #login button {
   margin: 20px;
   flex: 1.5;
   font-size: 25px;
   border-radius: 5px;
 }
-/* line 217, sass/body.scss */
+/* line 223, sass/body.scss */
 #login .label {
   padding: 25px 0 0px 0;
   font-size: 18px;
 }
-/* line 222, sass/body.scss */
+/* line 228, sass/body.scss */
 #login input {
   padding: 0 10px;
   border: 1px solid #777;
