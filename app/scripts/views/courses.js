@@ -24,7 +24,7 @@ define([
         className: 'courses',
 
         events: {
-            'click .course:not(.course[data-router="contactos"])': 'renderClasses',
+            'click .course[data-router!="contactos"]': 'renderClasses',
             'click .course[data-router="contactos"]': 'contacts',
             'click .class': 'renderClass'
         },
@@ -58,12 +58,12 @@ define([
 
         renderClasses: function(ev) {
 
-            window.location.hash = 'courses/'+$(ev.currentTarget).html();
+            window.location.hash = 'courses/'+$(ev.currentTarget).attr('data-router');
 
             var classes = this.collection.at(0).get('classes');
 
-            App.Vent.trigger('breadcrumbs', { title: $(ev.currentTarget).html() } );
-            App.Vent.trigger('subtitle', { subtitle: classes.length + " aulas em " + $(ev.currentTarget).html() } );
+            App.Vent.trigger('breadcrumbs', { title: $(ev.currentTarget).find('.label').html() } );
+            App.Vent.trigger('subtitle', { subtitle: classes.length + " aulas em " + $(ev.currentTarget).find('.label').html() } );
 
             this.$el.html(this.classes({
                 classes: classes

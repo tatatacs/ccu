@@ -1,72 +1,136 @@
-/*
-Error: Undefined variable: "$red".
-        on line 22 of C:/Users/maria_000/Desktop/CCU-projecto/ccu3/app/styles/sass/palettes.scss
+/* line 1, sass/palettes.scss */
+body.dark {
+  background-color: #141311;
+}
+/* line 4, sass/palettes.scss */
+body.dark #header {
+  background-color: #753928;
+  color: #d8d8d8;
+}
+/* line 8, sass/palettes.scss */
+body.dark #header #logo > svg {
+  fill: #d8d8d8;
+}
+/* line 13, sass/palettes.scss */
+body.dark #menu {
+  background-color: #b7b7b7;
+}
+/* line 15, sass/palettes.scss */
+body.dark #menu button {
+  -webkit-transition: padding-left 0.5s;
+  -o-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
+}
+/* line 20, sass/palettes.scss */
+body.dark #menu button:hover {
+  background-color: #222;
+  color: #eee;
+  padding-left: 30px;
+  -webkit-transition: padding-left 0.5s;
+  -o-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
+}
+/* line 29, sass/palettes.scss */
+body.dark #menu button:hover svg, body.dark #menu button:hover path {
+  fill: #eee;
+}
+/* line 35, sass/palettes.scss */
+body.dark .image {
+  background-color: #777;
+}
+/* line 39, sass/palettes.scss */
+body.dark #content {
+  color: #bbb;
+}
+/* line 43, sass/palettes.scss */
+body.dark .course:not(.promo), body.dark .class {
+  background-color: #bbb;
+  color: #111;
+  border: 7px solid #bbb;
+}
+/* line 48, sass/palettes.scss */
+body.dark .course:not(.promo) svg, body.dark .class svg {
+  fill: #111;
+}
+/* line 53, sass/palettes.scss */
+body.dark .course:not(.promo):hover {
+  background-color: transparent;
+  border: 7px solid;
+  color: #bbb;
+}
+/* line 58, sass/palettes.scss */
+body.dark .course:not(.promo):hover svg {
+  fill: #bbb;
+}
+/* line 63, sass/palettes.scss */
+body.dark .course.promo {
+  background-color: #A85A43;
+  color: #111;
+}
+/* line 68, sass/palettes.scss */
+body.dark .course.promo:hover {
+  background-color: transparent;
+  border: 7px solid #A85A43;
+  color: #bbb;
+}
 
-17: 	color: $white;
-18: 	background-color: scale-color($color, $lightness: -50%);
-19: }
-20: 
-21: .red {
-22: 	background-color: $red;
-23: 
-24: 	&.light { @include light($red); }
-25: 	&.lightest { @include lightest($red); }
-26: 	&.dark { @include dark($red); }
-27: 	&.darkest { @include darkest($red); }
+/*@mixin light($color) {
+	color: $black;
+	background-color: scale-color($color, $lightness: 50%);
+}
 
-Backtrace:
-C:/Users/maria_000/Desktop/CCU-projecto/ccu3/app/styles/sass/palettes.scss:22
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `map'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-C:/Ruby21/bin/compass:23:in `load'
-C:/Ruby21/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$red\".\A         on line 22 of C:/Users/maria_000/Desktop/CCU-projecto/ccu3/app/styles/sass/palettes.scss\A \A 17: 	color: $white;\A 18: 	background-color: scale-color($color, $lightness: -50%);\A 19: }\A 20: \A 21: .red {\A 22: 	background-color: $red;\A 23: \A 24: 	&.light { @include light($red); }\A 25: 	&.lightest { @include lightest($red); }\A 26: 	&.dark { @include dark($red); }\A 27: 	&.darkest { @include darkest($red); }"; }
+@mixin lightest($color) {
+	color: $black;
+	background-color: scale-color($color, $lightness: 75%);
+}
+
+@mixin darkest($color) {
+	color: $white;
+	background-color: scale-color($color, $lightness: -75%);
+}
+
+@mixin dark($color) {
+	color: $white;
+	background-color: scale-color($color, $lightness: -50%);
+}
+
+.red {
+	background-color: $red;
+
+	&.light { @include light($red); }
+	&.lightest { @include lightest($red); }
+	&.dark { @include dark($red); }
+	&.darkest { @include darkest($red); }
+
+
+}
+
+.blue {
+	background-color: $blue;
+
+	&.light { @include light($blue); }
+	&.lightest { @include lightest($blue); }
+	&.dark { @include dark($blue); }
+	&.darkest { @include darkest($blue); }
+
+}
+
+.gray {
+	background-color: #777;
+
+	&.light { @include light(#777); }
+	&.lightest { @include lightest(#777); }
+	&.dark { @include dark(#777); }
+	&.darkest { @include darkest(#777); }
+
+}
+
+.orange {
+	background-color: orange;
+
+	&.light { @include light(orange); }
+	&.lightest { @include lightest(orange); }
+	&.dark { @include dark(orange); }
+	&.darkest { @include darkest(orange); }
+
+}*/

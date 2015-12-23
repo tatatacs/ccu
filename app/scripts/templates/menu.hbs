@@ -1,20 +1,18 @@
 {{#if visitor}}
-<button data-route=''>Página da faculdade</button>
-<button data-route='courses'>Cursos</button>
-<button data-route=''>Notícias</button>
-<button data-route='informations'>Informações</button>
-<button data-route='contacts'>Contactos</button>
+<button data-route=''>{{>home}}Página da faculdade</button>
+<button data-route='courses'>{{>courses}}Cursos</button>
+<button data-route=''>{{>news}}Notícias</button>
+<button data-route='informations'>{{>info}}Informações</button>
+<button data-route='contacts'>{{>contacts}}Contactos</button>
 <button class="fontsize">
+	{{>fontsize}}
 	Tamanho de letra
-	<div class="pointer hidden"></div>
-	<div class="size"></div>
 </button>
 <button class="colorscheme">
+	{{>colorscheme}}
 	Esquema de cores
-	<div class="pointer hidden"></div>
-	<div class="color"></div>
 </button>
-<button data-route=''>Ajuda</button>
+<button data-route=''>{{>help}}Ajuda</button>
 {{/if}}
 
 {{#if student}}

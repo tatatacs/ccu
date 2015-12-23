@@ -1,4 +1,79 @@
-@mixin light($color) {
+body.dark {
+    background-color: #141311;
+
+	#header {
+	    background-color: #753928;
+	    color: #d8d8d8;
+
+	    #logo>svg {
+	    	fill: #d8d8d8;
+	    }
+	}
+
+	#menu {
+		background-color: #b7b7b7;
+		button {
+			-webkit-transition: padding-left 0.5s;
+		    -o-transition: padding-left 0.5s;
+		    transition: padding-left 0.5s;
+		}
+		button:hover {
+		    background-color: #222;
+		    color: #eee;
+		    padding-left: 30px;
+
+		    -webkit-transition: padding-left 0.5s;
+		    -o-transition: padding-left 0.5s;
+		    transition: padding-left 0.5s;
+
+		    svg, path {
+		    	fill: #eee;
+		    }
+		}
+	}
+
+	.image {
+	    background-color: #777;
+	}
+
+	#content {
+	    color: #bbb;
+	}
+
+	.course:not(.promo), .class {
+		background-color: #bbb;
+		color: #111;
+		border: 7px solid #bbb;
+
+		svg {
+			fill: #111;
+		}
+	}
+
+	.course:not(.promo):hover {
+		background-color:transparent;
+		border: 7px solid;
+		color: #bbb;
+
+		svg {
+			fill: #bbb;
+		}
+	}
+
+	.course.promo {
+		background-color: #A85A43;
+		color: #111;
+	}
+
+	.course.promo:hover {
+		background-color: transparent;
+		border: 7px solid #A85A43;
+		color: #bbb;
+	}
+}
+
+
+/*@mixin light($color) {
 	color: $black;
 	background-color: scale-color($color, $lightness: 50%);
 }
@@ -57,4 +132,4 @@
 	&.dark { @include dark(orange); }
 	&.darkest { @include darkest(orange); }
 
-}
+}*/

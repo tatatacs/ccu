@@ -1,10 +1,9 @@
 @import "variables";
 
 #body {
-	height: calc(100% - #{$header + $footer});
 	width: 100%;
-    padding: 10px;
     display: flex;
+    flex: 1;
     flex-flow: row wrap;
     overflow: hidden;
 }
@@ -129,15 +128,16 @@ b {
 	display: flex;
 	justify-content: space-around;
 	flex-grow: 1;
+
 	>button {
 		position: absolute;
 	    bottom: 10px;
 	    padding: 10px;
 	    right: 10px;
 	}
+
 	.course, .class {
 		width: calc(33% - 20px);
-	    border: 1px solid;
 	    border-radius: 5px;
 	    display: flex;
 	    align-items: center;
@@ -148,6 +148,13 @@ b {
 	    margin: 10px;
 	    min-width: 200px;
 	    cursor: pointer;
+	    box-sizing:border-box;
+
+	    svg {
+			max-height: 100px;
+			max-width: 100px;
+			margin-bottom: 20px;
+		}
 	}
 
 	>div {
@@ -168,6 +175,12 @@ b {
 		    min-width: 200px;
 		    cursor: pointer;
 		    margin-bottom: 25px;
+
+		    svg {
+				max-height: 100px;
+				max-width: 100px;
+				margin-bottom: 20px;
+			}
 		}
 	}
 
