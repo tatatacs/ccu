@@ -20,17 +20,24 @@ define([
 
         className: 'menu',
 
-        colorView: new ColorView(),
-        sizeView: new SizeView(),
-
         events: {
-            'click button:not(.colorscheme, .fontsize)': 'route',
+            'click button:not(.colorscheme, .fontsize, .fontsize *)': 'route',
             'click button.colorscheme': 'changeColors',
             'click button.fontsize': 'changeSizes'
         },
 
         initialize: function () {
             this.listenTo(App.Models.User, 'change', this.render);
+            App.Vent.on('menu:closedColorView', this.closedColorView, this);
+            App.Vent.on('menu:closedSizeView', this.closedSizeView, this);
+        },
+
+        closedColorView: function() {
+            this.colorView = null;
+        },
+
+        closedSizeView: function() {
+            this.sizeView = null;
         },
 
         render: function () {
@@ -46,9 +53,6 @@ define([
                         visitor: App.Models.User.get('visitor'),
                         classes: response.novas
                     }));
-
-                    _this.$('.color').replaceWith(_this.colorView.render().el);
-                    _this.$('.size').replaceWith(_this.sizeView.render().el);
                 }
             });
 
@@ -57,21 +61,48 @@ define([
 
         route: function(ev) {
             
+            console.log('routed it anyway like the lil bitch i am')
+
+            if(this.sizeView) {
+                this.sizeView.animateClose();
+                this.sizeView = null;
+            }
+            if(this.colorView) {
+                this.colorView.close();
+                this.colorView = null;
+            }
+
             window.location.hash = $(ev.currentTarget).attr('data-route');
         
         },
 
-        changeColors: function() {
-            this.colorView.$el.toggleClass('hidden');
-            this.$('.colorscheme>.pointer').toggleClass('hidden');
+        changeColors: function(ev) {
+
+            if(!this.colorView) {
+                this.colorView = new ColorView();
+
+                $(ev.currentTarget).append(this.colorView.render().el);
+
+                this.$('.colorscheme>.pointer').removeClass('hidden');
+            }
         },
 
-        changeSizes: function() {
-            this.sizeView.$el.removeClass('hidden');
-            this.$('.fontsize>.pointer').removeClass('hidden');
+        changeSizes: function(ev) {
+
+            if(!this.sizeView) {
+                this.sizeView = new SizeView();
+
+                $(ev.currentTarget).append(this.sizeView.render().el);
+
+                this.$('.fontsize>.pointer').removeClass('hidden');
+            } 
         },
 
         onClose: function() {
+
+            App.Vent.off('menu:closedColorView');
+            App.Vent.off('menu:closedSizeView');
+
             this.colorView.close();
             this.colorView = null;
             this.sizeView.close();

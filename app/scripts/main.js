@@ -50,14 +50,22 @@ require([
         
         Helpers: {},
 
-        Router: null
+        Router: null,
+
+        fontsize: 14,
+        titlesize: 18,
+
+        color: 'red'
         
     };
 
+    App.sheet = document.createElement('style')
+    document.body.appendChild(App.sheet);
 
     App.Vent = _.extend({}, Backbone.Events);
     
     App.Models.User = new User();
+
     App.Models.Color = new Color({color:'red'});
 
     App.Collections.Classes = new Classes();

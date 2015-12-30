@@ -9,56 +9,157 @@ define([
     'use strict';
 
     var SizeView = Backbone.View.extend({
+        
         template: JST['app/scripts/templates/size.hbs'],
 
         tagName: 'div',
 
         id: 'size',
 
-        className: 'size hidden',
-
-        fontsize: 14,
-        titlesize: 18,
+        className: 'size',
 
         events: {
-            'click #plus': 'larger',
-            'click #minus': 'smaller'
+            'click .titleSize>#plus:not(.disabled)': 'largerTitle',
+            'click .titleSize>#minus:not(.disabled)': 'smallerTitle',
+            'click .fontSize>#plus:not(.disabled)': 'largerFont',
+            'click .fontSize>#minus:not(.disabled)': 'smallerFont',
+            'click #save': 'save',
+            'click #cancel': 'animateClose'
         },
 
         initialize: function () {
-            
+            this.fontsize = App.fontsize;
+            this.titlesize = App.titlesize;
         },
 
         render: function () {
             
-            this.$el.html(this.template({size:this.fontsize}));
+            var _this = this;
+
+            this.$el.html(this.template({
+                titlesize: App.titlesize,
+                fontsize: App.fontsize
+            }));
+
+            if(this.fontsize === 20) {
+                this.$('.fontSize>#plus').attr('class','disabled');
+            }
+            if(this.fontsize === 10) {
+                this.$('.fontSize>#minus').attr('class','disabled');
+            }
+            if(this.titlesize === 25) {
+                this.$('.titleSize>#plus').attr('class','disabled');
+            }
+            if(this.titlesize === 10) {
+                this.$('.titleSize>#minus').attr('class','disabled');
+            }
+
+            setTimeout(function(){
+                _this.$el.animate({opacity:1},{duration:240, queue:false});
+            }, 0);
 
             return this;
         },
 
-        larger: function() {
+        
+
+        largerFont: function() {
             
+            if(this.fontsize + 1 === 20) {
+                this.$('.fontSize>#plus').attr('class','disabled');
+            }
+            if(this.fontsize + 1 > 10) {
+                this.$('.fontSize>#minus').attr('class', false);
+            }
+
             this.fontsize += 1;
-            this.titlesize += 1;
-
-            $('body *').css('font-size', this.fontsize + 'px');
-            $('body .title').css('font-size', this.titlesize + 'px');
-
-            this.render();
+            this.updateFont();
         },
 
-        smaller: function() {
+        smallerFont: function() {
+
+            if(this.fontsize - 1 === 10) {
+                this.$('.fontSize>#minus').attr('class','disabled');
+            }
+            if(this.fontsize - 1 < 20) {
+                this.$('.fontSize>#plus').attr('class', false);
+            }
             
             this.fontsize -= 1;
-            this.titlesize -= 1;
+            this.updateFont();
+        },
 
-            $('body *').css('font-size', this.fontsize + 'px');
-            $('body .title').css('font-size', this.titlesize + 'px');
+        updateFont: function() {
 
-            this.render();
+            $("body *:not(.title, .labelFontSize, .labelTitleSize, .size #save, .size #cancel, .size > .label)").css('font-size', this.fontsize);
+            this.$('.labelFontSize').html(this.fontsize);
         },
 
         
+
+        largerTitle: function() {
+            
+            if(this.titlesize + 1 === 25) {
+                this.$('.titleSize>#plus').attr('class','disabled');
+            }
+            if(this.titlesize + 1 > 10) {
+                this.$('.titleSize>#minus').attr('class', false);
+            }
+
+            this.titlesize += 1;
+            this.updateTitle();
+        },
+
+        smallerTitle: function() {
+            
+            if(this.titlesize - 1 === 10) {
+                this.$('.titleSize>#minus').attr('class','disabled');
+            }
+            if(this.titlesize - 1 < 25) {
+                this.$('.titleSize>#plus').attr('class', false);
+            }
+
+            this.titlesize -= 1;
+            this.updateTitle();
+        },
+
+        updateTitle: function() {
+
+            $(".title").css('font-size', this.titlesize);
+            this.$('.labelTitleSize').html(this.titlesize);
+        },
+
+        save: function() {
+            
+            var _this = this;
+
+            this.animateClose();
+        },
+
+        animateClose: function() {
+
+            var _this = this;
+
+            this.$el.animate({opacity:0},{
+                duration:250, 
+                queue:false, 
+                complete:function(){
+                    
+                    App.fontsize = _this.fontsize;
+                    App.titlesize = _this.titlesize;
+                    App.sheet.innerHTML = "body * { font-size: " + App.fontsize + "px; } body .title { font-size: " + App.titlesize + "px; }";
+
+                    setTimeout(function() {
+                        _this.close();
+                    }, 0);
+                    
+                }
+            });
+        },
+
+        onClose: function() {
+           App.Vent.trigger('menu:closedSizeView');
+        }
 
     });
 

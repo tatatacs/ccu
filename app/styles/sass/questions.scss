@@ -1,13 +1,18 @@
-.buttons {
-	button {
-		padding: 10px;
-		margin: 10px 0px 10px 5px;
-	}
-	flex-grow: 0.1;
-	display: flex;
-	justify-content: flex-end;
-}
+
+
+	
 .questions,.responses {
+
+	.buttons {
+		button {
+			padding: 10px;
+			margin: 10px 0px 10px 5px;
+		}
+		flex-grow: 0.1;
+		display: flex;
+		justify-content: flex-end;
+	}
+
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;

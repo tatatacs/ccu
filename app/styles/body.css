@@ -90,10 +90,10 @@ b {
 /* line 82, sass/body.scss */
 #content .content-wrapper {
   padding: 10px;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
+  overflow: hidden;
 }
 /* line 89, sass/body.scss */
 #content .content-wrapper .content {
@@ -113,7 +113,7 @@ b {
 /* line 106, sass/body.scss */
 #main-page > .image, #courses > .image {
   flex: 1;
-  background-color: orange;
+  background-color: #eee;
   margin: 0 20px 0 10px;
   max-width: 400px;
   min-width: 300px;
@@ -124,29 +124,33 @@ b {
   text-align: justify;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  line-height: 135%;
+  line-height: 150%;
 }
-/* line 121, sass/body.scss */
+/* line 120, sass/body.scss */
+#main-page > .lorem p, #courses > .lorem p {
+  margin-bottom: 15px;
+}
+/* line 124, sass/body.scss */
 #main-page > .lorem button, #courses > .lorem button {
+  margin-top: auto;
   padding: 10px;
 }
 
-/* line 127, sass/body.scss */
+/* line 131, sass/body.scss */
 #courses, #classes {
   flex-flow: row wrap;
   display: flex;
   justify-content: space-around;
   flex-grow: 1;
 }
-/* line 132, sass/body.scss */
+/* line 136, sass/body.scss */
 #courses > button, #classes > button {
   position: absolute;
   bottom: 10px;
   padding: 10px;
   right: 10px;
 }
-/* line 138, sass/body.scss */
+/* line 142, sass/body.scss */
 #courses .course, #courses .class, #classes .course, #classes .class {
   width: calc(33% - 20px);
   border: 1px solid;
@@ -161,13 +165,13 @@ b {
   min-width: 200px;
   cursor: pointer;
 }
-/* line 153, sass/body.scss */
+/* line 157, sass/body.scss */
 #courses > div, #classes > div {
   flex-flow: column;
   display: flex;
   flex-grow: 1;
 }
-/* line 158, sass/body.scss */
+/* line 162, sass/body.scss */
 #courses > div .course, #courses > div .class, #classes > div .course, #classes > div .class {
   width: calc(100% - 60px);
   border: 1px solid;
@@ -183,7 +187,7 @@ b {
   margin-bottom: 25px;
 }
 
-/* line 176, sass/body.scss */
+/* line 180, sass/body.scss */
 #login {
   display: flex;
   flex: 1;
@@ -191,7 +195,7 @@ b {
   justify-content: space-around;
   border: 1px solid;
 }
-/* line 183, sass/body.scss */
+/* line 187, sass/body.scss */
 #login .title {
   padding: 20px;
   flex: 2;
@@ -200,24 +204,24 @@ b {
   justify-content: center;
   border-bottom: 1px solid #000;
 }
-/* line 192, sass/body.scss */
+/* line 196, sass/body.scss */
 #login input, #login .label {
   flex: 1;
   margin: 0 20px;
 }
-/* line 197, sass/body.scss */
+/* line 201, sass/body.scss */
 #login button {
   margin: 20px;
   flex: 1.5;
   font-size: 25px;
   border-radius: 5px;
 }
-/* line 204, sass/body.scss */
+/* line 208, sass/body.scss */
 #login .label {
   padding: 25px 0 0px 0;
   font-size: 18px;
 }
-/* line 209, sass/body.scss */
+/* line 213, sass/body.scss */
 #login input {
   padding: 0 10px;
   border: 1px solid #777;
