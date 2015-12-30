@@ -54,7 +54,7 @@ body.dark {
 		}
 	}
 
-	.course:not(.promo):hover {
+	.course:not(.promo):hover, .class:hover {
 		background-color:transparent;
 		border: 7px solid;
 		color: #bbb;

@@ -53,13 +53,13 @@ body.dark .course:not(.promo) svg, body.dark .class svg {
   fill: #111;
 }
 /* line 57, sass/palettes.scss */
-body.dark .course:not(.promo):hover {
+body.dark .course:not(.promo):hover, body.dark .class:hover {
   background-color: transparent;
   border: 7px solid;
   color: #bbb;
 }
 /* line 62, sass/palettes.scss */
-body.dark .course:not(.promo):hover svg {
+body.dark .course:not(.promo):hover svg, body.dark .class:hover svg {
   fill: #bbb;
 }
 /* line 67, sass/palettes.scss */

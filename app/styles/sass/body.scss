@@ -86,41 +86,48 @@ b {
 	    height: 100%;
 
 		.content {
-
 			height: calc(100% - 20px);
-
+    		overflow-y: auto;
 			>img {
 				height: 100%;
 			}
 		}
-
 	}
 }
 
 #main-page, #courses {
-	flex: 1;
     display: flex;
     flex-flow: row wrap;
+    flex: 1;
+    overflow-y: auto;
 
     >.image {
-    	flex: 1;
-	    background-color: orange;
 	    margin: 0 20px 0 10px;
-	    max-width: 400px;
-    	min-width: 300px;
+	    width: 40%;
     }
     >.lorem {
-    	flex: 1;
-    	text-align:justify;
-    	display:flex;
-    	flex-direction: column;
-    	justify-content: space-between;
-    	line-height: 135%;
+	    flex: 1;
+	    text-align: justify;
+	    display: flex;
+	    flex-direction: column;
+	    line-height: 200%;
+	    overflow: auto;
+	    position: relative;
+		
+		p {
+			margin-bottom: 20px;
+		}
 
-    	button {
-    		padding: 10px;
+    	>button {
+	    	position: absolute;
+		    right: 10px;
+		    bottom: 0px;
+		    width: calc(100% - 10px);
+		    padding: 10px;
+		    border: 1px solid;
     	}
     }
+    
 }
 
 #courses, #classes {
@@ -137,22 +144,18 @@ b {
 	}
 
 	.course, .class {
-	    width: calc(33% - 20px);
-	    border-radius: 5px;
+		border-radius: 5px;
 	    display: flex;
 	    align-items: center;
 	    padding: 0 20px;
-	    min-height: 137px;
-	    flex-grow: 1;
 	    flex-direction: column;
 	    justify-content: center;
-	    margin: 20px;
-
-	    min-width: 200px;
-	    max-width: 400px;
-
+	    margin: 0 20px 20px 0;
 	    cursor: pointer;
 	    box-sizing: border-box;
+	    min-width: 200px;
+	    flex: 1;
+	    text-align: center;
 
 	    svg {
 		    max-height: 100px;
@@ -162,34 +165,6 @@ b {
 		    padding: 10px;
 		}
 	}
-
-	>div {
-		flex-flow: column;
-		display: flex;
-		flex-grow: 1;
-
-	    .course, .class {
-	    	width: calc(100% - 60px);
-		    border: 1px solid;
-		    border-radius: 5px;
-		    display: flex;
-		    align-items: center;
-		    padding: 0 20px;
-		    flex-grow: 1;
-		    flex-direction: column;
-		    justify-content: center;
-		    min-width: 200px;
-		    cursor: pointer;
-		    margin-bottom: 25px;
-
-		    svg {
-				max-height: 100px;
-				max-width: 100px;
-				margin-bottom: 20px;
-			}
-		}
-	}
-
 }
 
 #login {
