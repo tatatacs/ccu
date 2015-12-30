@@ -1,7 +1,8 @@
-{{#each courses}}
 
-<div class="course" data-router="{{router}}">{{label}}</div>
+<div class="course" data-router="letras">{{>literature}} <div class="label">Letras</div></div>
+<div class="course" data-router="ciencias">{{>science}} <div class="label">Ciências</div></div>
+<div class="course" data-router="tecnologia">{{>technology}} <div class="label">Tecnologia</div></div>
+<div class="course" data-router="artes">{{>arts}} <div class="label">Artes</div></div>
+<div class="course" data-router="linguas">{{>languages}} <div class="label">Línguas</div></div>
 
-{{/each}}
-
-<div class="course {{color}} light" data-router="contactos">Inscreva-se ja, apenas 120€ por ano!</div>
+<div class="course promo" data-router="contactos">Inscreva-se ja, apenas 120€ por ano!</div>

@@ -1,7 +1,7 @@
 /* line 3, sass/header.scss */
 #header {
   align-self: flex-start;
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -27,12 +27,14 @@
 #header #logo {
   height: 100%;
   display: flex;
+  width: 250px;
   align-items: center;
+  justify-content: center;
   font-size: 35px;
 }
-/* line 37, sass/header.scss */
-#header #logo > img {
-  height: calc(100% - 10px);
-  margin-top: 5px;
-  margin-left: 20px;
+/* line 38, sass/header.scss */
+#header #logo > svg {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
 }

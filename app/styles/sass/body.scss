@@ -1,10 +1,9 @@
 @import "variables";
 
 #body {
-	height: calc(100% - #{$header + $footer});
 	width: 100%;
-    padding: 10px;
     display: flex;
+    flex: 1;
     flex-flow: row wrap;
     overflow: hidden;
 }
@@ -87,94 +86,88 @@ b {
 	    overflow: hidden;
 
 		.content {
-
 			height: calc(100% - 20px);
-
+    		overflow-y: auto;
 			>img {
 				height: 100%;
 			}
 		}
-
 	}
 }
 
 #main-page, #courses {
-	flex: 1;
     display: flex;
     flex-flow: row wrap;
+    flex: 1;
+    overflow-y: auto;
 
     >.image {
     	flex: 1;
 	    background-color: #eee;
 	    margin: 0 20px 0 10px;
-	    max-width: 400px;
-    	min-width: 300px;
+	    width: 40%;
     }
     >.lorem {
-    	flex: 1;
-    	text-align:justify;
-    	display:flex;
-    	flex-direction: column;
-    	line-height: 150%;
 
+	    flex: 1;
+	    text-align: justify;
+	    display: flex;
+	    flex-direction: column;
+	    line-height: 200%;
+	    overflow: auto;
+	    position: relative;
+		
 		p {
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 		}
 
-    	button {
-    		margin-top: auto;
-    		padding: 10px;
+    	>button {
+	    	position: absolute;
+		    right: 10px;
+		    bottom: 0px;
+		    width: calc(100% - 10px);
+		    padding: 10px;
+		    border: 1px solid;
     	}
     }
+    
 }
 
 #courses, #classes {
-	flex-flow: row wrap;
-	display: flex;
-	justify-content: space-around;
-	flex-grow: 1;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+
 	>button {
 		position: absolute;
 	    bottom: 10px;
 	    padding: 10px;
 	    right: 10px;
 	}
+
 	.course, .class {
-		width: calc(33% - 20px);
-	    border: 1px solid;
-	    border-radius: 5px;
+		border-radius: 5px;
 	    display: flex;
 	    align-items: center;
 	    padding: 0 20px;
-	    flex-grow: 1;
 	    flex-direction: column;
 	    justify-content: center;
-	    margin: 10px;
-	    min-width: 200px;
+	    margin: 0 20px 20px 0;
 	    cursor: pointer;
-	}
+	    box-sizing: border-box;
+	    min-width: 200px;
+	    flex: 1;
+	    text-align: center;
 
-	>div {
-		flex-flow: column;
-		display: flex;
-		flex-grow: 1;
-
-	    .course, .class {
-	    	width: calc(100% - 60px);
-		    border: 1px solid;
-		    border-radius: 5px;
-		    display: flex;
-		    align-items: center;
-		    padding: 0 20px;
-		    flex-grow: 1;
-		    flex-direction: column;
-		    justify-content: center;
-		    min-width: 200px;
-		    cursor: pointer;
-		    margin-bottom: 25px;
+	    svg {
+		    max-height: 100px;
+		    max-width: 100px;
+		    height: 40%;
+		    width: 40%;
+		    padding: 10px;
 		}
 	}
-
 }
 
 #login {
