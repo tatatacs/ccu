@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -296,7 +296,7 @@ body.dark #profile .title {
   width: 250px;
   align-items: center;
   justify-content: center;
-  font-size: 35px;
+  font-size: 35px !important;
 }
 /* line 38, sass/header.scss */
 #header #logo > svg {
@@ -391,32 +391,19 @@ body.dark #profile .title {
 }
 /* line 83, sass/menu.scss */
 #menu .fontsize .size svg, #menu .colorscheme .size svg {
-<<<<<<< HEAD
-  height: 35px;
-  width: 35px;
-=======
   height: 40px;
   width: 40px;
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
   cursor: pointer;
   border: 1px solid;
   padding: 5px;
   border-radius: 5px;
   margin-right: 0;
 }
-<<<<<<< HEAD
-/* line 91, sass/menu.scss */
-#menu .fontsize .size svg.disabled, #menu .colorscheme .size svg.disabled {
-  opacity: 0.5;
-}
-/* line 96, sass/menu.scss */
-=======
 /* line 92, sass/menu.scss */
 #menu .fontsize .size svg.disabled, #menu .colorscheme .size svg.disabled {
   opacity: 0.5;
 }
 /* line 97, sass/menu.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #menu .fontsize .size .titleSize, #menu .fontsize .size .fontSize, #menu .colorscheme .size .titleSize, #menu .colorscheme .size .fontSize {
   display: flex;
   flex-flow: row;
@@ -427,45 +414,22 @@ body.dark #profile .title {
   margin-bottom: 10px;
   align-items: center;
 }
-<<<<<<< HEAD
-/* line 106, sass/menu.scss */
-#menu .fontsize .size .titleSize .labelTitleSize, #menu .fontsize .size .titleSize .labelFontSize, #menu .fontsize .size .fontSize .labelTitleSize, #menu .fontsize .size .fontSize .labelFontSize, #menu .colorscheme .size .titleSize .labelTitleSize, #menu .colorscheme .size .titleSize .labelFontSize, #menu .colorscheme .size .fontSize .labelTitleSize, #menu .colorscheme .size .fontSize .labelFontSize {
-  margin: 0 15px;
-}
-/* line 111, sass/menu.scss */
-=======
 /* line 107, sass/menu.scss */
 #menu .fontsize .size .titleSize .labelTitleSize, #menu .fontsize .size .titleSize .labelFontSize, #menu .fontsize .size .fontSize .labelTitleSize, #menu .fontsize .size .fontSize .labelFontSize, #menu .colorscheme .size .titleSize .labelTitleSize, #menu .colorscheme .size .titleSize .labelFontSize, #menu .colorscheme .size .fontSize .labelTitleSize, #menu .colorscheme .size .fontSize .labelFontSize {
   margin: 0 15px;
 }
 /* line 112, sass/menu.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #menu .fontsize .size .buttons, #menu .colorscheme .size .buttons {
   width: 100%;
   display: flex;
 }
-<<<<<<< HEAD
-/* line 116, sass/menu.scss */
-=======
 /* line 117, sass/menu.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #menu .fontsize .size .buttons > button, #menu .colorscheme .size .buttons > button {
   padding: 10px 10px;
   border-radius: 5px;
   margin: 3px;
   flex-grow: 1;
 }
-<<<<<<< HEAD
-/* line 123, sass/menu.scss */
-#menu .fontsize .size .buttons #cancel, #menu .colorscheme .size .buttons #cancel {
-  background-color: #D89E99;
-}
-/* line 126, sass/menu.scss */
-#menu .fontsize .size .buttons #save, #menu .colorscheme .size .buttons #save {
-  background-color: #C2DBB1;
-}
-/* line 132, sass/menu.scss */
-=======
 /* line 124, sass/menu.scss */
 #menu .fontsize .size .buttons #cancel, #menu .colorscheme .size .buttons #cancel {
   background-color: #D89E99;
@@ -475,27 +439,18 @@ body.dark #profile .title {
   background-color: #C2DBB1;
 }
 /* line 133, sass/menu.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #menu .fontsize .scheme, #menu .colorscheme .scheme {
   flex: 1;
   height: 100%;
 }
-<<<<<<< HEAD
-/* line 136, sass/menu.scss */
-=======
 /* line 137, sass/menu.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #menu .fontsize .scheme > .picker, #menu .colorscheme .scheme > .picker {
   margin: 5px;
   flex: 1;
   height: calc(100% - 10px);
   cursor: pointer;
 }
-<<<<<<< HEAD
-/* line 144, sass/menu.scss */
-=======
 /* line 145, sass/menu.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #menu .fontsize .hidden, #menu .colorscheme .hidden {
   display: none;
 }
@@ -525,71 +480,55 @@ body.dark #profile .title {
   border-radius: 5px;
   align-items: center;
 }
-<<<<<<< HEAD
-/* line 24, sass/body.scss */
-=======
-/* line 30, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 25, sass/body.scss */
 #profile .profileHeader img {
   margin-right: 30px;
   border-radius: 5px;
   height: 150px;
 }
-<<<<<<< HEAD
-/* line 29, sass/body.scss */
-=======
-/* line 35, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 30, sass/body.scss */
 #profile .profileHeader .info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-/* line 35, sass/body.scss */
-=======
-/* line 41, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 36, sass/body.scss */
 #profile .profileContent {
   display: flex;
   flex-grow: 1;
 }
-<<<<<<< HEAD
-/* line 43, sass/body.scss */
-=======
-/* line 45, sass/body.scss */
+/* line 40, sass/body.scss */
 #profile .profileContent course-header {
   margin-bottom: 2px;
   display: flex;
   margin-bottom: 2px;
 }
-/* line 51, sass/body.scss */
+/* line 46, sass/body.scss */
 #profile .profileContent course {
   display: flex;
 }
-/* line 55, sass/body.scss */
+/* line 50, sass/body.scss */
 #profile .profileContent name, #profile .profileContent rating, #profile .profileContent year {
   border-right: 1px solid;
   padding: 5px;
 }
-/* line 57, sass/body.scss */
+/* line 52, sass/body.scss */
 #profile .profileContent course-header, #profile .profileContent course {
   border-bottom: 1px solid;
 }
-/* line 60, sass/body.scss */
+/* line 55, sass/body.scss */
 #profile .profileContent course-header name, #profile .profileContent course name {
   width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 61, sass/body.scss */
+/* line 56, sass/body.scss */
 #profile .profileContent course-header rating, #profile .profileContent course-header year, #profile .profileContent course rating, #profile .profileContent course year {
   width: 20%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 64, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 59, sass/body.scss */
 #profile .profileContent .info {
   flex: 1;
   border: 2px solid;
@@ -601,29 +540,17 @@ body.dark #profile .title {
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-/* line 45, sass/body.scss */
-=======
-/* line 72, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 67, sass/body.scss */
 #profile .profileContent .info .title {
   padding: 20px;
 }
-<<<<<<< HEAD
-/* line 48, sass/body.scss */
-=======
-/* line 76, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 71, sass/body.scss */
 #profile .profileContent .info > div:not(.title) {
   margin: 5px;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-/* line 60, sass/body.scss */
-=======
-/* line 86, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 81, sass/body.scss */
 #content {
   position: relative;
   flex-direction: column;
@@ -632,29 +559,17 @@ body.dark #profile .title {
   min-width: 400px;
   padding: 10px;
 }
-<<<<<<< HEAD
-/* line 68, sass/body.scss */
+/* line 89, sass/body.scss */
 #content .title {
   padding: 20px;
 }
-/* line 71, sass/body.scss */
-=======
-/* line 94, sass/body.scss */
-#content .title {
-  padding: 20px;
-}
-/* line 97, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 92, sass/body.scss */
 #content .subtitle {
   position: relative;
   top: -10px;
   margin-left: 20px;
 }
-<<<<<<< HEAD
-/* line 76, sass/body.scss */
-=======
-/* line 102, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 97, sass/body.scss */
 #content .content-wrapper {
   padding: 10px;
   display: flex;
@@ -662,55 +577,32 @@ body.dark #profile .title {
   flex: 1;
   overflow: hidden;
 }
-<<<<<<< HEAD
-/* line 83, sass/body.scss */
-=======
-/* line 109, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 104, sass/body.scss */
 #content .content-wrapper .content {
   height: calc(100% - 20px);
   overflow-y: auto;
 }
-<<<<<<< HEAD
-/* line 86, sass/body.scss */
-=======
-/* line 112, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 107, sass/body.scss */
 #content .content-wrapper .content > img {
   height: 100%;
 }
 
-<<<<<<< HEAD
-/* line 93, sass/body.scss */
-=======
-/* line 119, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 114, sass/body.scss */
 #main-page, #courses {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
   overflow-y: auto;
 }
-<<<<<<< HEAD
-/* line 99, sass/body.scss */
+/* line 120, sass/body.scss */
 #main-page > .image, #courses > .image {
   flex: 1;
-  background-color: #eee;
-=======
-/* line 125, sass/body.scss */
-#main-page > .image, #courses > .image {
-  flex: 1;
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
   margin: 0 20px 0 10px;
   width: 40%;
   max-width: 400px;
   max-height: 500px;
 }
-<<<<<<< HEAD
-/* line 105, sass/body.scss */
-=======
-/* line 132, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 127, sass/body.scss */
 #main-page > .lorem, #courses > .lorem {
   flex: 1;
   text-align: justify;
@@ -722,19 +614,11 @@ body.dark #profile .title {
   max-width: 700px;
   max-height: 500px;
 }
-<<<<<<< HEAD
-/* line 115, sass/body.scss */
+/* line 139, sass/body.scss */
 #main-page > .lorem p, #courses > .lorem p {
   margin-bottom: 20px;
 }
-/* line 119, sass/body.scss */
-=======
-/* line 144, sass/body.scss */
-#main-page > .lorem p, #courses > .lorem p {
-  margin-bottom: 20px;
-}
-/* line 148, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 143, sass/body.scss */
 #main-page > .lorem > button, #courses > .lorem > button {
   position: absolute;
   right: 10px;
@@ -745,33 +629,21 @@ body.dark #profile .title {
   text-transform: capitalize;
 }
 
-<<<<<<< HEAD
-/* line 131, sass/body.scss */
-=======
-/* line 161, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 156, sass/body.scss */
 #courses, #classes {
   flex-flow: row wrap;
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
 }
-<<<<<<< HEAD
-/* line 137, sass/body.scss */
-=======
-/* line 167, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 162, sass/body.scss */
 #courses > button, #classes > button {
   position: absolute;
   bottom: 10px;
   padding: 10px;
   right: 10px;
 }
-<<<<<<< HEAD
-/* line 144, sass/body.scss */
-=======
-/* line 174, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 169, sass/body.scss */
 #courses .course, #courses .class, #classes .course, #classes .class {
   border-radius: 5px;
   display: flex;
@@ -782,19 +654,11 @@ body.dark #profile .title {
   margin: 0 20px 20px 0;
   cursor: pointer;
   box-sizing: border-box;
-<<<<<<< HEAD
-  min-width: 200px;
-  flex: 1;
-  text-align: center;
-}
-/* line 158, sass/body.scss */
-=======
   min-width: 300px;
   flex: 1;
   text-align: center;
 }
-/* line 188, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 183, sass/body.scss */
 #courses .course svg, #courses .class svg, #classes .course svg, #classes .class svg {
   max-height: 100px;
   max-width: 100px;
@@ -803,22 +667,14 @@ body.dark #profile .title {
   padding: 10px;
 }
 
-<<<<<<< HEAD
-/* line 168, sass/body.scss */
-=======
-/* line 198, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 193, sass/body.scss */
 #login {
   display: flex;
   flex: 1;
   flex-flow: column wrap;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-/* line 175, sass/body.scss */
-=======
-/* line 204, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 199, sass/body.scss */
 #login .title {
   padding: 20px;
   flex: 2;
@@ -826,42 +682,25 @@ body.dark #profile .title {
   align-items: center;
   justify-content: center;
 }
-<<<<<<< HEAD
-/* line 184, sass/body.scss */
-=======
-/* line 212, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 207, sass/body.scss */
 #login input, #login .label {
   flex: 1;
   margin: 0 20px;
 }
-<<<<<<< HEAD
-/* line 189, sass/body.scss */
-=======
-/* line 217, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 212, sass/body.scss */
 #login button {
   margin: 20px;
   flex: 1.5;
   font-size: 25px;
   border-radius: 5px;
 }
-<<<<<<< HEAD
-/* line 196, sass/body.scss */
-#login .label {
-=======
-/* line 224, sass/body.scss */
+/* line 219, sass/body.scss */
 #login .title.label {
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
   padding: 25px 0 0px 0;
   justify-content: flex-start;
   font-size: 18px;
 }
-<<<<<<< HEAD
-/* line 201, sass/body.scss */
-=======
-/* line 230, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+/* line 225, sass/body.scss */
 #login input {
   padding: 0 10px;
 }

@@ -1,4 +1,4 @@
-/* line 3, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\000033}}
 #body {
   width: 100%;
   display: flex;
@@ -7,13 +7,13 @@
   overflow: hidden;
 }
 
-/* line 11, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000311}}
 #profile {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
 }
-/* line 16, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000316}}
 #profile .profileHeader {
   display: flex;
   padding: 20px;
@@ -23,71 +23,55 @@
   border-radius: 5px;
   align-items: center;
 }
-<<<<<<< HEAD
-/* line 24, sass/body.scss */
-=======
-/* line 30, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000325}}
 #profile .profileHeader img {
   margin-right: 30px;
   border-radius: 5px;
   height: 150px;
 }
-<<<<<<< HEAD
-/* line 29, sass/body.scss */
-=======
-/* line 35, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000330}}
 #profile .profileHeader .info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-/* line 35, sass/body.scss */
-=======
-/* line 41, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000336}}
 #profile .profileContent {
   display: flex;
   flex-grow: 1;
 }
-<<<<<<< HEAD
-/* line 43, sass/body.scss */
-=======
-/* line 45, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000340}}
 #profile .profileContent course-header {
   margin-bottom: 2px;
   display: flex;
   margin-bottom: 2px;
 }
-/* line 51, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000346}}
 #profile .profileContent course {
   display: flex;
 }
-/* line 55, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000350}}
 #profile .profileContent name, #profile .profileContent rating, #profile .profileContent year {
   border-right: 1px solid;
   padding: 5px;
 }
-/* line 57, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000352}}
 #profile .profileContent course-header, #profile .profileContent course {
   border-bottom: 1px solid;
 }
-/* line 60, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000355}}
 #profile .profileContent course-header name, #profile .profileContent course name {
   width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 61, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000356}}
 #profile .profileContent course-header rating, #profile .profileContent course-header year, #profile .profileContent course rating, #profile .profileContent course year {
   width: 20%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 64, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000359}}
 #profile .profileContent .info {
   flex: 1;
   border: 2px solid;
@@ -99,29 +83,17 @@
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-/* line 45, sass/body.scss */
-=======
-/* line 72, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000367}}
 #profile .profileContent .info .title {
   padding: 20px;
 }
-<<<<<<< HEAD
-/* line 48, sass/body.scss */
-=======
-/* line 76, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000371}}
 #profile .profileContent .info > div:not(.title) {
   margin: 5px;
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-/* line 60, sass/body.scss */
-=======
-/* line 86, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000381}}
 #content {
   position: relative;
   flex-direction: column;
@@ -130,29 +102,17 @@
   min-width: 400px;
   padding: 10px;
 }
-<<<<<<< HEAD
-/* line 68, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000389}}
 #content .title {
   padding: 20px;
 }
-/* line 71, sass/body.scss */
-=======
-/* line 94, sass/body.scss */
-#content .title {
-  padding: 20px;
-}
-/* line 97, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000392}}
 #content .subtitle {
   position: relative;
   top: -10px;
   margin-left: 20px;
 }
-<<<<<<< HEAD
-/* line 76, sass/body.scss */
-=======
-/* line 102, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\0000397}}
 #content .content-wrapper {
   padding: 10px;
   display: flex;
@@ -160,55 +120,32 @@
   flex: 1;
   overflow: hidden;
 }
-<<<<<<< HEAD
-/* line 83, sass/body.scss */
-=======
-/* line 109, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003104}}
 #content .content-wrapper .content {
   height: calc(100% - 20px);
   overflow-y: auto;
 }
-<<<<<<< HEAD
-/* line 86, sass/body.scss */
-=======
-/* line 112, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003107}}
 #content .content-wrapper .content > img {
   height: 100%;
 }
 
-<<<<<<< HEAD
-/* line 93, sass/body.scss */
-=======
-/* line 119, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003114}}
 #main-page, #courses {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
   overflow-y: auto;
 }
-<<<<<<< HEAD
-/* line 99, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003120}}
 #main-page > .image, #courses > .image {
   flex: 1;
-  background-color: #eee;
-=======
-/* line 125, sass/body.scss */
-#main-page > .image, #courses > .image {
-  flex: 1;
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
   margin: 0 20px 0 10px;
   width: 40%;
   max-width: 400px;
   max-height: 500px;
 }
-<<<<<<< HEAD
-/* line 105, sass/body.scss */
-=======
-/* line 132, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003127}}
 #main-page > .lorem, #courses > .lorem {
   flex: 1;
   text-align: justify;
@@ -220,19 +157,11 @@
   max-width: 700px;
   max-height: 500px;
 }
-<<<<<<< HEAD
-/* line 115, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003139}}
 #main-page > .lorem p, #courses > .lorem p {
   margin-bottom: 20px;
 }
-/* line 119, sass/body.scss */
-=======
-/* line 144, sass/body.scss */
-#main-page > .lorem p, #courses > .lorem p {
-  margin-bottom: 20px;
-}
-/* line 148, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003143}}
 #main-page > .lorem > button, #courses > .lorem > button {
   position: absolute;
   right: 10px;
@@ -243,33 +172,21 @@
   text-transform: capitalize;
 }
 
-<<<<<<< HEAD
-/* line 131, sass/body.scss */
-=======
-/* line 161, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003156}}
 #courses, #classes {
   flex-flow: row wrap;
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
 }
-<<<<<<< HEAD
-/* line 137, sass/body.scss */
-=======
-/* line 167, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003162}}
 #courses > button, #classes > button {
   position: absolute;
   bottom: 10px;
   padding: 10px;
   right: 10px;
 }
-<<<<<<< HEAD
-/* line 144, sass/body.scss */
-=======
-/* line 174, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003169}}
 #courses .course, #courses .class, #classes .course, #classes .class {
   border-radius: 5px;
   display: flex;
@@ -280,19 +197,11 @@
   margin: 0 20px 20px 0;
   cursor: pointer;
   box-sizing: border-box;
-<<<<<<< HEAD
-  min-width: 200px;
-  flex: 1;
-  text-align: center;
-}
-/* line 158, sass/body.scss */
-=======
   min-width: 300px;
   flex: 1;
   text-align: center;
 }
-/* line 188, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003183}}
 #courses .course svg, #courses .class svg, #classes .course svg, #classes .class svg {
   max-height: 100px;
   max-width: 100px;
@@ -301,22 +210,14 @@
   padding: 10px;
 }
 
-<<<<<<< HEAD
-/* line 168, sass/body.scss */
-=======
-/* line 198, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003193}}
 #login {
   display: flex;
   flex: 1;
   flex-flow: column wrap;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-/* line 175, sass/body.scss */
-=======
-/* line 204, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003199}}
 #login .title {
   padding: 20px;
   flex: 2;
@@ -324,42 +225,25 @@
   align-items: center;
   justify-content: center;
 }
-<<<<<<< HEAD
-/* line 184, sass/body.scss */
-=======
-/* line 212, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003207}}
 #login input, #login .label {
   flex: 1;
   margin: 0 20px;
 }
-<<<<<<< HEAD
-/* line 189, sass/body.scss */
-=======
-/* line 217, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003212}}
 #login button {
   margin: 20px;
   flex: 1.5;
   font-size: 25px;
   border-radius: 5px;
 }
-<<<<<<< HEAD
-/* line 196, sass/body.scss */
-#login .label {
-=======
-/* line 224, sass/body.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003219}}
 #login .title.label {
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
   padding: 25px 0 0px 0;
   justify-content: flex-start;
   font-size: 18px;
 }
-<<<<<<< HEAD
-/* line 201, sass/body.scss */
-=======
-/* line 230, sass/body.scss */
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/body\.scss}line{font-family:\00003225}}
 #login input {
   padding: 0 10px;
 }
