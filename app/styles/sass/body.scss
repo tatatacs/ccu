@@ -79,12 +79,13 @@
 	}
 }
 #content {
-	position: relative;
+    position: relative;
     flex-direction: column;
     display: flex;
-	flex: 7;
-	min-width: 400px;
-	padding: 10px;
+    flex: 7;
+    min-width: 400px;
+    padding: 10px;
+    height: 100%;
 
 	.title {
 		padding: 20px;
@@ -112,10 +113,9 @@
 }
 
 #main-page, #courses {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1;
-    overflow-y: auto;
+	display: flex;
+    height: calc(100% - 66px);
+    position: relative;
 
     >.image {
 	    flex: 1;
@@ -126,31 +126,22 @@
     }
     >.lorem {
 
-		flex: 1;
-		text-align: justify;
-		display: flex;
-		flex-direction: column;
-		line-height: 200%;
-		overflow: auto;
-		position: relative;
-		max-width: 700px;
-		max-height: 500px;
+	    text-align: justify;
+	    line-height: 200%;
+	    overflow: auto;
+	    position: relative;
+	    max-width: 700px;
+	    max-height: calc(100% - 40px);
 
 		p {
 			margin-bottom: 20px;
 		}
-
-    	>button {
-			position: absolute;
-			right: 10px;
-			bottom: 0px;
-			width: calc(100% - 10px);
-			padding: 10px;
-			border-radius: 5px;
-			text-transform: capitalize;
-    	}
     }
-    
+    >button {
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	}
 }
 
 #courses, #classes {

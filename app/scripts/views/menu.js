@@ -46,13 +46,14 @@ define([
 
             App.Collections.Classes.fetch({
                 success: function(collection, response) {
-                    
-                    _this.$el.html(_this.template({
+                    var json = {
                         student: App.Models.User.get('student'),
                         teacher: App.Models.User.get('teacher'),
                         visitor: App.Models.User.get('visitor'),
                         classes: response.novas
-                    }));
+                    };
+                    console.log(json);
+                    _this.$el.html(_this.template(json));
                 }
             });
 

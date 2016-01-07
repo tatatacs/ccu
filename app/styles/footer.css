@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /* line 5, sass/footer.scss */
-=======
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/maria_000\/Desktop\/CCU-projecto\/ccu3\/app\/styles\/sass\/footer\.scss}line{font-family:\000033}}
->>>>>>> 0bf2a2bad21ed8ec0099cbcdcf268341a90a93e4
 #footer {
   width: 100%;
   height: 40px;
@@ -69,5 +65,5 @@
   border: 3px solid #bbb;
   border-radius: 3px;
   padding: 5px;
-  height: 30px;
+  height: auto;
 }
