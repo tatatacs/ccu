@@ -60,17 +60,20 @@ define([
         },
 
         route: function(ev) {
-            
-            console.log('routed it anyway like the lil bitch i am')
 
             if(this.sizeView) {
                 this.sizeView.animateClose();
                 this.sizeView = null;
+                $('.fontsize').removeClass('editing');
             }
             if(this.colorView) {
                 this.colorView.close();
                 this.colorView = null;
+                $('.colorscheme').removeClass('editing');
             }
+
+            this.$('.selected').removeClass('selected');
+            $(ev.currentTarget).addClass('selected');
 
             window.location.hash = $(ev.currentTarget).attr('data-route');
         
@@ -88,6 +91,8 @@ define([
         },
 
         changeSizes: function(ev) {
+
+            $(ev.currentTarget).addClass('editing');
 
             if(!this.sizeView) {
                 this.sizeView = new SizeView();

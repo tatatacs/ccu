@@ -20,15 +20,14 @@ define([
         events: {},
 
         initialize: function () {
-            this.listenTo( App.Models.Color, 'change', this.render);
+            
         },
 
         render: function () {
             App.Vent.trigger('title', { title: 'Página do aluno' } );
             App.Vent.trigger('subtitle', { subtitle: '' } );
             this.$el.html(this.template({
-                model: App.Models.User.toJSON(),
-                color: App.Models.Color.get('color')
+                model: App.Models.User.toJSON()
             }));
             return this;
         }

@@ -24,7 +24,7 @@ define([
             'click .fontSize>#plus:not(.disabled)': 'largerFont',
             'click .fontSize>#minus:not(.disabled)': 'smallerFont',
             'click #save': 'save',
-            'click #cancel': 'animateClose'
+            'click #cancel': 'cancel'
         },
 
         initialize: function () {
@@ -61,7 +61,6 @@ define([
             return this;
         },
 
-        
 
         largerFont: function() {
             
@@ -131,7 +130,16 @@ define([
 
         save: function() {
             
-            var _this = this;
+            App.fontsize = this.fontsize;
+            App.titlesize = this.titlesize;
+
+            this.animateClose();
+        },
+
+        cancel: function() {
+            
+            $(".title").css('font-size', App.titlesize);
+            $("body *:not(.title, .labelFontSize, .labelTitleSize, .size #save, .size #cancel, .size > .label)").css('font-size', App.fontsize);
 
             this.animateClose();
         },
@@ -145,8 +153,9 @@ define([
                 queue:false, 
                 complete:function(){
                     
-                    App.fontsize = _this.fontsize;
-                    App.titlesize = _this.titlesize;
+
+                    $('.fontsize').removeClass('editing');
+
                     App.sheet.innerHTML = "body * { font-size: " + App.fontsize + "px; } body .title { font-size: " + App.titlesize + "px; }";
 
                     setTimeout(function() {

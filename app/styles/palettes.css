@@ -13,66 +13,126 @@ body.dark #header #logo > svg {
 }
 /* line 13, sass/palettes.scss */
 body.dark #menu {
-  background-color: #b7b7b7;
-}
-/* line 15, sass/palettes.scss */
-body.dark #menu button {
-  -webkit-transition: padding-left 0.5s;
-  -o-transition: padding-left 0.5s;
-  transition: padding-left 0.5s;
-}
-/* line 20, sass/palettes.scss */
-body.dark #menu button:hover {
   background-color: #222;
-  color: #eee;
-  padding-left: 30px;
+  border-right: 10px solid #333;
+}
+/* line 17, sass/palettes.scss */
+body.dark #menu button {
+  color: #bbb;
   -webkit-transition: padding-left 0.5s;
   -o-transition: padding-left 0.5s;
   transition: padding-left 0.5s;
+}
+/* line 24, sass/palettes.scss */
+body.dark #menu button svg, body.dark #menu button path {
+  fill: #bbb;
 }
 /* line 29, sass/palettes.scss */
-body.dark #menu button:hover svg, body.dark #menu button:hover path {
-  fill: #eee;
+body.dark #menu button[data-route]:hover,
+body.dark #menu button[data-route].selected {
+  background-color: #b7b7b7;
+  padding-left: 30px;
+  color: #222;
+  -webkit-transition: padding-left 0.5s;
+  -o-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
 }
-/* line 37, sass/palettes.scss */
+/* line 39, sass/palettes.scss */
+body.dark #menu button[data-route]:hover svg, body.dark #menu button[data-route]:hover path,
+body.dark #menu button[data-route].selected svg,
+body.dark #menu button[data-route].selected path {
+  fill: #222;
+}
+/* line 44, sass/palettes.scss */
+body.dark #menu button.fontsize:hover, body.dark #menu button.coloscheme:hover,
+body.dark #menu button.fontsize.editing, body.dark #menu button.coloscheme.editing {
+  background-color: #753928;
+}
+/* line 49, sass/palettes.scss */
+body.dark #menu button > .size, body.dark #menu button > .size:hover {
+  background-color: #222;
+  color: #bbb;
+}
+/* line 52, sass/palettes.scss */
+body.dark #menu button > .size svg, body.dark #menu button > .size path, body.dark #menu button > .size:hover svg, body.dark #menu button > .size:hover path {
+  fill: #bbb;
+}
+/* line 55, sass/palettes.scss */
+body.dark #menu button > .size .buttons #save, body.dark #menu button > .size:hover .buttons #save {
+  background-color: #4D7332;
+  color: #fff;
+}
+/* line 59, sass/palettes.scss */
+body.dark #menu button > .size .buttons #cancel, body.dark #menu button > .size:hover .buttons #cancel {
+  background-color: #A32424;
+  color: #fff;
+}
+/* line 75, sass/palettes.scss */
 body.dark #content {
   color: #bbb;
 }
-/* line 41, sass/palettes.scss */
+/* line 79, sass/palettes.scss */
 body.dark #content .content-wrapper .image {
   background-color: #777;
 }
-/* line 47, sass/palettes.scss */
+/* line 85, sass/palettes.scss */
 body.dark .course:not(.promo), body.dark .class {
-  background-color: #bbb;
-  color: #111;
-  border: 7px solid #bbb;
-}
-/* line 52, sass/palettes.scss */
-body.dark .course:not(.promo) svg, body.dark .class svg {
-  fill: #111;
-}
-/* line 57, sass/palettes.scss */
-body.dark .course:not(.promo):hover, body.dark .class:hover {
   background-color: transparent;
   border: 7px solid;
   color: #bbb;
 }
-/* line 62, sass/palettes.scss */
-body.dark .course:not(.promo):hover svg, body.dark .class:hover svg {
+/* line 90, sass/palettes.scss */
+body.dark .course:not(.promo) svg, body.dark .class svg {
   fill: #bbb;
 }
-/* line 67, sass/palettes.scss */
+/* line 96, sass/palettes.scss */
+body.dark .course:not(.promo):hover, body.dark .class:hover {
+  background-color: #bbb;
+  color: #111;
+  border: 7px solid #bbb;
+}
+/* line 101, sass/palettes.scss */
+body.dark .course:not(.promo):hover svg, body.dark .class:hover svg {
+  fill: #111;
+}
+/* line 106, sass/palettes.scss */
 body.dark .course.promo {
+  background-color: transparent;
+  border: 7px solid #A85A43;
+  color: #bbb;
+}
+/* line 112, sass/palettes.scss */
+body.dark .course.promo:hover {
   background-color: #A85A43;
   border: 7px solid #A85A43;
   color: #111;
 }
-/* line 73, sass/palettes.scss */
-body.dark .course.promo:hover {
+/* line 119, sass/palettes.scss */
+body.dark #login {
+  border: 2px solid;
+}
+/* line 123, sass/palettes.scss */
+body.dark #login .title {
+  background-color: #753928;
+}
+/* line 126, sass/palettes.scss */
+body.dark #login .title.label {
   background-color: transparent;
-  border: 7px solid #A85A43;
+}
+/* line 131, sass/palettes.scss */
+body.dark #login .login {
+  background-color: #4D7332;
   color: #bbb;
+}
+/* line 136, sass/palettes.scss */
+body.dark #login input {
+  border: 2px solid #bbb;
+  color: #bbb;
+}
+/* line 143, sass/palettes.scss */
+body.dark #profile .title {
+  background-color: #753928;
+  color: #ccc;
 }
 
 /*@mixin light($color) {
