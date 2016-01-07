@@ -11,28 +11,66 @@ body.dark {
 	}
 
 	#menu {
-		background-color: #b7b7b7;
+		background-color: #222;
+		border-right: 10px solid #333;
+	    
 		button {
+			color: #bbb;
+
 			-webkit-transition: padding-left 0.5s;
 		    -o-transition: padding-left 0.5s;
 		    transition: padding-left 0.5s;
+
+		    svg, path {
+		    	fill: #bbb;
+		    }
 		}
-		button:hover {
-		    background-color: #222;
-		    color: #eee;
+		
+		button[data-route]:hover, 
+		button[data-route].selected {
+		    background-color: #b7b7b7;
 		    padding-left: 30px;
+		    color: #222;
 
 		    -webkit-transition: padding-left 0.5s;
 		    -o-transition: padding-left 0.5s;
 		    transition: padding-left 0.5s;
 
 		    svg, path {
-		    	fill: #eee;
+		    	fill: #222;
 		    }
+		}
+
+		button.fontsize:hover, button.coloscheme:hover,
+		button.fontsize.editing, button.coloscheme.editing {
+			background-color: #753928;
+		}
+
+		button>.size, button>.size:hover {
+			background-color: #222;
+			color:#bbb;
+			svg, path {
+		    	fill: #bbb;
+		    }
+		    .buttons #save {
+			    background-color: #4D7332;
+			    color: #fff;
+			}
+			.buttons #cancel {
+			    background-color: #A32424;
+			    color: #fff;
+			}
 		}
 	}
 
-	
+	#main-page {
+		
+		button {
+		
+			//background-color: #A85A43;
+		
+		}
+	}
 
 	#content {
 	    color: #bbb;
@@ -45,6 +83,17 @@ body.dark {
 	}
 
 	.course:not(.promo), .class {
+		background-color:transparent;
+		border: 7px solid;
+		color: #bbb;
+
+		svg {
+			fill: #bbb;
+		}
+
+	}
+
+	.course:not(.promo):hover, .class:hover {
 		background-color: #bbb;
 		color: #111;
 		border: 7px solid #bbb;
@@ -54,26 +103,47 @@ body.dark {
 		}
 	}
 
-	.course:not(.promo):hover, .class:hover {
-		background-color:transparent;
-		border: 7px solid;
-		color: #bbb;
-
-		svg {
-			fill: #bbb;
-		}
-	}
-
 	.course.promo {
-		background-color: #A85A43;
-		border: 7px solid #A85A43;
-		color: #111;
-	}
-
-	.course.promo:hover {
 		background-color: transparent;
 		border: 7px solid #A85A43;
 		color: #bbb;
+	}
+
+	.course.promo:hover {
+		background-color: #A85A43;
+		border: 7px solid #A85A43;
+		color: #111;
+
+	}
+
+	#login {
+
+		border: 2px solid;
+
+		.title {
+			background-color:#753928;
+
+			&.label {
+				background-color: transparent;
+			}
+		}
+		
+		.login {
+			background-color:#4D7332;
+			color: #bbb;
+		}
+
+		input {
+			border: 2px solid #bbb;
+    		color: #bbb;
+		}
+	}
+
+	#profile {
+		.title {
+    		background-color: #753928;
+    		color: #ccc;
+		}
 	}
 }
 

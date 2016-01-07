@@ -1,4 +1,4 @@
-<div class='profileHeader {{color}} lightest'>
+<div class='profileHeader'>
 	{{#if model.teacher}}
 	<img src='http://www.foundationhouse.org.au/wp-content/uploads/2014/05/Briele_YES_smallest.jpg'>
 	{{else}}
@@ -17,16 +17,34 @@
 
 <div class='profileContent'>
 	
-	{{#if student}}
+	{{#if model.student}} 
 	<div class="info">
 		<div class="title">Cursos Concluídos:</div>
-		<div>História da Arte do Antigo Egipto</div>
-		<div>Música Tradicional Castelhana</div>
-		<div>Introdução ao Estudo das Ciências Políticas</div>
+		<course-header>
+			<name>Nome</name>
+			<rating>Nota</rating>
+			<year>Ano</year>
+		</course-header>
+		<course>
+			<name>História da Arte do Antigo Egipto</name>
+			<rating>18</rating>
+			<year>2014-2015</year>
+		</course>
+		<course>
+			<name>Música Tradicional Castelhana</name>
+			<rating>18</rating>
+			<year>2014-2015</year>
+		</course>
+		<course>
+			<name>Introdução ao Estudo das Ciências Políticas</name>
+			<rating>16</rating>
+			<year>2014-2015</year>
+		</course>
 	</div>
 
 	<div class="info">
-		<div class="title">Inscrito em:</div>
+		<div class="title">Cursos em progresso:</div>
+	
 		<div>História da Ciência e de Cientistas</div>
 		<div>A União Europeia</div>
 		<div>Ciências Políticas</div>

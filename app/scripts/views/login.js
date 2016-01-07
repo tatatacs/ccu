@@ -29,9 +29,7 @@ define([
             App.Vent.trigger('title', { title: 'Iniciar sessão' } );
             App.Vent.trigger('subtitle', { subtitle: '' } );
             
-            this.$el.html(this.template({
-                color: App.Models.Color.get('color')
-            }));
+            this.$el.html(this.template());
             
             return this;
         },
@@ -71,6 +69,9 @@ define([
             
             App.Models.User.set(type, true);
             App.Models.User.set('visitor', false);
+
+            window.location.hash = 'profile';
+
         },
 
         onClose: function() {

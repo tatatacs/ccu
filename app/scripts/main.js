@@ -77,4 +77,6 @@ require([
 
     Backbone.history.start();
 
+    window.location.hash = '';
+
 });
