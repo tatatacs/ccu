@@ -1,8 +1,69 @@
-/* line 3, sass/footer.scss */
+/* line 5, sass/footer.scss */
 #footer {
   width: 100%;
-  height: 30px;
-  position: absolute;
-  bottom: 0px;
+  height: 40px;
+  position: fixed;
   left: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #bbb;
+  background-color: #753928;
+  transition: all 1s ease;
+}
+/* line 22, sass/footer.scss */
+#footer .security {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+/* line 28, sass/footer.scss */
+#footer .security svg {
+  height: 35px;
+  width: 35px;
+  fill: #ccc;
+  margin-right: 10px;
+  padding: 5px;
+  transition: all 1s ease;
+}
+/* line 40, sass/footer.scss */
+#footer .security .button {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 5px;
+  border: 3px solid;
+  text-align: center;
+  transition: all 1s ease;
+}
+/* line 55, sass/footer.scss */
+#footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+}
+/* line 62, sass/footer.scss */
+#footer .links .link {
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+/* line 69, sass/footer.scss */
+#footer.expanded {
+  height: 70px;
+}
+/* line 72, sass/footer.scss */
+#footer.expanded svg {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+}
+/* line 79, sass/footer.scss */
+#footer.expanded .button {
+  border: 3px solid #bbb;
+  border-radius: 3px;
+  padding: 5px;
+  height: 30px;
 }

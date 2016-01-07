@@ -1,4 +1,4 @@
-/* line 3, sass/header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/header\.scss}line{font-family:\000033}}
 #header {
   align-self: flex-start;
   height: 70px;
@@ -7,23 +7,23 @@
   width: 100%;
   justify-content: space-between;
 }
-/* line 13, sass/header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/header\.scss}line{font-family:\0000313}}
 #header > div {
   height: 100%;
   display: flex;
 }
-/* line 18, sass/header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/header\.scss}line{font-family:\0000318}}
 #header button {
   height: 100%;
   border: none;
   font-family: inherit;
   min-width: 200px;
 }
-/* line 25, sass/header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/header\.scss}line{font-family:\0000325}}
 #header .profile {
   width: 200px;
 }
-/* line 29, sass/header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/header\.scss}line{font-family:\0000329}}
 #header #logo {
   height: 100%;
   display: flex;
@@ -32,7 +32,7 @@
   justify-content: center;
   font-size: 35px;
 }
-/* line 38, sass/header.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/c\:\/Users\/maria\.silva\/Desktop\/Projectos\/ccu\/app\/styles\/sass\/header\.scss}line{font-family:\0000338}}
 #header #logo > svg {
   height: 35px;
   width: 35px;

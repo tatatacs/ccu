@@ -4,62 +4,38 @@
 <button data-route=''>{{>news}}Notícias</button>
 <button data-route='informations'>{{>info}}Informações</button>
 <button data-route='contacts'>{{>contacts}}Contactos</button>
-<button class="fontsize">
-	{{>fontsize}}
-	Tamanho de letra
-</button>
-<button class="colorscheme">
-	{{>colorscheme}}
-	Esquema de cores
-</button>
+<button class="fontsize">{{>fontsize}}Tamanho de letra</button>
+<button class="colorscheme">{{>colorscheme}}Esquema de cores</button>
 <button data-route=''>{{>help}}Ajuda</button>
 {{/if}}
 
 {{#if student}}
 
-<button data-route='profile'>
-	Perfil do aluno
-</button>
-<button data-route='classes'>
-	Minhas Aulas
+<button data-route='profile'>{{>profile}}Perfil do aluno</button>
+<button data-route='classes'>{{>courses}}Minhas Aulas
 	<div class="sub">{{classes}} novas aulas</div>
 </button>
-<button data-route='calendar'>Calendário</button>
-<button data-route='responses'>Dúvidas
+<button data-route='calendar'>{{>calendar}}Calendário</button>
+<button data-route='responses'>{{>question}}Dúvidas
 	<div class="sub">2 novas respostas</div>
 </button>
-<button data-route=''>Opções</button>
-
-<button class="fontsize">
-	Tamanho de letra
-</button>
-
-<button class="colorscheme">
-	Esquema de cores
-</button>
-
-<button data-route=''>Ajuda</button>
+<button data-route=''>{{options}} Opções</button>
+<button class="fontsize">{{>fontsize}}Tamanho de letra</button>
+<button class="colorscheme">{{>colorscheme}}Esquema de cores</button>
+<button data-route=''>{{>help}}Ajuda</button>
 {{/if}}
 
 
 {{#if teacher}}
 
-<button data-route='profile'>
-	Perfil do professor
-</button>
-<button data-route='classes'>
-	Minhas Aulas
-</button>
-<button data-route='calendar'>Calendário</button>
-<button data-route='questions'>Dúvidas
+<button data-route='profile'>{{>profile}}Perfil do professor</button>
+<button data-route='classes'>{{>courses}}Minhas Aulas</button>
+<button data-route='calendar'>{{>calendar}}Calendário</button>
+<button data-route='questions'>{{>question}}Dúvidas
 	<div class="sub">2 novas dúvidas</div>
 </button>
-<button data-route=''>Opções</button>
-<button class="fontsize">
-	Tamanho de letra
-</button>
-<button class="colorscheme">
-	Esquema de cores
-</button>
-<button data-route=''>Ajuda</button>
+<button data-route=''>{{options}}Opções</button>
+<button class="fontsize">{{>fontsize}}Tamanho de letra</button>
+<button class="colorscheme">{{>colorscheme}}Esquema de cores</button>
+<button data-route=''>{{>help}}Ajuda</button>
 {{/if}}

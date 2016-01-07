@@ -2,23 +2,18 @@
 #body {
   width: 100%;
   display: flex;
-  flex: 1;
+  height: calc(100% - 110px);
   flex-flow: row wrap;
   overflow: hidden;
 }
 
 /* line 11, sass/body.scss */
-b {
-  font-weight: bold;
-}
-
-/* line 16, sass/body.scss */
 #profile {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
 }
-/* line 21, sass/body.scss */
+/* line 16, sass/body.scss */
 #profile .profileHeader {
   display: flex;
   padding: 20px;
@@ -27,19 +22,19 @@ b {
   border-radius: 10px;
   margin: 10px;
 }
-/* line 29, sass/body.scss */
+/* line 24, sass/body.scss */
 #profile .profileHeader img {
   margin-right: 30px;
   border-radius: 50%;
   height: 150px;
 }
-/* line 34, sass/body.scss */
+/* line 29, sass/body.scss */
 #profile .profileHeader .info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-/* line 40, sass/body.scss */
+/* line 35, sass/body.scss */
 #profile .profileContent {
   display: flex;
   padding: 0 20px;
@@ -48,18 +43,18 @@ b {
   border-radius: 10px;
   margin: 10px;
 }
-/* line 48, sass/body.scss */
+/* line 43, sass/body.scss */
 #profile .profileContent .info {
   flex: 1;
   margin: 10px;
   display: flex;
   flex-direction: column;
 }
-/* line 50, sass/body.scss */
+/* line 45, sass/body.scss */
 #profile .profileContent .info .title {
   padding: 20px 0;
 }
-/* line 53, sass/body.scss */
+/* line 48, sass/body.scss */
 #profile .profileContent .info > div:not(.title) {
   border: 1px solid;
   padding: 5px;
@@ -67,7 +62,7 @@ b {
   cursor: pointer;
 }
 
-/* line 65, sass/body.scss */
+/* line 60, sass/body.scss */
 #content {
   position: relative;
   flex-direction: column;
@@ -76,17 +71,17 @@ b {
   min-width: 400px;
   padding: 10px;
 }
-/* line 73, sass/body.scss */
+/* line 68, sass/body.scss */
 #content .title {
   padding: 20px;
 }
-/* line 76, sass/body.scss */
+/* line 71, sass/body.scss */
 #content .subtitle {
   position: relative;
   top: -10px;
   margin-left: 20px;
 }
-/* line 81, sass/body.scss */
+/* line 76, sass/body.scss */
 #content .content-wrapper {
   padding: 10px;
   display: flex;
@@ -94,96 +89,69 @@ b {
   flex: 1;
   overflow: hidden;
 }
-/* line 88, sass/body.scss */
+/* line 83, sass/body.scss */
 #content .content-wrapper .content {
   height: calc(100% - 20px);
   overflow-y: auto;
 }
-/* line 91, sass/body.scss */
+/* line 86, sass/body.scss */
 #content .content-wrapper .content > img {
   height: 100%;
 }
 
-/* line 98, sass/body.scss */
+/* line 93, sass/body.scss */
 #main-page, #courses {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
   overflow-y: auto;
 }
-/* line 104, sass/body.scss */
+/* line 99, sass/body.scss */
 #main-page > .image, #courses > .image {
-<<<<<<< HEAD
   flex: 1;
   background-color: #eee;
-=======
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
   margin: 0 20px 0 10px;
   width: 40%;
 }
-/* line 108, sass/body.scss */
+/* line 105, sass/body.scss */
 #main-page > .lorem, #courses > .lorem {
   flex: 1;
   text-align: justify;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
-  line-height: 150%;
-}
-/* line 120, sass/body.scss */
-#main-page > .lorem p, #courses > .lorem p {
-  margin-bottom: 15px;
-}
-/* line 124, sass/body.scss */
-#main-page > .lorem button, #courses > .lorem button {
-  margin-top: auto;
-=======
   line-height: 200%;
   overflow: auto;
   position: relative;
 }
-/* line 117, sass/body.scss */
+/* line 115, sass/body.scss */
 #main-page > .lorem p, #courses > .lorem p {
   margin-bottom: 20px;
 }
-/* line 121, sass/body.scss */
+/* line 119, sass/body.scss */
 #main-page > .lorem > button, #courses > .lorem > button {
   position: absolute;
   right: 10px;
   bottom: 0px;
   width: calc(100% - 10px);
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
   padding: 10px;
   border: 1px solid;
 }
 
-<<<<<<< HEAD
 /* line 131, sass/body.scss */
-=======
-/* line 133, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
 #courses, #classes {
   flex-flow: row wrap;
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
 }
-<<<<<<< HEAD
-/* line 136, sass/body.scss */
-=======
-/* line 139, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 137, sass/body.scss */
 #courses > button, #classes > button {
   position: absolute;
   bottom: 10px;
   padding: 10px;
   right: 10px;
 }
-<<<<<<< HEAD
-/* line 142, sass/body.scss */
-=======
-/* line 146, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 144, sass/body.scss */
 #courses .course, #courses .class, #classes .course, #classes .class {
   border-radius: 5px;
   display: flex;
@@ -193,33 +161,12 @@ b {
   justify-content: center;
   margin: 0 20px 20px 0;
   cursor: pointer;
-<<<<<<< HEAD
-}
-/* line 157, sass/body.scss */
-#courses > div, #classes > div {
-  flex-flow: column;
-  display: flex;
-  flex-grow: 1;
-}
-/* line 162, sass/body.scss */
-#courses > div .course, #courses > div .class, #classes > div .course, #classes > div .class {
-  width: calc(100% - 60px);
-  border: 1px solid;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: center;
-=======
   box-sizing: border-box;
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
   min-width: 200px;
   flex: 1;
   text-align: center;
 }
-/* line 160, sass/body.scss */
+/* line 158, sass/body.scss */
 #courses .course svg, #courses .class svg, #classes .course svg, #classes .class svg {
   max-height: 100px;
   max-width: 100px;
@@ -228,11 +175,7 @@ b {
   padding: 10px;
 }
 
-<<<<<<< HEAD
-/* line 180, sass/body.scss */
-=======
-/* line 170, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 168, sass/body.scss */
 #login {
   display: flex;
   flex: 1;
@@ -240,11 +183,7 @@ b {
   justify-content: space-around;
   border: 1px solid;
 }
-<<<<<<< HEAD
-/* line 187, sass/body.scss */
-=======
-/* line 177, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 175, sass/body.scss */
 #login .title {
   padding: 20px;
   flex: 2;
@@ -253,40 +192,24 @@ b {
   justify-content: center;
   border-bottom: 1px solid #000;
 }
-<<<<<<< HEAD
-/* line 196, sass/body.scss */
-=======
-/* line 186, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 184, sass/body.scss */
 #login input, #login .label {
   flex: 1;
   margin: 0 20px;
 }
-<<<<<<< HEAD
-/* line 201, sass/body.scss */
-=======
-/* line 191, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 189, sass/body.scss */
 #login button {
   margin: 20px;
   flex: 1.5;
   font-size: 25px;
   border-radius: 5px;
 }
-<<<<<<< HEAD
-/* line 208, sass/body.scss */
-=======
-/* line 198, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 196, sass/body.scss */
 #login .label {
   padding: 25px 0 0px 0;
   font-size: 18px;
 }
-<<<<<<< HEAD
-/* line 213, sass/body.scss */
-=======
-/* line 203, sass/body.scss */
->>>>>>> 7a05c7150e32a75fb2580d5e9f0eb402c05be5e5
+/* line 201, sass/body.scss */
 #login input {
   padding: 0 10px;
   border: 1px solid #777;

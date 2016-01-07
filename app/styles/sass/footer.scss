@@ -1,9 +1,85 @@
 @import "variables";
 
+//#937B63
+
 #footer {
-	width: 100%;
+    width: 100%;
     height: $footer;
-    position: absolute;
-    bottom: 0px;
+
+    position: fixed;
     left: 0px;
+    bottom: 0px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+	color: #bbb;
+    background-color: #753928;
+
+    transition: all 1s ease;
+
+	.security {
+    	display: flex;
+    	align-items: center;
+    	
+    	cursor: pointer;
+
+		svg {
+		    height: 35px;
+		    width: 35px;
+
+		    fill: #ccc;
+	
+			margin-right: 10px;
+		    padding: 5px;
+	
+		    transition: all 1s ease;
+		}
+
+		.button {
+		    height: 0;
+			overflow: hidden;
+
+		    padding: 0;
+		   	margin-top: 5px;
+		    border: 3px solid;
+
+		   	text-align: center;
+
+		    transition: all 1s ease;
+		}
+	}
+	
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		transition: all 1s ease;
+
+		.link {
+			cursor: pointer;
+		    margin-left: 40px;
+		}
+	}
+}
+
+#footer.expanded {
+	height: 70px;
+
+	svg {
+		height: 50px;
+		width: 50px;
+
+		padding: 5px;
+	}
+
+	.button {
+	    border: 3px solid #bbb;
+	    border-radius: 3px;
+	    padding: 5px;
+	    height: 30px;
+	}
 }

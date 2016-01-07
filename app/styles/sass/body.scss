@@ -3,15 +3,10 @@
 #body {
 	width: 100%;
     display: flex;
-    flex: 1;
+    height: calc(100% - #{$footer + $header});
     flex-flow: row wrap;
     overflow: hidden;
 }
-
-b {
-	font-weight: bold;
-}
-
 
 #profile {
 	display:flex;

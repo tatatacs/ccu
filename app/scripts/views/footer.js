@@ -17,23 +17,30 @@ define([
 
         className: 'footer dark',
 
-        events: {},
+        events: {
+            'mouseover .security': 'expand',
+            'mouseleave .security': 'collapse'
+        },
 
         color: null,
 
         initialize: function () {
-            this.listenTo(App.Models.Color, 'change', this.render);
+            
         },
 
         render: function (color) {
             
             this.$el.html(this.template());
             
-            this.$el.switchClass( this.color, App.Models.Color.get('color') );
-
-            this.color = App.Models.Color.get('color');
-            
             return this;
+        },
+
+        expand: function() {
+            this.$el.addClass('expanded');
+        },
+
+        collapse: function() {
+            this.$el.removeClass('expanded');
         },
 
         onClose: function() {

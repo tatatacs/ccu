@@ -40,8 +40,9 @@ define([
             var username = this.$('input.username').val();
             var password = this.$('input.password').val();
 
-            if(username) {
-                if(password === 'teacher' || password === 'professor')  {
+            switch(username) {
+                case 'teacher':
+                case 'professor':  {
                     var type = 'teacher';
                     App.Models.User.set({
                         'name': 'Maria Josefa da Conceição',
@@ -52,7 +53,8 @@ define([
                         'natural': 'Portugal',
                         'contact': '932374910'
                     });
-                } else {
+                } break;
+                case 'student': {
                     var type = 'student';
 
                     App.Models.User.set({
@@ -64,11 +66,11 @@ define([
                         'natural': 'Cabo Verde',
                         'contact': '919234888'
                     });
-                }
-                App.Models.User.set(type, true);
-                App.Models.User.set('visitor', false);
+                } break;
             }
-            //window.location.hash = '';
+            
+            App.Models.User.set(type, true);
+            App.Models.User.set('visitor', false);
         },
 
         onClose: function() {
