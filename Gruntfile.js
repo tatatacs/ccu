@@ -32,10 +32,10 @@ module.exports = function (grunt) {
                 nospawn: true,
                 livereload: true
             },
-            compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}{,*/}*.{scss,sass}'],
-                tasks: ['compass']
-            },
+            //compass: {
+            //    files: ['<%= yeoman.app %>/styles/{,*/}{,*/}*.{scss,sass}'],
+            //    tasks: ['compass']
+            //},
             livereload: {
                 options: {
                     livereload: grunt.option('livereloadport') || LIVERELOAD_PORT
@@ -255,7 +255,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-        compass: {
+        /*compass: {
             options: {
                 sassDir: '<%= yeoman.app %>/styles/sass',
                 cssDir: '<%= yeoman.app %>/styles',
@@ -270,10 +270,10 @@ module.exports = function (grunt) {
                     debugInfo: true
                 }
             }
-        }
+        }*/
     });
 
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    //grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('createDefaultTemplate', function () {
         grunt.file.write('.tmp/scripts/templates.js', 'this.JST = this.JST || {};');
@@ -304,7 +304,7 @@ module.exports = function (grunt) {
             'clean:server',
             'createDefaultTemplate',
             'handlebars',
-            'compass:server',
+            //'compass:server',
             'connect:livereload',
             'open:server',
             'watch'
@@ -317,7 +317,7 @@ module.exports = function (grunt) {
                 'clean:server',
                 'createDefaultTemplate',
                 'handlebars',
-                'compass',
+                //'compass',
                 'connect:test',
                 'mocha',
             ];
@@ -335,7 +335,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'createDefaultTemplate',
         'handlebars',
-        'compass:dist',
+        //'compass:dist',
         'useminPrepare',
         'requirejs',
         'imagemin',
