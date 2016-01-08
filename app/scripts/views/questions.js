@@ -20,11 +20,12 @@ define([
 
         events: {
             'click .question': 'writeResponse',
-            'click .send': 'sendResponse'
+            'click .send': 'sendResponse',
+            'click .cancel': 'back'
         },
 
         initialize: function () {
-            this.listenTo(App.Models.Color, 'change', this.render);
+
         },
 
         render: function () {
@@ -37,8 +38,7 @@ define([
                         App.Vent.trigger('title', { title: 'Dúvidas'})
                         App.Vent.trigger('subtitle', { subtitle: 'Tem 2 novas dúvidas'})
                         _this.$el.html(_this.template({
-                            questions: collection.toJSON(),
-                            color: App.Models.Color.get('color')
+                            questions: collection.toJSON()
                         }));
                     }
                 });
@@ -46,8 +46,7 @@ define([
                 App.Vent.trigger('title', { title: 'Dúvidas'})
                 App.Vent.trigger('subtitle', { subtitle: 'Tem 2 novas dúvidas'})
                 _this.$el.html(_this.template({
-                    questions: App.Collections.Questions.toJSON(),
-                    color: App.Models.Color.get('color')
+                    questions: App.Collections.Questions.toJSON()
                 }));
             }
             return this;
@@ -76,6 +75,10 @@ define([
                 'read':true
             });
 
+            this.render();
+        },
+
+        cancel: function() {
             this.render();
         }
     });

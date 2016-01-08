@@ -2,20 +2,21 @@
 
 	
 .questions,.responses {
-
+	height: calc(100% - 70px);
 	.buttons {
 		button {
 			padding: 10px;
 			margin: 10px 0px 10px 5px;
+			width: 150px;
+			border: 3px solid;
+			border-radius: 5px;
 		}
-		flex-grow: 0.1;
 		display: flex;
 		justify-content: flex-end;
 	}
 
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1;
 	
 	>.questions, >.responses {
 		border: 1px solid;
@@ -40,36 +41,53 @@
 
 #question, #response {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
+    height: 100%;
+    padding: 0 10px;
 
     .field {
-	    flex-grow: 1;
+
 	    display: flex;
 	    flex-direction:column;
 
 	    >textarea {
-		    flex-grow: 1;
 		    padding: 10px;
+		    border: 2px solid;
 		}
 	    
 	    .label {
-	    	padding: 10px 0;
+	    	padding: 0px 0 5px 0;
 	    }
 
 	    input {
+	    	margin-bottom: 20px;
 		    padding: 10px;
 		    flex-grow: 1;
+		    border: 2px solid;
 		}
 
-	    &.name, &.class, &.tit {
-	    	flex-grow: 0.1;
+	    &.name, &.classname, &.tit {
+
 	    } 
 
 	    &.buttons {
-	    	flex-grow: 0.1;
 		    display: flex;
 		    flex-direction: row;
+		    position: relative;
+		    margin-top: 10px;
+		    align-items: center;
+		    justify-content: flex-end;
+
+		    button {
+		    	width: 200px;
+		    	padding: 7px;
+		    	margin-left: 10px;
+		    	border: 3px solid;
+		    	border-radius: 5px;
+
+		    	&.send { right: 230px;}
+		    	&.cancel {right: 0;}
+		    }
 		}
 	}
 }

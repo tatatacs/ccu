@@ -29,22 +29,15 @@ define([
 
         initialize: function () {
             this.listenTo(App.Models.User, 'change', this.render);
-            this.listenTo(App.Models.Color, 'change', this.render);
         },
 
 
         render: function () {
 
             this.$el.html(this.template({
-                user: App.Models.User.toJSON(),
-                color: App.Models.Color.get('color')
+                user: App.Models.User.toJSON()
             }));
 
-
-            if(!this.$el.hasClass(App.Models.Color.get('color'))) {
-                this.$el.switchClass( this.color, App.Models.Color.get('color') );
-                this.color = App.Models.Color.get('color');
-            }
 
             return this;
         

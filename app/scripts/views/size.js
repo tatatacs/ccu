@@ -54,6 +54,11 @@ define([
                 this.$('.titleSize>#minus').attr('class','disabled');
             }
 
+            $('body').on('click', function(){
+                $('body').off('click');
+                _this.animateClose();
+            });
+
             setTimeout(function(){
                 _this.$el.animate({opacity:1},{duration:240, queue:false});
             }, 0);
@@ -148,14 +153,13 @@ define([
 
             var _this = this;
 
+            $('.fontsize').removeClass('editing');
+
             this.$el.animate({opacity:0},{
                 duration:250, 
                 queue:false, 
                 complete:function(){
-                    
-
                     $('.fontsize').removeClass('editing');
-
                     App.sheet.innerHTML = "body * { font-size: " + App.fontsize + "px; } body .title { font-size: " + App.titlesize + "px; }";
 
                     setTimeout(function() {

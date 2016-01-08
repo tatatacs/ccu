@@ -43,6 +43,8 @@ define([
 
         switchViews: function(type) {
             
+            var _this = this;
+
             if(this.subview) {
                 this.subview.close();
                 this.subview = null;
@@ -79,7 +81,10 @@ define([
 
             }
 
-            this.$('.content-wrapper').html(this.subview.render().el);
+            this.render();
+            setTimeout(function() {
+                _this.$('.content-wrapper').html(_this.subview.render().el);
+            }, 0);
         },
 
         subtitle: function(params) {

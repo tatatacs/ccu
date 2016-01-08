@@ -3,11 +3,15 @@
 	ul3i
 </div>
 
+<div id="search">
+	<input id="searchBar" placeholder="Pesquisar..." type="text"></input>
+</div>
+
 {{#if user.name}}
 <div>
-	<button class='profile {{color}} lightest'>{{user.name}}</button>
-	<button class='logout {{color}} light'>Terminar sessão</button>
+	<button class='profile'>{{>profile}} {{user.name}}</button>
+	<button class='logout'>Terminar sessão</button>
 </div>
 {{else}}
-<button class='login {{color}} light'>Iniciar sessão</button>
+<button class='login'>Iniciar sessão</button>
 {{/if}}

@@ -17,27 +17,88 @@ define([
 
         color: 'red',
 
-        className: 'color hidden',
+        className: 'color',
 
         events: {
-            'click .scheme': 'changeColors'
+            'click': 'handle',
+            'click .picker': 'changeColors',
+            'click #save': 'save',
+            'click #cancel': 'cancel'
         },
 
         initialize: function () {
-            //this.listenTo(this.model, 'change', this.render);
+            this.color = App.color;
         },
 
         render: function () {
+            
+            var _this = this;
+
             this.$el.html(this.template());
+
+            $('body').on('click', function(){
+                $('body').off('click');
+                _this.animateClose();
+            });
+
+            setTimeout(function(){
+                _this.$('.picker[data-class="' + App.color + '"]').addClass('selected');
+                _this.$el.animate({opacity:1},{duration:240, queue:false});
+            }, 0);
             return this;
         },
 
+        handle: function(ev) {
+            ev.stopPropagation();
+            ev.preventDefault();
+            return false;
+        },
+
+
         changeColors: function(ev) {
 
-            //if($(ev.currentTarget).attr('data-color') === App.color);
-            //    return;
+            $('body').removeClass().addClass($(ev.currentTarget).attr('data-class'));
+            $('.picker').removeClass('selected');
+            $(ev.currentTarget).addClass('selected');
 
-            App.Models.Color.set('color', $(ev.currentTarget).attr('data-color'));
+        },
+
+
+        save: function() {
+            
+            App.color = $('.picker.selected').attr('data-class');
+
+            this.animateClose();
+        },
+
+        cancel: function() {
+
+            $('body').addClass(App.color);
+
+            this.animateClose();
+        },
+
+        animateClose: function() {
+
+            var _this = this;
+
+            $('.colorscheme').removeClass('editing');
+            
+            this.$el.animate({opacity:0},{
+                duration:250, 
+                queue:false, 
+                complete:function(){
+                    $('.colorscheme').removeClass('editing');
+                    setTimeout(function() {
+                        _this.close();
+                    }, 0);
+                    
+                }
+            });
+        },
+
+        onClose: function() {
+           App.Vent.trigger('menu:closedColorView');
         }
     });
 

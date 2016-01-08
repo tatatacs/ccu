@@ -24,7 +24,11 @@ define([
         },
 
         render: function () {
-            App.Vent.trigger('title', { title: 'Página do aluno' } );
+            if(App.Models.User.get('student')) {
+                App.Vent.trigger('title', { title: 'Página do aluno' } );
+            } else {
+                App.Vent.trigger('title', { title: 'Página do professor' } );
+            }
             App.Vent.trigger('subtitle', { subtitle: '' } );
             this.$el.html(this.template({
                 model: App.Models.User.toJSON()

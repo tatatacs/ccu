@@ -9,9 +9,10 @@
 }
 
 #profile {
-	display:flex;
-	flex-grow: 1;
-	flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    height: calc(100% - 50px);
+    flex-direction: column;
 
 	.profileHeader {
 	    display: flex;
@@ -51,6 +52,7 @@
 
 		course-header, course {
 			border-bottom: 1px solid;
+			flex-grow: 1;
 
 			name { width:60%; overflow: hidden; text-overflow:ellipsis; }
 			rating, year { width:20%; overflow: hidden; text-overflow:ellipsis; }
@@ -66,11 +68,28 @@
 
 			.title {
 			    padding: 20px;
+			    position: relative;
+			    svg {
+				    height: 80px;
+				    width: 60px;
+				    position: absolute;
+				    right: 0px;
+				    top: 0px;
+				}
 			}
 
 			>div:not(.title) {
+				position: relative;
 			    margin: 5px;
 			    cursor: pointer;
+			    display: flex;
+			    align-items: center;
+			    flex-grow: 1;
+			    svg {
+				    height: 15px;
+				    width: 15px;
+				    margin-right: 10px;
+				}
 			}
 			margin: 10px;
 			display: flex;
@@ -87,8 +106,19 @@
     padding: 10px;
     height: 100%;
 
+    button.addClass {
+	    position: absolute;
+	    top: 15px;
+	    right: 30px;
+	    width: 200px;
+	    border: 3px solid;
+	    padding: 10px;
+	    border-radius: 5px;
+	}
+
 	.title {
 		padding: 20px;
+		line-height: 130%;
 	}
 	.subtitle {
 	    position: relative;
@@ -96,11 +126,9 @@
 	    margin-left: 20px;
 	}
 	.content-wrapper {
-	    padding: 10px;
-	    display: flex;
-	    flex-direction: column;
-	    flex:1;
-	    overflow: hidden;
+		padding: 10px;
+		height: 100%;
+		overflow: hidden;
 
 		.content {
 			height: calc(100% - 20px);
@@ -113,49 +141,132 @@
 }
 
 #main-page, #courses {
-	display: flex;
-    height: calc(100% - 66px);
+    display: flex;
     position: relative;
+    overflow: hidden;
 
     >.image {
-	    flex: 1;
-	    margin: 0 20px 0 10px;
-	    width: 40%;
-	    max-width: 400px;
-	    max-height: 500px;
+	    background-color: #777;
+	    min-width: 70px;
+	    width: 30%;
+	    height: 100%;
     }
-    >.lorem {
-
-	    text-align: justify;
-	    line-height: 200%;
-	    overflow: auto;
-	    position: relative;
+    >.context {
+	    height: 100%;
 	    max-width: 700px;
-	    max-height: calc(100% - 40px);
+	    position: relative;
+	    width: 70%;
+	    display: flex;
+	    flex-direction: column;
+	    >.lorem {
+		    text-align: justify;
+		    line-height: 200%;
+		    overflow: auto;
+		    position: relative;
+		    
+		    max-height: calc(100% - 70px);
+		    padding: 0 15px;
 
-		p {
-			margin-bottom: 20px;
+			p {
+				margin-bottom: 20px;
+			}
+	    }
+	    >button {
+			padding: 20px;
+			border: 3px solid;
+			margin: 15px 30px 0 30px;
+			border-radius: 5px;
 		}
-    }
-    >button {
-	    position: absolute;
-	    bottom: 0;
-	    right: 0;
 	}
 }
+
+#main-page { height: calc(100% - 60px); }
+#courses, #classes { height: calc(100% - 80px); }
 
 #courses, #classes {
     flex-flow: row wrap;
     display: flex;
     justify-content: flex-start;
     flex-grow: 1;
+    position: relative;
+
+	.video {
+		position: relative;
+	    display: flex;
+	    height: calc(100% - 70px);
+	    width: 100%;
+	    cursor: pointer;
+	    align-items: center;
+    	justify-content: center;
+
+	    #start {
+		    max-height: 100px;
+		    opacity: 0.5;
+		}
+
+	    .controls {
+	    	height: 0;
+		    display: flex;
+		    width: 100%;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    overflow: hidden;
+		    align-items: center;
+
+		    -webkit-transition: height 0.5s ease;
+		    -o-transition: height 0.5s ease;
+		    transition: height 0.5s ease;
+			
+			>.progress {
+			    margin-left: 110px;
+			}
+		    
+		    >svg {
+
+		    	&.hidden { display: none; }
+
+		    	height: 0px;
+		    	width: 40px;
+		    	position: absolute;
+		    	margin-top: 10px;
+
+				&#expand { right: 10px; }
+				&#play { left: 10px; }
+				&#pause { left: 10px; }
+				&#volume { left: 55px; }
+
+		    	-webkit-transition: height 0.5s ease;
+			    -o-transition: height 0.5s ease;
+			    transition: height 0.5s ease;
+		    }
+		}
+		&:hover {
+			.controls {
+				height: 50px;
+				>svg {
+			    	height: 30px;
+			    }
+			}
+		}
+	}
+
 
 	>button {
 		position: absolute;
 	    bottom: 10px;
 	    padding: 10px;
-	    right: 10px;
+	    right: 0px;
+	    background-color: transparent;
+	    border: 5px solid;
+	    border-radius: 5px;
 	}
+
+	>div {    
+		display: flex;
+    	flex-direction: column;
+    	.class { margin-top: 10px;}
+	} 
 
 	.course, .class {
 		border-radius: 5px;
@@ -164,7 +275,7 @@
 	    padding: 0 20px;
 	    flex-direction: column;
 	    justify-content: center;
-	    margin: 0 20px 20px 0;
+	    margin: 0 30px 30px 0;
 	    cursor: pointer;
 	    box-sizing: border-box;
 	    min-width: 300px;
@@ -182,8 +293,11 @@
 }
 
 #login {
-	display: flex;
+    display: flex;
     flex: 1;
+    height: calc(100% - 60px);
+    max-height: 500px;
+    max-width: 900px;
     flex-flow: column wrap;
     justify-content: space-around;
 

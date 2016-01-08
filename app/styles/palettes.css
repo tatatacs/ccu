@@ -3,31 +3,72 @@ body.dark {
   background-color: #141311;
 }
 /* line 4, sass/palettes.scss */
+body.dark input, body.dark textarea {
+  color: #ccc;
+}
+/* line 8, sass/palettes.scss */
+body.dark .questions, body.dark .responses {
+  color: #bbb;
+}
+/* line 11, sass/palettes.scss */
+body.dark .questions .buttons > button, body.dark .responses .buttons > button {
+  color: #bbb;
+}
+/* line 14, sass/palettes.scss */
+body.dark .questions .buttons > button:disabled, body.dark .responses .buttons > button:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 19, sass/palettes.scss */
 body.dark #header {
   background-color: #753928;
   color: #d8d8d8;
 }
-/* line 8, sass/palettes.scss */
+/* line 23, sass/palettes.scss */
 body.dark #header #logo > svg {
   fill: #d8d8d8;
 }
-/* line 13, sass/palettes.scss */
+/* line 27, sass/palettes.scss */
+body.dark #header button {
+  color: #bbb;
+}
+/* line 29, sass/palettes.scss */
+body.dark #header .profile {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 30, sass/palettes.scss */
+body.dark #header .login {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 34, sass/palettes.scss */
+body.dark #footer {
+  color: #bbb;
+  background-color: #753928;
+}
+/* line 37, sass/palettes.scss */
+body.dark #footer svg {
+  fill: #ccc;
+}
+/* line 41, sass/palettes.scss */
+body.dark #footer.expanded .button {
+  border: 3px solid #bbb;
+}
+/* line 47, sass/palettes.scss */
 body.dark #menu {
   background-color: #222;
   border-right: 10px solid #333;
 }
-/* line 17, sass/palettes.scss */
+/* line 51, sass/palettes.scss */
 body.dark #menu button {
   color: #bbb;
   -webkit-transition: padding-left 0.5s;
   -o-transition: padding-left 0.5s;
   transition: padding-left 0.5s;
 }
-/* line 24, sass/palettes.scss */
+/* line 58, sass/palettes.scss */
 body.dark #menu button svg, body.dark #menu button path {
   fill: #bbb;
 }
-/* line 29, sass/palettes.scss */
+/* line 63, sass/palettes.scss */
 body.dark #menu button[data-route]:hover,
 body.dark #menu button[data-route].selected {
   background-color: #b7b7b7;
@@ -37,101 +78,370 @@ body.dark #menu button[data-route].selected {
   -o-transition: padding-left 0.5s;
   transition: padding-left 0.5s;
 }
-/* line 39, sass/palettes.scss */
+/* line 73, sass/palettes.scss */
 body.dark #menu button[data-route]:hover svg, body.dark #menu button[data-route]:hover path,
 body.dark #menu button[data-route].selected svg,
 body.dark #menu button[data-route].selected path {
   fill: #222;
 }
-/* line 44, sass/palettes.scss */
-body.dark #menu button.fontsize:hover, body.dark #menu button.coloscheme:hover,
-body.dark #menu button.fontsize.editing, body.dark #menu button.coloscheme.editing {
+/* line 78, sass/palettes.scss */
+body.dark #menu button.fontsize:hover, body.dark #menu button.colorscheme:hover,
+body.dark #menu button.fontsize.editing, body.dark #menu button.colorscheme.editing {
   background-color: #753928;
 }
-/* line 49, sass/palettes.scss */
-body.dark #menu button > .size, body.dark #menu button > .size:hover {
+/* line 84, sass/palettes.scss */
+body.dark #menu button > .size, body.dark #menu button > .color,
+body.dark #menu button > .size:hover, body.dark #menu button > .color:hover {
   background-color: #222;
   color: #bbb;
 }
-/* line 52, sass/palettes.scss */
-body.dark #menu button > .size svg, body.dark #menu button > .size path, body.dark #menu button > .size:hover svg, body.dark #menu button > .size:hover path {
+/* line 88, sass/palettes.scss */
+body.dark #menu button > .size svg, body.dark #menu button > .size path, body.dark #menu button > .color svg, body.dark #menu button > .color path,
+body.dark #menu button > .size:hover svg,
+body.dark #menu button > .size:hover path, body.dark #menu button > .color:hover svg, body.dark #menu button > .color:hover path {
   fill: #bbb;
 }
-/* line 55, sass/palettes.scss */
-body.dark #menu button > .size .buttons #save, body.dark #menu button > .size:hover .buttons #save {
+/* line 91, sass/palettes.scss */
+body.dark #menu button > .size .buttons #save, body.dark #menu button > .color .buttons #save,
+body.dark #menu button > .size:hover .buttons #save, body.dark #menu button > .color:hover .buttons #save {
   background-color: #4D7332;
   color: #fff;
 }
-/* line 59, sass/palettes.scss */
-body.dark #menu button > .size .buttons #cancel, body.dark #menu button > .size:hover .buttons #cancel {
+/* line 95, sass/palettes.scss */
+body.dark #menu button > .size .buttons #cancel, body.dark #menu button > .color .buttons #cancel,
+body.dark #menu button > .size:hover .buttons #cancel, body.dark #menu button > .color:hover .buttons #cancel {
   background-color: #A32424;
   color: #fff;
 }
-/* line 75, sass/palettes.scss */
+/* line 99, sass/palettes.scss */
+body.dark #menu button > .size:before, body.dark #menu button > .color:before,
+body.dark #menu button > .size:hover:before, body.dark #menu button > .color:hover:before {
+  background-color: #222;
+}
+/* line 102, sass/palettes.scss */
+body.dark #menu button > .size:after, body.dark #menu button > .color:after,
+body.dark #menu button > .size:hover:after, body.dark #menu button > .color:hover:after {
+  background-color: #222;
+  border: 1px solid #bbb;
+}
+/* line 111, sass/palettes.scss */
+body.dark #main-page .context > button, body.dark #courses .context > button {
+  color: #aaa;
+  background-color: transparent;
+}
+/* line 115, sass/palettes.scss */
+body.dark #main-page .context > button:hover, body.dark #courses .context > button:hover {
+  background-color: #bbb;
+  color: #222;
+  border-color: #bbb;
+}
+/* line 123, sass/palettes.scss */
 body.dark #content {
   color: #bbb;
 }
-/* line 79, sass/palettes.scss */
+/* line 127, sass/palettes.scss */
 body.dark #content .content-wrapper .image {
   background-color: #777;
 }
-/* line 85, sass/palettes.scss */
+/* line 132, sass/palettes.scss */
+body.dark #content .addClass {
+  color: #bbb;
+}
+/* line 139, sass/palettes.scss */
+body.dark #courses button, body.dark #classes button {
+  color: #bbb;
+}
+/* line 145, sass/palettes.scss */
+body.dark #classes .video {
+  background-color: #777;
+}
+/* line 148, sass/palettes.scss */
+body.dark #classes .video .controls {
+  background-color: #555;
+}
+/* line 154, sass/palettes.scss */
 body.dark .course:not(.promo), body.dark .class {
   background-color: transparent;
   border: 7px solid;
   color: #bbb;
 }
-/* line 90, sass/palettes.scss */
-body.dark .course:not(.promo) svg, body.dark .class svg {
+/* line 159, sass/palettes.scss */
+body.dark .course:not(.promo) svg, body.dark .course:not(.promo) path, body.dark .class svg, body.dark .class path {
   fill: #bbb;
 }
-/* line 96, sass/palettes.scss */
+/* line 165, sass/palettes.scss */
 body.dark .course:not(.promo):hover, body.dark .class:hover {
   background-color: #bbb;
   color: #111;
   border: 7px solid #bbb;
 }
-/* line 101, sass/palettes.scss */
-body.dark .course:not(.promo):hover svg, body.dark .class:hover svg {
+/* line 170, sass/palettes.scss */
+body.dark .course:not(.promo):hover svg, body.dark .course:not(.promo):hover path, body.dark .class:hover svg, body.dark .class:hover path {
   fill: #111;
 }
-/* line 106, sass/palettes.scss */
+/* line 175, sass/palettes.scss */
 body.dark .course.promo {
   background-color: transparent;
   border: 7px solid #A85A43;
   color: #bbb;
 }
-/* line 112, sass/palettes.scss */
+/* line 181, sass/palettes.scss */
 body.dark .course.promo:hover {
   background-color: #A85A43;
   border: 7px solid #A85A43;
   color: #111;
 }
-/* line 119, sass/palettes.scss */
+/* line 188, sass/palettes.scss */
 body.dark #login {
   border: 2px solid;
 }
-/* line 123, sass/palettes.scss */
+/* line 192, sass/palettes.scss */
 body.dark #login .title {
   background-color: #753928;
 }
-/* line 126, sass/palettes.scss */
+/* line 195, sass/palettes.scss */
 body.dark #login .title.label {
   background-color: transparent;
 }
-/* line 131, sass/palettes.scss */
+/* line 200, sass/palettes.scss */
 body.dark #login .login {
   background-color: #4D7332;
   color: #bbb;
 }
-/* line 136, sass/palettes.scss */
+/* line 205, sass/palettes.scss */
 body.dark #login input {
   border: 2px solid #bbb;
   color: #bbb;
 }
-/* line 143, sass/palettes.scss */
+/* line 212, sass/palettes.scss */
 body.dark #profile .title {
   background-color: #753928;
+  color: #ccc;
+}
+/* line 216, sass/palettes.scss */
+body.dark #profile svg {
+  fill: #ccc;
+}
+/* line 222, sass/palettes.scss */
+body.dark #modal .title {
+  color: #ccc;
+}
+
+/* line 228, sass/palettes.scss */
+body.light {
+  background-color: #eee;
+}
+/* line 231, sass/palettes.scss */
+body.light input, body.light textarea {
+  color: #555;
+}
+/* line 235, sass/palettes.scss */
+body.light .questions, body.light .responses {
+  color: #555;
+}
+/* line 238, sass/palettes.scss */
+body.light .questions .buttons > button, body.light .responses .buttons > button {
+  color: #555;
+}
+/* line 242, sass/palettes.scss */
+body.light .questions .buttons > button:disabled, body.light .responses .buttons > button:disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* line 248, sass/palettes.scss */
+body.light #header {
+  background-color: #F7C997;
+  color: #555;
+}
+/* line 252, sass/palettes.scss */
+body.light #header #logo > svg {
+  fill: #555;
+}
+/* line 257, sass/palettes.scss */
+body.light #footer {
+  background-color: #F7C997;
+  color: #555;
+}
+/* line 261, sass/palettes.scss */
+body.light #footer svg {
+  fill: #555;
+}
+/* line 265, sass/palettes.scss */
+body.light #footer.expanded .button {
+  border: 3px solid #555;
+}
+/* line 271, sass/palettes.scss */
+body.light #menu {
+  background-color: #ddd;
+  border-right: 10px solid #bbb;
+}
+/* line 275, sass/palettes.scss */
+body.light #menu button {
+  color: #555;
+  -webkit-transition: padding-left 0.5s;
+  -o-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
+}
+/* line 282, sass/palettes.scss */
+body.light #menu button svg, body.light #menu button path {
+  fill: #555;
+}
+/* line 287, sass/palettes.scss */
+body.light #menu button[data-route]:hover,
+body.light #menu button[data-route].selected {
+  background-color: #b7b7b7;
+  padding-left: 30px;
+  color: #222;
+  -webkit-transition: padding-left 0.5s;
+  -o-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
+}
+/* line 297, sass/palettes.scss */
+body.light #menu button[data-route]:hover svg, body.light #menu button[data-route]:hover path,
+body.light #menu button[data-route].selected svg,
+body.light #menu button[data-route].selected path {
+  fill: #222;
+}
+/* line 302, sass/palettes.scss */
+body.light #menu button.fontsize:hover, body.light #menu button.colorscheme:hover,
+body.light #menu button.fontsize.editing, body.light #menu button.colorscheme.editing {
+  background-color: #F7C997;
+}
+/* line 307, sass/palettes.scss */
+body.light #menu button > .size, body.light #menu button > .color,
+body.light #menu button > .size:hover, body.light #menu button > .color:hover {
+  background-color: #fff;
+  color: #333;
+}
+/* line 311, sass/palettes.scss */
+body.light #menu button > .size svg, body.light #menu button > .size path, body.light #menu button > .color svg, body.light #menu button > .color path,
+body.light #menu button > .size:hover svg,
+body.light #menu button > .size:hover path, body.light #menu button > .color:hover svg, body.light #menu button > .color:hover path {
+  fill: #333;
+}
+/* line 314, sass/palettes.scss */
+body.light #menu button > .size .buttons #save, body.light #menu button > .color .buttons #save,
+body.light #menu button > .size:hover .buttons #save, body.light #menu button > .color:hover .buttons #save {
+  background-color: #92B877;
+  color: #222;
+}
+/* line 318, sass/palettes.scss */
+body.light #menu button > .size .buttons #cancel, body.light #menu button > .color .buttons #cancel,
+body.light #menu button > .size:hover .buttons #cancel, body.light #menu button > .color:hover .buttons #cancel {
+  background-color: #B87777;
+  color: #222;
+}
+/* line 322, sass/palettes.scss */
+body.light #menu button > .size:before, body.light #menu button > .color:before,
+body.light #menu button > .size:hover:before, body.light #menu button > .color:hover:before {
+  background-color: #fff;
+}
+/* line 325, sass/palettes.scss */
+body.light #menu button > .size:after, body.light #menu button > .color:after,
+body.light #menu button > .size:hover:after, body.light #menu button > .color:hover:after {
+  background-color: #fff;
+  border: 1px solid #555;
+}
+/* line 334, sass/palettes.scss */
+body.light #main-page .context > button, body.light #courses .context > button {
+  color: #555;
+  background-color: transparent;
+}
+/* line 338, sass/palettes.scss */
+body.light #main-page .context > button:hover, body.light #courses .context > button:hover {
+  background-color: #333;
+  color: #ccc;
+  border-color: #333;
+}
+/* line 346, sass/palettes.scss */
+body.light #content {
+  color: #555;
+}
+/* line 350, sass/palettes.scss */
+body.light #content .content-wrapper .image {
+  background-color: #777;
+}
+/* line 355, sass/palettes.scss */
+body.light #content .addClass {
+  color: #555;
+}
+/* line 361, sass/palettes.scss */
+body.light #courses button, body.light #classes button {
+  color: #333;
+}
+/* line 366, sass/palettes.scss */
+body.light #classes .video {
+  background-color: #555;
+}
+/* line 369, sass/palettes.scss */
+body.light #classes .video .controls {
+  background-color: #888;
+  color: #fff;
+}
+/* line 375, sass/palettes.scss */
+body.light .course:not(.promo), body.light .class {
+  background-color: transparent;
+  border: 7px solid;
+  color: #555;
+}
+/* line 380, sass/palettes.scss */
+body.light .course:not(.promo) svg, body.light .course:not(.promo) path, body.light .class svg, body.light .class path {
+  fill: #555;
+}
+/* line 386, sass/palettes.scss */
+body.light .course:not(.promo):hover, body.light .class:hover {
+  background-color: #555;
+  color: #eee;
+  border: 7px solid #555;
+}
+/* line 391, sass/palettes.scss */
+body.light .course:not(.promo):hover svg, body.light .course:not(.promo):hover path, body.light .class:hover svg, body.light .class:hover path {
+  fill: #eee;
+}
+/* line 396, sass/palettes.scss */
+body.light .course.promo {
+  background-color: transparent;
+  border: 7px solid #F7C997;
+  color: #111;
+}
+/* line 402, sass/palettes.scss */
+body.light .course.promo:hover {
+  background-color: #F7C997;
+  border: 7px solid #F7C997;
+  color: #111;
+}
+/* line 409, sass/palettes.scss */
+body.light #login {
+  border: 2px solid;
+}
+/* line 413, sass/palettes.scss */
+body.light #login .title {
+  background-color: #F7C997;
+}
+/* line 416, sass/palettes.scss */
+body.light #login .title.label {
+  background-color: transparent;
+}
+/* line 421, sass/palettes.scss */
+body.light #login .login {
+  background-color: #92B877;
+  color: #333;
+}
+/* line 426, sass/palettes.scss */
+body.light #login input {
+  border: 2px solid #555;
+  color: #555;
+}
+/* line 433, sass/palettes.scss */
+body.light #profile .title {
+  background-color: #F7C997;
+  color: #333;
+}
+/* line 437, sass/palettes.scss */
+body.light #profile svg {
+  fill: #333;
+}
+/* line 443, sass/palettes.scss */
+body.light #modal .title, body.light #modal input, body.light #modal textarea {
   color: #ccc;
 }
 

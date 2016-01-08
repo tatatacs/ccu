@@ -11,9 +11,10 @@
 #profile {
   display: flex;
   flex-grow: 1;
+  height: calc(100% - 50px);
   flex-direction: column;
 }
-/* line 16, sass/body.scss */
+/* line 17, sass/body.scss */
 #profile .profileHeader {
   display: flex;
   padding: 20px;
@@ -23,55 +24,56 @@
   border-radius: 5px;
   align-items: center;
 }
-/* line 25, sass/body.scss */
+/* line 26, sass/body.scss */
 #profile .profileHeader img {
   margin-right: 30px;
   border-radius: 5px;
   height: 150px;
 }
-/* line 30, sass/body.scss */
+/* line 31, sass/body.scss */
 #profile .profileHeader .info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-/* line 36, sass/body.scss */
+/* line 37, sass/body.scss */
 #profile .profileContent {
   display: flex;
   flex-grow: 1;
 }
-/* line 40, sass/body.scss */
+/* line 41, sass/body.scss */
 #profile .profileContent course-header {
   margin-bottom: 2px;
   display: flex;
   margin-bottom: 2px;
 }
-/* line 46, sass/body.scss */
+/* line 47, sass/body.scss */
 #profile .profileContent course {
   display: flex;
 }
-/* line 50, sass/body.scss */
+/* line 51, sass/body.scss */
 #profile .profileContent name, #profile .profileContent rating, #profile .profileContent year {
   border-right: 1px solid;
   padding: 5px;
 }
-/* line 52, sass/body.scss */
+/* line 53, sass/body.scss */
 #profile .profileContent course-header, #profile .profileContent course {
   border-bottom: 1px solid;
+  flex-grow: 1;
 }
-/* line 55, sass/body.scss */
+/* line 57, sass/body.scss */
 #profile .profileContent course-header name, #profile .profileContent course name {
   width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 56, sass/body.scss */
+/* line 58, sass/body.scss */
 #profile .profileContent course-header rating, #profile .profileContent course-header year, #profile .profileContent course rating, #profile .profileContent course year {
   width: 20%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 59, sass/body.scss */
+/* line 61, sass/body.scss */
 #profile .profileContent .info {
   flex: 1;
   border: 2px solid;
@@ -83,17 +85,36 @@
   display: flex;
   flex-direction: column;
 }
-/* line 67, sass/body.scss */
+/* line 69, sass/body.scss */
 #profile .profileContent .info .title {
   padding: 20px;
+  position: relative;
 }
-/* line 71, sass/body.scss */
+/* line 72, sass/body.scss */
+#profile .profileContent .info .title svg {
+  height: 80px;
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+/* line 81, sass/body.scss */
 #profile .profileContent .info > div:not(.title) {
+  position: relative;
   margin: 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+/* line 88, sass/body.scss */
+#profile .profileContent .info > div:not(.title) svg {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
 }
 
-/* line 81, sass/body.scss */
+/* line 100, sass/body.scss */
 #content {
   position: relative;
   flex-direction: column;
@@ -103,83 +124,195 @@
   padding: 10px;
   height: 100%;
 }
-/* line 90, sass/body.scss */
+/* line 109, sass/body.scss */
+#content button.addClass {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 200px;
+  border: 3px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* line 119, sass/body.scss */
 #content .title {
   padding: 20px;
+  line-height: 130%;
 }
-/* line 93, sass/body.scss */
+/* line 123, sass/body.scss */
 #content .subtitle {
   position: relative;
   top: -10px;
   margin-left: 20px;
 }
-/* line 98, sass/body.scss */
+/* line 128, sass/body.scss */
 #content .content-wrapper {
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  height: 100%;
   overflow: hidden;
 }
-/* line 105, sass/body.scss */
+/* line 133, sass/body.scss */
 #content .content-wrapper .content {
   height: calc(100% - 20px);
   overflow-y: auto;
 }
-/* line 108, sass/body.scss */
+/* line 136, sass/body.scss */
 #content .content-wrapper .content > img {
   height: 100%;
 }
 
-/* line 115, sass/body.scss */
+/* line 143, sass/body.scss */
 #main-page, #courses {
   display: flex;
-  height: calc(100% - 66px);
   position: relative;
+  overflow: hidden;
 }
-/* line 120, sass/body.scss */
+/* line 148, sass/body.scss */
 #main-page > .image, #courses > .image {
-  flex: 1;
-  margin: 0 20px 0 10px;
-  width: 40%;
-  max-width: 400px;
-  max-height: 500px;
+  background-color: #777;
+  min-width: 70px;
+  width: 30%;
+  height: 100%;
 }
-/* line 127, sass/body.scss */
-#main-page > .lorem, #courses > .lorem {
+/* line 154, sass/body.scss */
+#main-page > .context, #courses > .context {
+  height: 100%;
+  max-width: 700px;
+  position: relative;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+/* line 161, sass/body.scss */
+#main-page > .context > .lorem, #courses > .context > .lorem {
   text-align: justify;
   line-height: 200%;
   overflow: auto;
   position: relative;
-  max-width: 700px;
-  max-height: calc(100% - 40px);
+  max-height: calc(100% - 70px);
+  padding: 0 15px;
 }
-/* line 136, sass/body.scss */
-#main-page > .lorem p, #courses > .lorem p {
+/* line 170, sass/body.scss */
+#main-page > .context > .lorem p, #courses > .context > .lorem p {
   margin-bottom: 20px;
 }
-/* line 140, sass/body.scss */
-#main-page > button, #courses > button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+/* line 174, sass/body.scss */
+#main-page > .context > button, #courses > .context > button {
+  padding: 20px;
+  border: 3px solid;
+  margin: 15px 30px 0 30px;
+  border-radius: 5px;
 }
 
-/* line 147, sass/body.scss */
+/* line 183, sass/body.scss */
+#main-page {
+  height: calc(100% - 60px);
+}
+
+/* line 184, sass/body.scss */
+#courses, #classes {
+  height: calc(100% - 80px);
+}
+
+/* line 186, sass/body.scss */
 #courses, #classes {
   flex-flow: row wrap;
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
+  position: relative;
 }
-/* line 153, sass/body.scss */
+/* line 193, sass/body.scss */
+#courses .video, #classes .video {
+  position: relative;
+  display: flex;
+  height: calc(100% - 70px);
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+/* line 202, sass/body.scss */
+#courses .video #start, #classes .video #start {
+  max-height: 100px;
+  opacity: 0.5;
+}
+/* line 207, sass/body.scss */
+#courses .video .controls, #classes .video .controls {
+  height: 0;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  align-items: center;
+  -webkit-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+}
+/* line 221, sass/body.scss */
+#courses .video .controls > .progress, #classes .video .controls > .progress {
+  margin-left: 110px;
+}
+/* line 225, sass/body.scss */
+#courses .video .controls > svg, #classes .video .controls > svg {
+  height: 0px;
+  width: 40px;
+  position: absolute;
+  margin-top: 10px;
+  -webkit-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
+}
+/* line 227, sass/body.scss */
+#courses .video .controls > svg.hidden, #classes .video .controls > svg.hidden {
+  display: none;
+}
+/* line 234, sass/body.scss */
+#courses .video .controls > svg#expand, #classes .video .controls > svg#expand {
+  right: 10px;
+}
+/* line 235, sass/body.scss */
+#courses .video .controls > svg#play, #classes .video .controls > svg#play {
+  left: 10px;
+}
+/* line 236, sass/body.scss */
+#courses .video .controls > svg#pause, #classes .video .controls > svg#pause {
+  left: 10px;
+}
+/* line 237, sass/body.scss */
+#courses .video .controls > svg#volume, #classes .video .controls > svg#volume {
+  left: 55px;
+}
+/* line 245, sass/body.scss */
+#courses .video:hover .controls, #classes .video:hover .controls {
+  height: 50px;
+}
+/* line 247, sass/body.scss */
+#courses .video:hover .controls > svg, #classes .video:hover .controls > svg {
+  height: 30px;
+}
+/* line 255, sass/body.scss */
 #courses > button, #classes > button {
   position: absolute;
   bottom: 10px;
   padding: 10px;
-  right: 10px;
+  right: 0px;
+  background-color: transparent;
+  border: 5px solid;
+  border-radius: 5px;
 }
-/* line 160, sass/body.scss */
+/* line 265, sass/body.scss */
+#courses > div, #classes > div {
+  display: flex;
+  flex-direction: column;
+}
+/* line 268, sass/body.scss */
+#courses > div .class, #classes > div .class {
+  margin-top: 10px;
+}
+/* line 271, sass/body.scss */
 #courses .course, #courses .class, #classes .course, #classes .class {
   border-radius: 5px;
   display: flex;
@@ -187,14 +320,14 @@
   padding: 0 20px;
   flex-direction: column;
   justify-content: center;
-  margin: 0 20px 20px 0;
+  margin: 0 30px 30px 0;
   cursor: pointer;
   box-sizing: border-box;
   min-width: 300px;
   flex: 1;
   text-align: center;
 }
-/* line 174, sass/body.scss */
+/* line 285, sass/body.scss */
 #courses .course svg, #courses .class svg, #classes .course svg, #classes .class svg {
   max-height: 100px;
   max-width: 100px;
@@ -203,14 +336,17 @@
   padding: 10px;
 }
 
-/* line 184, sass/body.scss */
+/* line 295, sass/body.scss */
 #login {
   display: flex;
   flex: 1;
+  height: calc(100% - 60px);
+  max-height: 500px;
+  max-width: 900px;
   flex-flow: column wrap;
   justify-content: space-around;
 }
-/* line 190, sass/body.scss */
+/* line 304, sass/body.scss */
 #login .title {
   padding: 20px;
   flex: 2;
@@ -218,25 +354,25 @@
   align-items: center;
   justify-content: center;
 }
-/* line 198, sass/body.scss */
+/* line 312, sass/body.scss */
 #login input, #login .label {
   flex: 1;
   margin: 0 20px;
 }
-/* line 203, sass/body.scss */
+/* line 317, sass/body.scss */
 #login button {
   margin: 20px;
   flex: 1.5;
   font-size: 25px;
   border-radius: 5px;
 }
-/* line 210, sass/body.scss */
+/* line 324, sass/body.scss */
 #login .title.label {
   padding: 25px 0 0px 0;
   justify-content: flex-start;
   font-size: 18px;
 }
-/* line 216, sass/body.scss */
+/* line 330, sass/body.scss */
 #login input {
   padding: 0 10px;
 }

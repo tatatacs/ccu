@@ -29,15 +29,16 @@ require([
     'models/color',
     'collections/classes',
     'collections/questions',
-    'collections/responses'
-], function (Backbone, Router, User, Color, Classes, Questions, Responses) {
+    'collections/responses',
+    'views/modal'
+], function (Backbone, Router, User, Color, Classes, Questions, Responses, Modal) {
 
     Backbone.View.prototype.close = function(){
-      this.remove();
-      this.unbind();
-      if (this.onClose){
+      if(this.onClose){
         this.onClose();
       }
+      this.remove();
+      this.unbind();
     }
 
     window.App = {
@@ -55,7 +56,7 @@ require([
         fontsize: 14,
         titlesize: 18,
 
-        color: 'red'
+        color: 'dark'
         
     };
 
@@ -66,12 +67,13 @@ require([
     
     App.Models.User = new User();
 
-    App.Models.Color = new Color({color:'red'});
-
     App.Collections.Classes = new Classes();
 
     App.Collections.Questions = new Questions();
     App.Collections.Responses = new Responses();
+
+    App.Views.Modal = new Modal();
+    App.Views.Modal.render();
 
     App.Router = new Router();
 

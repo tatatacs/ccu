@@ -3,4 +3,51 @@
 #modal {
 	background-image: url('../images/modal.png');
 	background-repeat: repeat;
+
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+
+    flex-direction: column;
+
+    .content {
+    	height: 85%;
+    	width: 70%;
+
+    	max-width: 900px;
+    }
+
+    &.seeThrough {
+    	pointer-events: none;
+    }
+
+    .title {
+    	height: 30%;
+    	display: flex;
+    	align-items: center;
+	    color: #ccc;
+	    padding-top: 50px;
+	    width: 70%;
+    	max-width: 900px;
+    	padding: 0 10px;
+	}
+	.label {
+	    color: #ccc;
+	    font-size: 15px;
+	    margin-top: 15px;
+	    margin-bottom: 10px;
+	}
+	button {
+		color: #ccc;
+		padding: 10px;
+	}
 }

@@ -5,10 +5,13 @@
 <div>
 	{{label}}
 	<div class="class" data-class='yes' data-label='{{label}}' data-index='{{@index}}'>
-		<div>
-			{{#if new}}nova aula
-			{{else}}rever aula{{/if}}
-		</div>
+		
+		{{#if new}}
+		{{>starShape}} <div class="italic">Nova aula!</div>
+		{{else}}
+		{{>badge}} <div class="italic">Rever aula</div>
+		{{/if}}
+
 	</div>
 </div>
 {{/each}}
@@ -20,7 +23,17 @@
 <div class="class" data-label='{{label}}' data-index='{{@index}}'>
 	{{label}}
 
-	{{#if new}}<div> {{new}} novas aulas</div>{{/if}}
+	{{#if new}}
+		{{>star}}
+	{{else}}
+		{{>starShape}}
+	{{/if}}
+
+	{{#if new}}
+	<div class="italic"> {{new}} novas aulas!</div>
+	{{else}}
+	<div class="italic">Não tem novas aulas</div>
+	{{/if}}
 </div>
 
 {{/each}}

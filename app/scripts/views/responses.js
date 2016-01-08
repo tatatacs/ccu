@@ -20,11 +20,12 @@ define([
 
         events: {
             'click .new': 'newQuestion',
-            'click .send': 'sendQuestion'
+            'click .send': 'sendQuestion',
+            'click .cancel': 'cancel'
         },
 
         initialize: function () {
-            this.listenTo(App.Models.Color, 'change', this.render);
+
         },
 
         render: function () {
@@ -38,8 +39,7 @@ define([
                         App.Vent.trigger('title', { title: 'Dúvidas'})
                         App.Vent.trigger('subtitle', { subtitle: 'Tem 2 novas respostas'})
                         _this.$el.html(_this.template({
-                            responses: collection.toJSON(),
-                            color: App.Models.Color.get('color')
+                            responses: collection.toJSON()
                         }));
                     }
                 });
@@ -47,8 +47,7 @@ define([
                 App.Vent.trigger('title', { title: 'Dúvidas'})
                 App.Vent.trigger('subtitle', { subtitle: 'Tem 2 novas respostas'})
                 _this.$el.html(_this.template({
-                    responses: App.Collections.Responses.toJSON(),
-                    color: App.Models.Color.get('color')
+                    responses: App.Collections.Responses.toJSON()
                 }));
             }
             return this;
@@ -60,7 +59,6 @@ define([
             App.Vent.trigger('subtitle', { subtitle: ''});
 
             this.$el.html(this.questionTemplate({
-                color: App.Models.Color.get('color')
             }));
             
         },
@@ -75,6 +73,10 @@ define([
             console.log(App.Collections.Responses);
             App.Collections.Questions.add([{ name: App.Models.User.get('name'), course: _class, title: title, date: '11 de Dezembro 2015', read: false, question: question }]);
 
+            this.render();
+        },
+
+        cancel: function() {
             this.render();
         }
 

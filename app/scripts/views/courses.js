@@ -12,7 +12,7 @@ define([
     var CoursesView = Backbone.View.extend({
         
         courses: JST['app/scripts/templates/courses.hbs'],
-        classes: JST['app/scripts/templates/classes.hbs'],
+        classes: JST['app/scripts/templates/visitorClasses.hbs'],
         visitorClass: JST['app/scripts/templates/visitorClass.hbs'],
 
         tagName: 'div',
@@ -33,7 +33,6 @@ define([
 
         initialize: function () {
             this.listenTo(this.collection, 'change', this.render);
-            this.listenTo(App.Models.Color, 'change', this.render);
         },
 
         render: function () {
@@ -46,7 +45,6 @@ define([
                     App.Vent.trigger('title', { title: 'Cursos' } );
                     App.Vent.trigger('subtitle', { subtitle: collection.length + " cursos" } );
                     _this.$el.html(_this.courses({
-                        color: App.Models.Color.get('color'),
                         courses:collection.toJSON()
                     }));
                     
@@ -62,8 +60,8 @@ define([
 
             var classes = this.collection.at(0).get('classes');
 
-            App.Vent.trigger('breadcrumbs', { title: $(ev.currentTarget).find('.label').html() } );
-            App.Vent.trigger('subtitle', { subtitle: classes.length + " aulas em " + $(ev.currentTarget).find('.label').html() } );
+            App.Vent.trigger('breadcrumbs', { title: $(ev.currentTarget).attr('data-label') } );
+            App.Vent.trigger('subtitle', { subtitle: classes.length + " aulas em " + $(ev.currentTarget).attr('data-label') } );
 
             this.$el.html(this.classes({
                 classes: classes

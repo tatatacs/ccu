@@ -19,7 +19,7 @@
 	
 	{{#if model.student}} 
 	<div class="info">
-		<div class="title">Cursos Concluídos:</div>
+		<div class="title">Cursos Concluídos: {{>badge}}</div>
 		<course-header>
 			<name>Nome</name>
 			<rating>Nota</rating>
@@ -45,18 +45,18 @@
 	<div class="info">
 		<div class="title">Cursos em progresso:</div>
 	
-		<div>História da Ciência e de Cientistas</div>
-		<div>A União Europeia</div>
-		<div>Ciências Políticas</div>
-		<div>Diálogos com a Arte</div>
-		<div>Estudos Olisiponenses</div>
+		<div>{{>starShape}}História da Ciência e de Cientistas</div>
+		<div>{{>starShape}}A União Europeia</div>
+		<div>{{>starShape}}Ciências Políticas</div>
+		<div>{{>starShape}}Diálogos com a Arte</div>
+		<div>{{>starShape}}Estudos Olisiponenses</div>
 	</div>
 	{{else}}
 	<div class="info">
 		<div class="title">Cursos leccionados:</div>
-		<div>História de Portugal e Cultura</div>
-		<div>A União Europeia</div>
-		<div>Estudos Olisiponenses</div>
+		<div>{{>star}}História de Portugal e Cultura</div>
+		<div>{{>star}}A União Europeia</div>
+		<div>{{>star}}Estudos Olisiponenses</div>
 	</div>
 	{{/if}}
 </div>

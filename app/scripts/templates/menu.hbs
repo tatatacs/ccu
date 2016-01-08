@@ -10,14 +10,20 @@
 {{/if}}
 
 {{#if student}}
-
-<button data-route='profile'>{{>profile}}Perfil do aluno</button>
-<button data-route='classes'>{{>courses}}Minhas Aulas
-	<div class="sub">{{classes}} novas aulas</div>
+<button data-route=''>{{>home}}Página da faculdade</button>
+<button data-route='profile' class="selected">{{>profile}}Perfil do aluno</button>
+<button data-route='classes'>{{>courses}}
+	<div class='button-container'>
+		Minhas Aulas
+		<div class="sub">{{classes}} novas aulas</div>
+	</div>
 </button>
 <button data-route='calendar'>{{>calendar}}Calendário</button>
-<button data-route='responses'>{{>question}}Dúvidas
-	<div class="sub">2 novas respostas</div>
+<button data-route='responses'>{{>question}}
+	<div class='button-container'>
+		Dúvidas
+		<div class="sub">2 novas respostas</div>
+	</div>
 </button>
 <button data-route=''>{{>options}} Opções</button>
 <button class="fontsize">{{>fontsize}}Tamanho de letra</button>
@@ -27,12 +33,15 @@
 
 
 {{#if teacher}}
-
-<button data-route='profile'>{{>profile}}Perfil do professor</button>
+<button data-route=''>{{>home}}Página da faculdade</button>
+<button data-route='profile' class="selected">{{>profile}}Perfil do professor</button>
 <button data-route='classes'>{{>courses}}Minhas Aulas</button>
 <button data-route='calendar'>{{>calendar}}Calendário</button>
-<button data-route='questions'>{{>question}}Dúvidas
-	<div class="sub">2 novas dúvidas</div>
+<button data-route='questions'>{{>question}}
+	<div class='button-container'>
+		Dúvidas
+		<div class="sub">2 novas dúvidas</div>
+	</div>
 </button>
 <button data-route=''>{{>options}}Opções</button>
 <button class="fontsize">{{>fontsize}}Tamanho de letra</button>

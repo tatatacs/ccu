@@ -2,4 +2,48 @@
 #modal {
   background-image: url("../images/modal.png");
   background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  flex-direction: column;
+}
+/* line 22, sass/modal.scss */
+#modal .content {
+  height: 85%;
+  width: 70%;
+  max-width: 900px;
+}
+/* line 29, sass/modal.scss */
+#modal.seeThrough {
+  pointer-events: none;
+}
+/* line 33, sass/modal.scss */
+#modal .title {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  padding-top: 50px;
+  width: 70%;
+  max-width: 900px;
+  padding: 0 10px;
+}
+/* line 43, sass/modal.scss */
+#modal .label {
+  color: #ccc;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+/* line 49, sass/modal.scss */
+#modal button {
+  color: #ccc;
+  padding: 10px;
 }

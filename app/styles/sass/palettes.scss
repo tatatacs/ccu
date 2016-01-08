@@ -1,6 +1,21 @@
 body.dark {
     background-color: #141311;
 
+	input, textarea {
+		color: #ccc;
+	}
+
+	.questions,.responses {
+		color: #bbb;
+
+		.buttons>button {
+			color: #bbb;
+		}
+		.buttons>button:disabled {
+			background-color: rgba(255,255,255, 0.1);
+		}
+	}
+
 	#header {
 	    background-color: #753928;
 	    color: #d8d8d8;
@@ -8,6 +23,25 @@ body.dark {
 	    #logo>svg {
 	    	fill: #d8d8d8;
 	    }
+
+	    button {color:#bbb;}
+		
+		.profile { background-color: rgba(0,0,0, 0.5); }
+		.login { background-color: rgba(0,0,0, 0.5); }
+
+	}
+
+	#footer {
+		color: #bbb;
+    	background-color: #753928;
+    	svg {
+    		fill: #ccc;
+    	}
+    	&.expanded {
+    		.button {
+    			border: 3px solid #bbb;
+    		}
+    	}
 	}
 
 	#menu {
@@ -41,12 +75,14 @@ body.dark {
 		    }
 		}
 
-		button.fontsize:hover, button.coloscheme:hover,
-		button.fontsize.editing, button.coloscheme.editing {
+		button.fontsize:hover, button.colorscheme:hover,
+		button.fontsize.editing, button.colorscheme.editing {
 			background-color: #753928;
 		}
 
-		button>.size, button>.size:hover {
+
+		button>.size, button>.color,
+		button>.size:hover, button>.color:hover {
 			background-color: #222;
 			color:#bbb;
 			svg, path {
@@ -60,15 +96,27 @@ body.dark {
 			    background-color: #A32424;
 			    color: #fff;
 			}
+			&:before {
+				background-color: #222;
+			}
+			&:after {
+				background-color: #222;
+				border: 1px solid #bbb;
+			}
 		}
 	}
 
-	#main-page {
+	#main-page, #courses {
 		
-		button {
-		
-			//background-color: #A85A43;
-		
+		.context>button {
+			color: #aaa;
+			background-color: transparent;
+			
+			&:hover {
+				background-color: #bbb;
+				color: #222;
+				border-color: #bbb;
+			}
 		}
 	}
 
@@ -80,14 +128,35 @@ body.dark {
 			    background-color: #777; 
 			}
 	    }
+
+	    .addClass {
+	    	color: #bbb;
+	    }
 	}
+
+
+	#courses, #classes {
+		button {
+			color: #bbb;
+		}
+	}
+
+
+	#classes .video {
+		background-color: #777;
+
+		.controls {
+			background-color: #555;
+		}
+	}
+
 
 	.course:not(.promo), .class {
 		background-color:transparent;
 		border: 7px solid;
 		color: #bbb;
 
-		svg {
+		svg, path {
 			fill: #bbb;
 		}
 
@@ -98,7 +167,7 @@ body.dark {
 		color: #111;
 		border: 7px solid #bbb;
 
-		svg {
+		svg, path {
 			fill: #111;
 		}
 	}
@@ -144,8 +213,239 @@ body.dark {
     		background-color: #753928;
     		color: #ccc;
 		}
+		svg {
+		    fill: #ccc;
+		}
+	}
+
+	#modal {
+		.title {
+			color: #ccc;
+		}
 	}
 }
+
+body.light {
+    background-color: #eee;
+
+    input, textarea {
+		color: #555;
+	}
+
+	.questions,.responses {
+		color: #555;
+
+		.buttons>button {
+			color: #555;
+		}
+
+		.buttons>button:disabled {
+			background-color: rgba(0,0,0, 0.1);
+		}
+	}
+
+
+	#header {
+	    background-color: #F7C997;
+	    color: #555;
+
+	    #logo>svg {
+	    	fill: #555;
+	    }
+	}
+
+	#footer {
+		background-color: #F7C997;
+		color: #555;
+
+		svg {
+			fill: #555;
+		}
+		&.expanded {
+    		.button {
+    			border: 3px solid #555;
+    		}
+    	}
+	}
+
+	#menu {
+		background-color: #ddd;
+		border-right: 10px solid #bbb;
+	    
+		button {
+			color: #555;
+
+			-webkit-transition: padding-left 0.5s;
+		    -o-transition: padding-left 0.5s;
+		    transition: padding-left 0.5s;
+
+		    svg, path {
+		    	fill: #555;
+		    }
+		}
+		
+		button[data-route]:hover, 
+		button[data-route].selected {
+		    background-color: #b7b7b7;
+		    padding-left: 30px;
+		    color: #222;
+
+		    -webkit-transition: padding-left 0.5s;
+		    -o-transition: padding-left 0.5s;
+		    transition: padding-left 0.5s;
+
+		    svg, path {
+		    	fill: #222;
+		    }
+		}
+
+		button.fontsize:hover, button.colorscheme:hover,
+		button.fontsize.editing, button.colorscheme.editing {
+			background-color: #F7C997;
+		}
+
+		button>.size, button>.color, 
+		button>.size:hover, button>.color:hover {
+			background-color: #fff;
+			color:#333;
+			svg, path {
+		    	fill: #333;
+		    }
+		    .buttons #save {
+			    background-color: #92B877;
+			    color: #222;
+			}
+			.buttons #cancel {
+			    background-color: #B87777;
+			    color: #222;
+			}
+			&:before {
+				background-color: #fff;
+			}
+			&:after {
+				background-color: #fff;
+				border: 1px solid #555;
+			}
+		}
+	}
+
+	#main-page, #courses {
+		
+		.context>button {
+			color: #555;
+			background-color: transparent;
+			
+			&:hover {
+				background-color: #333;
+				color: #ccc;
+				border-color: #333;
+			}
+		}
+	}
+
+	#content {
+	    color: #555;
+
+	    .content-wrapper {
+	    	.image {
+			    background-color: #777; 
+			}
+	    }
+
+	    .addClass {
+	    	color: #555;
+	    }
+	}
+
+	#courses, #classes {
+		button {
+			color: #333;
+		}
+	}
+
+	#classes .video {
+		background-color: #555;
+
+		.controls {
+			background-color: #888;
+			color: #fff;
+		}
+	}
+
+	.course:not(.promo), .class {
+		background-color:transparent;
+		border: 7px solid;
+		color: #555;
+
+		svg, path {
+			fill: #555;
+		}
+
+	}
+
+	.course:not(.promo):hover, .class:hover {
+		background-color: #555;
+		color: #eee;
+		border: 7px solid #555;
+
+		svg, path {
+			fill: #eee;
+		}
+	}
+
+	.course.promo {
+		background-color: transparent;
+		border: 7px solid #F7C997;
+		color: #111;
+	}
+
+	.course.promo:hover {
+		background-color: #F7C997;
+		border: 7px solid #F7C997;
+		color: #111;
+
+	}
+
+	#login {
+
+		border: 2px solid;
+
+		.title {
+			background-color:#F7C997;
+
+			&.label {
+				background-color: transparent;
+			}
+		}
+		
+		.login {
+			background-color:#92B877;
+			color: #333;
+		}
+
+		input {
+			border: 2px solid #555;
+    		color: #555;
+		}
+	}
+
+	#profile {
+		.title {
+    		background-color: #F7C997;
+    		color: #333;
+		}
+		svg {
+		    fill: #333;
+		}
+	}
+
+	#modal {
+		.title, input, textarea {
+			color: #ccc;
+		}
+	}
+}
+
 
 
 /*@mixin light($color) {

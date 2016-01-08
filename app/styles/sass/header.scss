@@ -13,17 +13,22 @@
 	>div {
 		height: 100%;
 		display: flex;
+		align-items: center;
 	}
 
 	button {
-	    height: 100%;
+	    height: 80%;
 	    border: none;
+	    border-radius: 5px;
 	    font-family: inherit;
 	    min-width: 200px;
+	    padding: 0 20px;
+	    display: flex;
+	    align-items:center;
 	}
 
 	.profile {
-		width: 200px;
+		svg { margin-right: 10px;}
 	}
 
 	#logo{
@@ -39,5 +44,53 @@
 	    height: 35px;
 	    width: 35px;
 	    margin-right: 10px;
+	}
+
+	#search {
+	    width: 35%;
+	    position: absolute;
+	    left: 300px;
+	    top: 17px;
+	    height: 35px;
+	    display: flex;
+	    align-items: center;
+
+		#searchBar {
+		    padding: 20px;
+		    padding-left: 40px;
+		    border-radius: 17px;
+		    background-color: #ccc;
+		    color: #333;
+		    height: 100%;
+		    width: 100%;
+		}
+
+		&:before {
+		    background-image: url("../../images/search.png");
+		    height: 16px;
+		    width: 16px;
+		    content: '';
+		    position: absolute;
+		    top: 10px;
+		    left: 15px;
+		}
+	}
+
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		    color:    #555;
+		}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:    #555;
+	   opacity:  1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:    #555;
+	   opacity:  1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color:    #555;
+	}
+	:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+	  color:    #555;
 	}
 }

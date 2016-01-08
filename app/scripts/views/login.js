@@ -22,14 +22,16 @@ define([
         },
 
         initialize: function () {
-            this.listenTo(App.Models.Color, 'change', this.render);
+            
         },
 
         render: function () {
             App.Vent.trigger('title', { title: 'Iniciar sessão' } );
             App.Vent.trigger('subtitle', { subtitle: '' } );
             
-            this.$el.html(this.template());
+            this.$el.html(this.template({
+                
+            }));
             
             return this;
         },

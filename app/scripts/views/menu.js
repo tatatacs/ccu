@@ -21,15 +21,23 @@ define([
         className: 'menu',
 
         events: {
-            'click button:not(.colorscheme, .fontsize, .fontsize *)': 'route',
+            'click':'handle',
+            'click button:not(.colorscheme, .colorscheme *, .fontsize, .fontsize *)': 'route',
             'click button.colorscheme': 'changeColors',
             'click button.fontsize': 'changeSizes'
         },
 
+        handle: function(ev) {
+            ev.stopPropagation();
+            ev.preventDefault();
+            return false;
+        },
+
         initialize: function () {
             this.listenTo(App.Models.User, 'change', this.render);
-            App.Vent.on('menu:closedColorView', this.closedColorView, this);
-            App.Vent.on('menu:closedSizeView', this.closedSizeView, this);
+            
+            App.Vent.on('menu:closedSizeView', this.closeSize, this);
+            App.Vent.on('menu:closedColorView', this.closeColor, this);
         },
 
         closedColorView: function() {
@@ -82,16 +90,30 @@ define([
 
         changeColors: function(ev) {
 
+            if(this.sizeView) {
+                this.sizeView.animateClose();
+                this.sizeView = null;
+                $('.fontsize').removeClass('editing');
+            }
+
+            $(ev.currentTarget).addClass('editing');
+
             if(!this.colorView) {
                 this.colorView = new ColorView();
 
                 $(ev.currentTarget).append(this.colorView.render().el);
 
                 this.$('.colorscheme>.pointer').removeClass('hidden');
-            }
+            } 
         },
 
         changeSizes: function(ev) {
+
+            if(this.colorView) {
+                this.colorView.close();
+                this.colorView = null;
+                $('.colorscheme').removeClass('editing');
+            }
 
             $(ev.currentTarget).addClass('editing');
 
@@ -104,10 +126,18 @@ define([
             } 
         },
 
+        closeSize: function() {
+            this.sizeView = null;
+        },
+
+        closeColor: function() {
+            this.colorView = null;
+        },
+
         onClose: function() {
 
-            App.Vent.off('menu:closedColorView');
             App.Vent.off('menu:closedSizeView');
+            App.Vent.off('menu:closedColorView');
 
             this.colorView.close();
             this.colorView = null;

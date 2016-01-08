@@ -1,7 +1,10 @@
-<video width=75% height=75% controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
+<div class="video">
+	{{>start}}
+	<div class="controls">{{>play}} {{>pause}} {{>volume}} <div class="progress">0:00 / 30:00</div> {{>expand}}</div>
+</div>
 
-<button class="question {{color}} dark">Colocar dúvida ao professor</button>
+{{#if student}}
+<button class="question">Colocar dúvida ao professor</button>
+{{else}}
+<button class="edit">Editar aula</button>
+{{/if}}

@@ -14,9 +14,6 @@
     align-items: center;
     justify-content: space-around;
 
-	color: #bbb;
-    background-color: #753928;
-
     transition: all 1s ease;
 
 	.security {
@@ -28,8 +25,6 @@
 		svg {
 		    height: 35px;
 		    width: 35px;
-
-		    fill: #ccc;
 	
 			margin-right: 10px;
 		    padding: 5px;
@@ -77,7 +72,6 @@
 	}
 
 	.button {
-	    border: 3px solid #bbb;
 	    border-radius: 3px;
 	    padding: 5px;
 	    height: auto;

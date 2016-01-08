@@ -32,8 +32,9 @@ body * {
 	font-size: 14px;
 }
 
+
 body .title {
-	font-size: 20px;
+	font-size: 18px;
 	text-transform: uppercase;
 	font-family: arial black;
 }
@@ -45,6 +46,12 @@ button {
 
 button:focus {
 	outline: none;
+}
+
+
+input:focus {
+    border: none;
+    outline: none;
 }
 
 #header {
@@ -67,7 +74,11 @@ i {
 	font-weight: italic;
 }
 
-.bold {
+.italic {
+	font-style: italic;
+}
+
+.bold, {
 	font-weight: bold;
 	margin-left: 5px;
 }
