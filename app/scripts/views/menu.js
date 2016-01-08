@@ -38,6 +38,7 @@ define([
             
             App.Vent.on('menu:closedSizeView', this.closeSize, this);
             App.Vent.on('menu:closedColorView', this.closeColor, this);
+            App.Vent.on('menu:profile', this.render, this);
         },
 
         closedColorView: function() {
@@ -80,6 +81,10 @@ define([
                 this.colorView = null;
                 $('.colorscheme').removeClass('editing');
             }
+            if(($(ev.currentTarget).attr('data-route') === '') &&
+                (App.Models.User.get('student') || App.Models.User.get('teacher'))) {
+                this.$el.html(this.template({home:true}));
+            } 
 
             this.$('.selected').removeClass('selected');
             $(ev.currentTarget).addClass('selected');
@@ -138,6 +143,7 @@ define([
 
             App.Vent.off('menu:closedSizeView');
             App.Vent.off('menu:closedColorView');
+            App.Vent.off('menu:profile');
 
             this.colorView.close();
             this.colorView = null;

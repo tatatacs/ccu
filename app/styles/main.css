@@ -93,20 +93,21 @@ body.dark #header {
   color: #d8d8d8;
 }
 /* line 23, sass/palettes.scss */
-body.dark #header #logo > svg {
+body.dark #header svg {
   fill: #d8d8d8;
 }
 /* line 27, sass/palettes.scss */
 body.dark #header button {
-  color: #bbb;
+  color: #ddd;
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 /* line 29, sass/palettes.scss */
 body.dark #header .profile {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 /* line 30, sass/palettes.scss */
-body.dark #header .login {
-  background-color: rgba(0, 0, 0, 0.5);
+body.dark #header .login, body.dark #header .logout {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 /* line 34, sass/palettes.scss */
 body.dark #footer {
@@ -322,39 +323,52 @@ body.light #header {
   color: #555;
 }
 /* line 252, sass/palettes.scss */
-body.light #header #logo > svg {
+body.light #header svg {
   fill: #555;
 }
-/* line 257, sass/palettes.scss */
+/* line 256, sass/palettes.scss */
+body.light #header button {
+  color: #555;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+/* line 258, sass/palettes.scss */
+body.light #header .profile {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* line 259, sass/palettes.scss */
+body.light #header .login, body.light #header .logout {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 262, sass/palettes.scss */
 body.light #footer {
   background-color: #F7C997;
   color: #555;
 }
-/* line 261, sass/palettes.scss */
+/* line 266, sass/palettes.scss */
 body.light #footer svg {
   fill: #555;
 }
-/* line 265, sass/palettes.scss */
+/* line 270, sass/palettes.scss */
 body.light #footer.expanded .button {
   border: 3px solid #555;
 }
-/* line 271, sass/palettes.scss */
+/* line 276, sass/palettes.scss */
 body.light #menu {
   background-color: #ddd;
   border-right: 10px solid #bbb;
 }
-/* line 275, sass/palettes.scss */
+/* line 280, sass/palettes.scss */
 body.light #menu button {
   color: #555;
   -webkit-transition: padding-left 0.5s;
   -o-transition: padding-left 0.5s;
   transition: padding-left 0.5s;
 }
-/* line 282, sass/palettes.scss */
+/* line 287, sass/palettes.scss */
 body.light #menu button svg, body.light #menu button path {
   fill: #555;
 }
-/* line 287, sass/palettes.scss */
+/* line 292, sass/palettes.scss */
 body.light #menu button[data-route]:hover,
 body.light #menu button[data-route].selected {
   background-color: #b7b7b7;
@@ -364,152 +378,152 @@ body.light #menu button[data-route].selected {
   -o-transition: padding-left 0.5s;
   transition: padding-left 0.5s;
 }
-/* line 297, sass/palettes.scss */
+/* line 302, sass/palettes.scss */
 body.light #menu button[data-route]:hover svg, body.light #menu button[data-route]:hover path,
 body.light #menu button[data-route].selected svg,
 body.light #menu button[data-route].selected path {
   fill: #222;
 }
-/* line 302, sass/palettes.scss */
+/* line 307, sass/palettes.scss */
 body.light #menu button.fontsize:hover, body.light #menu button.colorscheme:hover,
 body.light #menu button.fontsize.editing, body.light #menu button.colorscheme.editing {
   background-color: #F7C997;
 }
-/* line 307, sass/palettes.scss */
+/* line 312, sass/palettes.scss */
 body.light #menu button > .size, body.light #menu button > .color,
 body.light #menu button > .size:hover, body.light #menu button > .color:hover {
   background-color: #fff;
   color: #333;
 }
-/* line 311, sass/palettes.scss */
+/* line 316, sass/palettes.scss */
 body.light #menu button > .size svg, body.light #menu button > .size path, body.light #menu button > .color svg, body.light #menu button > .color path,
 body.light #menu button > .size:hover svg,
 body.light #menu button > .size:hover path, body.light #menu button > .color:hover svg, body.light #menu button > .color:hover path {
   fill: #333;
 }
-/* line 314, sass/palettes.scss */
+/* line 319, sass/palettes.scss */
 body.light #menu button > .size .buttons #save, body.light #menu button > .color .buttons #save,
 body.light #menu button > .size:hover .buttons #save, body.light #menu button > .color:hover .buttons #save {
   background-color: #92B877;
   color: #222;
 }
-/* line 318, sass/palettes.scss */
+/* line 323, sass/palettes.scss */
 body.light #menu button > .size .buttons #cancel, body.light #menu button > .color .buttons #cancel,
 body.light #menu button > .size:hover .buttons #cancel, body.light #menu button > .color:hover .buttons #cancel {
   background-color: #B87777;
   color: #222;
 }
-/* line 322, sass/palettes.scss */
+/* line 327, sass/palettes.scss */
 body.light #menu button > .size:before, body.light #menu button > .color:before,
 body.light #menu button > .size:hover:before, body.light #menu button > .color:hover:before {
   background-color: #fff;
 }
-/* line 325, sass/palettes.scss */
+/* line 330, sass/palettes.scss */
 body.light #menu button > .size:after, body.light #menu button > .color:after,
 body.light #menu button > .size:hover:after, body.light #menu button > .color:hover:after {
   background-color: #fff;
   border: 1px solid #555;
 }
-/* line 334, sass/palettes.scss */
+/* line 339, sass/palettes.scss */
 body.light #main-page .context > button, body.light #courses .context > button {
   color: #555;
   background-color: transparent;
 }
-/* line 338, sass/palettes.scss */
+/* line 343, sass/palettes.scss */
 body.light #main-page .context > button:hover, body.light #courses .context > button:hover {
   background-color: #333;
   color: #ccc;
   border-color: #333;
 }
-/* line 346, sass/palettes.scss */
+/* line 351, sass/palettes.scss */
 body.light #content {
   color: #555;
 }
-/* line 350, sass/palettes.scss */
+/* line 355, sass/palettes.scss */
 body.light #content .content-wrapper .image {
   background-color: #777;
 }
-/* line 355, sass/palettes.scss */
+/* line 360, sass/palettes.scss */
 body.light #content .addClass {
   color: #555;
 }
-/* line 361, sass/palettes.scss */
+/* line 366, sass/palettes.scss */
 body.light #courses button, body.light #classes button {
   color: #333;
 }
-/* line 366, sass/palettes.scss */
+/* line 371, sass/palettes.scss */
 body.light #classes .video {
   background-color: #555;
 }
-/* line 369, sass/palettes.scss */
+/* line 374, sass/palettes.scss */
 body.light #classes .video .controls {
   background-color: #888;
   color: #fff;
 }
-/* line 375, sass/palettes.scss */
+/* line 380, sass/palettes.scss */
 body.light .course:not(.promo), body.light .class {
   background-color: transparent;
   border: 7px solid;
   color: #555;
 }
-/* line 380, sass/palettes.scss */
+/* line 385, sass/palettes.scss */
 body.light .course:not(.promo) svg, body.light .course:not(.promo) path, body.light .class svg, body.light .class path {
   fill: #555;
 }
-/* line 386, sass/palettes.scss */
+/* line 391, sass/palettes.scss */
 body.light .course:not(.promo):hover, body.light .class:hover {
   background-color: #555;
   color: #eee;
   border: 7px solid #555;
 }
-/* line 391, sass/palettes.scss */
+/* line 396, sass/palettes.scss */
 body.light .course:not(.promo):hover svg, body.light .course:not(.promo):hover path, body.light .class:hover svg, body.light .class:hover path {
   fill: #eee;
 }
-/* line 396, sass/palettes.scss */
+/* line 401, sass/palettes.scss */
 body.light .course.promo {
   background-color: transparent;
   border: 7px solid #F7C997;
   color: #111;
 }
-/* line 402, sass/palettes.scss */
+/* line 407, sass/palettes.scss */
 body.light .course.promo:hover {
   background-color: #F7C997;
   border: 7px solid #F7C997;
   color: #111;
 }
-/* line 409, sass/palettes.scss */
+/* line 414, sass/palettes.scss */
 body.light #login {
   border: 2px solid;
 }
-/* line 413, sass/palettes.scss */
+/* line 418, sass/palettes.scss */
 body.light #login .title {
   background-color: #F7C997;
 }
-/* line 416, sass/palettes.scss */
+/* line 421, sass/palettes.scss */
 body.light #login .title.label {
   background-color: transparent;
 }
-/* line 421, sass/palettes.scss */
+/* line 426, sass/palettes.scss */
 body.light #login .login {
   background-color: #92B877;
   color: #333;
 }
-/* line 426, sass/palettes.scss */
+/* line 431, sass/palettes.scss */
 body.light #login input {
   border: 2px solid #555;
   color: #555;
 }
-/* line 433, sass/palettes.scss */
+/* line 438, sass/palettes.scss */
 body.light #profile .title {
   background-color: #F7C997;
   color: #333;
 }
-/* line 437, sass/palettes.scss */
+/* line 442, sass/palettes.scss */
 body.light #profile svg {
   fill: #333;
 }
-/* line 443, sass/palettes.scss */
+/* line 448, sass/palettes.scss */
 body.light #modal .title, body.light #modal input, body.light #modal textarea {
   color: #ccc;
 }
@@ -595,16 +609,21 @@ body.light #modal .title, body.light #modal input, body.light #modal textarea {
   border: none;
   border-radius: 5px;
   font-family: inherit;
-  min-width: 200px;
   padding: 0 20px;
   display: flex;
   align-items: center;
-}
-/* line 31, sass/header.scss */
-#header .profile svg {
+  font-family: century gothic;
+  font-weight: bold;
+  text-transform: uppercase;
   margin-right: 10px;
 }
 /* line 34, sass/header.scss */
+#header .profile svg {
+  margin-right: 10px;
+  height: 35px;
+  margin-left: -10px;
+}
+/* line 37, sass/header.scss */
 #header #logo {
   height: 100%;
   display: flex;
@@ -613,13 +632,13 @@ body.light #modal .title, body.light #modal input, body.light #modal textarea {
   justify-content: center;
   font-size: 35px !important;
 }
-/* line 43, sass/header.scss */
+/* line 46, sass/header.scss */
 #header #logo > svg {
   height: 35px;
   width: 35px;
   margin-right: 10px;
 }
-/* line 49, sass/header.scss */
+/* line 52, sass/header.scss */
 #header #search {
   width: 35%;
   position: absolute;
@@ -629,7 +648,7 @@ body.light #modal .title, body.light #modal input, body.light #modal textarea {
   display: flex;
   align-items: center;
 }
-/* line 58, sass/header.scss */
+/* line 61, sass/header.scss */
 #header #search #searchBar {
   padding: 20px;
   padding-left: 40px;
@@ -639,7 +658,7 @@ body.light #modal .title, body.light #modal input, body.light #modal textarea {
   height: 100%;
   width: 100%;
 }
-/* line 68, sass/header.scss */
+/* line 71, sass/header.scss */
 #header #search:before {
   background-image: url("../../images/search.png");
   height: 16px;
@@ -649,29 +668,29 @@ body.light #modal .title, body.light #modal input, body.light #modal textarea {
   top: 10px;
   left: 15px;
 }
-/* line 79, sass/header.scss */
+/* line 82, sass/header.scss */
 #header ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #555;
 }
-/* line 82, sass/header.scss */
+/* line 85, sass/header.scss */
 #header :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #555;
   opacity: 1;
 }
-/* line 86, sass/header.scss */
+/* line 89, sass/header.scss */
 #header ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #555;
   opacity: 1;
 }
-/* line 90, sass/header.scss */
+/* line 93, sass/header.scss */
 #header :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #555;
 }
-/* line 93, sass/header.scss */
+/* line 96, sass/header.scss */
 #header :placeholder-shown {
   /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
   color: #555;
@@ -1204,7 +1223,7 @@ body.light #modal .title, body.light #modal input, body.light #modal textarea {
   padding: 0 20px;
   flex-direction: column;
   justify-content: center;
-  margin: 0 30px 30px 0;
+  margin: 0 20px 20px 0;
   cursor: pointer;
   box-sizing: border-box;
   min-width: 300px;
@@ -1505,58 +1524,62 @@ body * {
 body .title {
   font-size: 18px;
   text-transform: uppercase;
-  font-family: arial black;
+  font-family: century gothic;
+  font-weight: bold;
 }
 
-/* line 42, sass/main.scss */
+/* line 43, sass/main.scss */
 button {
   cursor: pointer;
   border: none;
+  font-family: century gothic;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* line 47, sass/main.scss */
+/* line 51, sass/main.scss */
 button:focus {
   outline: none;
 }
 
-/* line 52, sass/main.scss */
+/* line 56, sass/main.scss */
 input:focus {
   border: none;
   outline: none;
 }
 
-/* line 57, sass/main.scss */
+/* line 61, sass/main.scss */
 #header {
   order: 1;
 }
 
-/* line 61, sass/main.scss */
+/* line 65, sass/main.scss */
 #body {
   order: 2;
 }
 
-/* line 65, sass/main.scss */
+/* line 69, sass/main.scss */
 #content {
   order: 3;
   line-height: 120%;
 }
 
-/* line 70, sass/main.scss */
+/* line 74, sass/main.scss */
 b {
   font-weight: bold;
 }
 
-/* line 73, sass/main.scss */
+/* line 77, sass/main.scss */
 i {
   font-weight: italic;
 }
 
-/* line 77, sass/main.scss */
+/* line 81, sass/main.scss */
 .italic {
   font-style: italic;
 }
 
-/* line 81, sass/main.scss */
+/* line 85, sass/main.scss */
 .bold {
   font-weight: bold;
   margin-left: 5px;

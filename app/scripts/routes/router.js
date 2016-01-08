@@ -15,6 +15,7 @@ define([
         routes: {
         	'':'main',
             'courses':'courses',
+            'news': 'news',
             'classes': 'classes',
             'login':'login',
             'contacts': 'contacts',
@@ -59,6 +60,15 @@ define([
 
         },
 
+        news: function() {
+
+            App.Views.active.switchViews('main');
+            setTimeout(function() {
+                App.Vent.trigger('title', {title: "Notícias"});
+            }, 0);
+
+        },
+
 
         responses: function() {
 
@@ -91,7 +101,7 @@ define([
         },
 
         profile: function() {
-            
+            App.Vent.trigger('menu:profile');
             App.Views.active.switchViews('profile');
 
         },

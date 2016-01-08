@@ -36,12 +36,16 @@ body * {
 body .title {
 	font-size: 18px;
 	text-transform: uppercase;
-	font-family: arial black;
+	font-family: century gothic;
+	font-weight: bold;
 }
 
 button {
 	cursor: pointer;
 	border: none;
+	font-family:century gothic;
+	font-weight: bold;
+	text-transform:uppercase;
 }
 
 button:focus {

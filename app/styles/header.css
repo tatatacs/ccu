@@ -19,16 +19,21 @@
   border: none;
   border-radius: 5px;
   font-family: inherit;
-  min-width: 200px;
   padding: 0 20px;
   display: flex;
   align-items: center;
-}
-/* line 31, sass/header.scss */
-#header .profile svg {
+  font-family: century gothic;
+  font-weight: bold;
+  text-transform: uppercase;
   margin-right: 10px;
 }
 /* line 34, sass/header.scss */
+#header .profile svg {
+  margin-right: 10px;
+  height: 35px;
+  margin-left: -10px;
+}
+/* line 37, sass/header.scss */
 #header #logo {
   height: 100%;
   display: flex;
@@ -37,13 +42,13 @@
   justify-content: center;
   font-size: 35px !important;
 }
-/* line 43, sass/header.scss */
+/* line 46, sass/header.scss */
 #header #logo > svg {
   height: 35px;
   width: 35px;
   margin-right: 10px;
 }
-/* line 49, sass/header.scss */
+/* line 52, sass/header.scss */
 #header #search {
   width: 35%;
   position: absolute;
@@ -53,7 +58,7 @@
   display: flex;
   align-items: center;
 }
-/* line 58, sass/header.scss */
+/* line 61, sass/header.scss */
 #header #search #searchBar {
   padding: 20px;
   padding-left: 40px;
@@ -63,7 +68,7 @@
   height: 100%;
   width: 100%;
 }
-/* line 68, sass/header.scss */
+/* line 71, sass/header.scss */
 #header #search:before {
   background-image: url("../../images/search.png");
   height: 16px;
@@ -73,29 +78,29 @@
   top: 10px;
   left: 15px;
 }
-/* line 79, sass/header.scss */
+/* line 82, sass/header.scss */
 #header ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #555;
 }
-/* line 82, sass/header.scss */
+/* line 85, sass/header.scss */
 #header :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #555;
   opacity: 1;
 }
-/* line 86, sass/header.scss */
+/* line 89, sass/header.scss */
 #header ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #555;
   opacity: 1;
 }
-/* line 90, sass/header.scss */
+/* line 93, sass/header.scss */
 #header :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #555;
 }
-/* line 93, sass/header.scss */
+/* line 96, sass/header.scss */
 #header :placeholder-shown {
   /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
   color: #555;

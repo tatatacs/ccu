@@ -1,7 +1,7 @@
 {{#if visitor}}
 <button data-route='' class="selected">{{>home}}Página da faculdade</button>
 <button data-route='courses'>{{>courses}}Cursos</button>
-<button data-route=''>{{>news}}Notícias</button>
+<button data-route='news'>{{>news}}Notícias</button>
 <button data-route='informations'>{{>info}}Informações</button>
 <button data-route='contacts'>{{>contacts}}Contactos</button>
 <button class="fontsize">{{>fontsize}}Tamanho de letra</button>
@@ -9,9 +9,19 @@
 <button data-route=''>{{>help}}Ajuda</button>
 {{/if}}
 
+{{#if home}}
+<button data-route='' class="selected">{{>home}}Página da faculdade</button>
+<button data-route='courses'>{{>courses}}Cursos</button>
+<button data-route='news'>{{>news}}Notícias</button>
+<button data-route='informations'>{{>info}}Informações</button>
+<button data-route='contacts'>{{>contacts}}Contactos</button>
+<button class="fontsize">{{>fontsize}}Tamanho de letra</button>
+<button class="colorscheme">{{>colorscheme}}Esquema de cores</button>
+<button data-route=''>{{>help}}Ajuda</button>
+{{else}}
+
 {{#if student}}
 <button data-route=''>{{>home}}Página da faculdade</button>
-<button data-route='profile' class="selected">{{>profile}}Perfil do aluno</button>
 <button data-route='classes'>{{>courses}}
 	<div class='button-container'>
 		Minhas Aulas
@@ -34,7 +44,6 @@
 
 {{#if teacher}}
 <button data-route=''>{{>home}}Página da faculdade</button>
-<button data-route='profile' class="selected">{{>profile}}Perfil do professor</button>
 <button data-route='classes'>{{>courses}}Minhas Aulas</button>
 <button data-route='calendar'>{{>calendar}}Calendário</button>
 <button data-route='questions'>{{>question}}
@@ -47,4 +56,5 @@
 <button class="fontsize">{{>fontsize}}Tamanho de letra</button>
 <button class="colorscheme">{{>colorscheme}}Esquema de cores</button>
 <button data-route=''>{{>help}}Ajuda</button>
+{{/if}}
 {{/if}}

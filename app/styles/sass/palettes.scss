@@ -20,14 +20,14 @@ body.dark {
 	    background-color: #753928;
 	    color: #d8d8d8;
 
-	    #logo>svg {
+	    svg {
 	    	fill: #d8d8d8;
 	    }
 
-	    button {color:#bbb;}
+	    button {color:#ddd;border:3px solid rgba(0,0,0,0.2)}
 		
-		.profile { background-color: rgba(0,0,0, 0.5); }
-		.login { background-color: rgba(0,0,0, 0.5); }
+		.profile { background-color: rgba(0,0,0, 0.4); }
+		.login, .logout { background-color: rgba(0,0,0, 0.3); }
 
 	}
 
@@ -249,9 +249,14 @@ body.light {
 	    background-color: #F7C997;
 	    color: #555;
 
-	    #logo>svg {
+	    svg {
 	    	fill: #555;
 	    }
+
+	    button {color:#555;border:3px solid rgba(0,0,0,0.2);}
+		
+		.profile { background-color: rgba(0,0,0, 0.1); }
+		.login, .logout { background-color: rgba(255,255,255, 0.1); }
 	}
 
 	#footer {
